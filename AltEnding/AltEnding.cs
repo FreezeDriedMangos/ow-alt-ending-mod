@@ -1,19 +1,27 @@
 ﻿using OWML.Common;
 using OWML.ModHelper;
+using AltEnding.Utilities.ModAPIs;
 
-namespace ModTemplate
+namespace AltEnding
 {
-    public class ModTemplate : ModBehaviour
+    public class AltEnding : ModBehaviour
     {
+        public static AltEnding Instance;
+
         private void Awake()
         {
             // You won't be able to access OWML's mod helper in Awake.
             // So you probably don't want to do anything here.
             // Use Start() instead.
+            Instance = this;
         }
 
         private void Start()
         {
+            INewHorizons newHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
+            newHorizonsAPI.LoadConfigs(this);
+
+
             // Starting here, you'll have access to OWML's mod helper.
             ModHelper.Console.WriteLine($"My mod {nameof(ModTemplate)} is loaded!", MessageType.Success);
 
