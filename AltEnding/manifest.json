@@ -4,5 +4,6 @@
   "name": "Alternate Ending",
   "uniqueName": "clay.AltEnding",
   "version": "0.1.0",
-  "owmlVersion": "2.3.2"
+  "owmlVersion": "2.3.2",
+  "dependencies": [ "xen.NewHorizons" ]
 }
