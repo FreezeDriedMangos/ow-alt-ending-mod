@@ -3,19 +3,21 @@ using OWML.Common;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace AltEnding;
+namespace AltEnding.Utilities.ModAPIs 
+{ 
 
-internal interface INewHorizons
-{
-    void Create(Dictionary<string, object> config, IModBehaviour mod);
+    internal interface INewHorizons
+    {
+        void Create(Dictionary<string, object> config, IModBehaviour mod);
 
-    void LoadConfigs(IModBehaviour mod);
+        void LoadConfigs(IModBehaviour mod);
 
-    GameObject GetPlanet(string name);
+        GameObject GetPlanet(string name);
 
-    string GetCurrentStarSystem(); 
+        string GetCurrentStarSystem(); 
 
-    UnityEvent<string> GetChangeStarSystemEvent();
+        UnityEvent<string> GetChangeStarSystemEvent();
 
-    UnityEvent<string> GetStarSystemLoadedEvent();
+        UnityEvent<string> GetStarSystemLoadedEvent();
+    }
 }
