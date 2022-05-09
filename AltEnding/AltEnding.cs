@@ -9,7 +9,9 @@ namespace AltEnding
     {
         public static AltEnding Instance;
 
+        private bool initialized = false;
         private BlinkController blinkController;
+        private PropsController propsController;
 
         private void Awake()
         {
@@ -49,7 +51,10 @@ namespace AltEnding
                 ModHelper.Console.WriteLine($"Found player body, and it's called {playerBody.name}!",
                     MessageType.Success);
 
+                if (initialized) return;
+                initialized = true;
                 this.blinkController = new BlinkController(FindObjectOfType<PlayerCameraEffectController>());
+                this.propsController = new PropsController();
             };
         }
 
@@ -67,23 +72,15 @@ namespace AltEnding
 
             if (systemName == "SolarSystem")
             {
-                // TODO: spawn these items for testing
-                // RingWorld_Body/Sector_RingWorld/Sector_SecretEntrance/Interactibles_SecretEntrance/Experiment_3/VisionTorchApparatus
-                // DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector
-                // DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem
-
-                // TODO: spawn this item for actual use, and put it in the sun watching room of the stranger (the top floor of the room accessed via the dam)
-                // DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem
-                // TODO: modify the above item for actual use purposes
+                propsController.SpawnMainSystemProps();
             }
             else if (systemName == "clay.AltEnding.PostEndingSolarSystem")
             {
-                // TODO: spawn this item I think? and place it on timber hearth
-                // DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector
-                // TODO: modify this item to 
-            }
+                // TODO: teleport the player to the atp
+                // TODO: delete atp lights
 
-            // GameObject memoryStaff = GameObject.Instantiate("RingWorld_Body/Sector_RingWorld/Sector_SecretEntrance/Interactibles_SecretEntrance/Experiment_3/VisionTorchApparatus")
+                propsController.SpawnEndingProps();
+            }
 
             
         }
