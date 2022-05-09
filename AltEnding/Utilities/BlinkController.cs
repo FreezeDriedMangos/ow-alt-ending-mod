@@ -16,7 +16,6 @@ namespace AltEnding.Utilities
         {
             PlayerCameraEffectController = pcec;
             originalEyeMaskTexture = pcec._owCamera.postProcessingSettings.eyeMask.eyeMask;
-
             // TODO: load the 3 eye texture
         }
 
@@ -40,7 +39,17 @@ namespace AltEnding.Utilities
 
         public void Blink()
         {
-            PlayerCameraEffectController.OpenEyes(1, true);
+            float blinkTime = 0.5f;
+            PlayerCameraEffectController.CloseEyes(blinkTime/2f);
+            PlayerCameraEffectController.OpenEyes(blinkTime/2f, false);
+        }
+
+        public void BlinkEyeCountSlightOfHand(int newEyeCount)
+        {
+            float blinkTime = 0.5f;
+            PlayerCameraEffectController.CloseEyes(blinkTime/2f);
+            SetBlinkNumEyes(newEyeCount);
+            PlayerCameraEffectController.OpenEyes(blinkTime/2f, false);
         }
     }
 }
