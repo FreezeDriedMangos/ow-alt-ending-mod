@@ -17,6 +17,7 @@ namespace AltEnding.Utilities
             PlayerCameraEffectController = pcec;
             originalEyeMaskTexture = pcec._owCamera.postProcessingSettings.eyeMask.eyeMask;
             // TODO: load the 3 eye texture
+
         }
 
         public void SetBlinkNumEyes(int numEyes)

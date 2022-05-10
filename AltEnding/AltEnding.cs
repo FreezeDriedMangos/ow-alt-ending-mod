@@ -2,9 +2,15 @@
 using OWML.ModHelper;
 using AltEnding.Utilities.ModAPIs;
 using AltEnding.Utilities;
+using HarmonyLib;
+using System.Reflection;
+using AltEnding.CustomProps;
+using System.Collections.Generic;
 
 namespace AltEnding
 {
+    // looking at the game's source: 1) open ilspy 2) open OuterWilds_Data/Managed/Assembly-CSharp.dll 3) open the "{} -" dropdown
+
     public class AltEnding : ModBehaviour
     {
         public static AltEnding Instance;
@@ -31,8 +37,18 @@ namespace AltEnding
 
         private void Start()
         {
+            // =======
+            // Make Required Patches
+            // =======
+            
+            Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
+
+            // =======
+            // Initialize New Horizons
+            // =======
+
             INewHorizons newHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
-            // newHorizonsAPI.LoadConfigs(this);
+            // newHorizonsAPI.LoadConfigs(this); // TODO: uncomment this
 
 
             // Starting here, you'll have access to OWML's mod helper.
@@ -55,6 +71,27 @@ namespace AltEnding
                 initialized = true;
                 this.blinkController = new BlinkController(FindObjectOfType<PlayerCameraEffectController>());
                 this.propsController = new PropsController();
+
+                
+                // TESTING AppearingQuantumObject
+                var campsite = UnityEngine.GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Props_StartingCamp/OtherComponentsGroup");
+                List<AppearingQuantumObject> aqos = new List<AppearingQuantumObject>();
+            
+                UnityEngine.Transform[] children = campsite.GetComponentsInChildren<UnityEngine.Transform>();
+                foreach(UnityEngine.Transform prop in children)
+                {
+                    aqos.Add(prop.gameObject.AddComponent<AppearingQuantumObject>());
+                }
+
+                for (int i = 0; i < children.Length; i++)
+                {
+                    for (int j = i+1; j < children.Length; j++)
+                    {
+                        aqos[i].AddEntangledObject(aqos[j]);
+                    }
+                    aqos[i].IsPresenting = false;
+                }
+                aqos[0].IsPresenting = true;
             };
         }
 
@@ -81,8 +118,6 @@ namespace AltEnding
 
                 propsController.SpawnEndingProps();
             }
-
-            
         }
     }
 }
