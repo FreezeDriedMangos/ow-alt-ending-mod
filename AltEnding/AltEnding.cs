@@ -19,6 +19,19 @@ namespace AltEnding
         private BlinkController blinkController;
         private PropsController propsController;
 
+
+        delegate void Printer(string s, MessageType t);
+        private static Printer printer;
+
+        public static void Print(string s)
+        {
+            if (printer == null) return;
+
+            printer(s, MessageType.Debug);
+        }
+
+
+
         private void Awake()
         {
             // You won't be able to access OWML's mod helper in Awake.
@@ -53,6 +66,8 @@ namespace AltEnding
 
             // Starting here, you'll have access to OWML's mod helper.
             ModHelper.Console.WriteLine($"My mod {nameof(AltEnding)} is loaded!", MessageType.Success);
+            printer = ModHelper.Console.WriteLine;
+
 
             newHorizonsAPI.GetChangeStarSystemEvent().AddListener(OnStarSystemChange); 
             newHorizonsAPI.GetStarSystemLoadedEvent().AddListener(OnStarSystemLoaded);
@@ -77,15 +92,14 @@ namespace AltEnding
                 var campsite = UnityEngine.GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Props_StartingCamp/OtherComponentsGroup");
                 List<AppearingQuantumObject> aqos = new List<AppearingQuantumObject>();
             
-                UnityEngine.Transform[] children = campsite.GetComponentsInChildren<UnityEngine.Transform>();
-                foreach(UnityEngine.Transform prop in children)
+                foreach(UnityEngine.Transform prop in campsite.transform)
                 {
                     aqos.Add(prop.gameObject.AddComponent<AppearingQuantumObject>());
                 }
 
-                for (int i = 0; i < children.Length; i++)
+                for (int i = 0; i < aqos.Count; i++)
                 {
-                    for (int j = i+1; j < children.Length; j++)
+                    for (int j = i+1; j < aqos.Count; j++)
                     {
                         aqos[i].AddEntangledObject(aqos[j]);
                     }
