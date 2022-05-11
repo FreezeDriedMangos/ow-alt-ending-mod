@@ -20,10 +20,12 @@ namespace AltEnding
         private PropsController propsController;
 
 
+        public static INewHorizons newHorizonsAPI;
+
         delegate void Printer(string s, MessageType t);
         private static Printer printer;
 
-        public static void Print(string s)
+        public static void PrintToModConsole(string s)
         {
             if (printer == null) return;
 
@@ -60,7 +62,7 @@ namespace AltEnding
             // Initialize New Horizons
             // =======
 
-            INewHorizons newHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
+            newHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
             // newHorizonsAPI.LoadConfigs(this); // TODO: uncomment this
 
 
@@ -123,7 +125,8 @@ namespace AltEnding
 
             if (systemName == "SolarSystem")
             {
-                propsController.SpawnMainSystemProps();
+                ModHelper.Console.WriteLine("Loading main props!");
+                propsController.SpawnMainSystemProps(newHorizonsAPI);
             }
             else if (systemName == "clay.AltEnding.PostEndingSolarSystem")
             {

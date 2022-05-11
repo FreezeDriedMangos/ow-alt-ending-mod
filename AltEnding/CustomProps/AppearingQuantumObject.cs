@@ -53,7 +53,8 @@ namespace AltEnding.CustomProps
 
         public override bool ChangeQuantumState(bool skipInstantVisibilityCheck)
         {
-            AltEnding.Print($"Changing quantum state for {gameObject.name}");
+            AltEnding.PrintToModConsole($"Changing quantum state for {gameObject.name}");
+            UnityEngine.Debug.Log($"Changing quantum state for {gameObject.name}");
 
 
             if (entangledObjects.Count <= 0)

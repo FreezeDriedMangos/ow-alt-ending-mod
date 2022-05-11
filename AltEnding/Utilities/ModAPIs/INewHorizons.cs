@@ -6,7 +6,7 @@ using UnityEngine.Events;
 namespace AltEnding.Utilities.ModAPIs 
 { 
 
-    internal interface INewHorizons
+    public interface INewHorizons
     {
         void Create(Dictionary<string, object> config, IModBehaviour mod);
 
@@ -20,6 +20,6 @@ namespace AltEnding.Utilities.ModAPIs
 
         UnityEvent<string> GetStarSystemLoadedEvent();
 
-        GameObject SpawnObject(GameObject planet, Sector sector, string propToCopyPath, Vector3 position, Vector3 eulerAngles, float scale, bool alignWithNormal)
+        GameObject SpawnObject(GameObject planet, Sector sector, string propToCopyPath, Vector3 position, Vector3 eulerAngles, float scale, bool alignWithNormal);
     }
 }
