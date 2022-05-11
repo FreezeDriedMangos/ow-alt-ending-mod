@@ -19,5 +19,7 @@ namespace AltEnding.Utilities.ModAPIs
         UnityEvent<string> GetChangeStarSystemEvent();
 
         UnityEvent<string> GetStarSystemLoadedEvent();
+
+        GameObject SpawnObject(GameObject planet, Sector sector, string propToCopyPath, Vector3 position, Vector3 eulerAngles, float scale, bool alignWithNormal)
     }
 }
