@@ -22,6 +22,10 @@ namespace AltEnding.CustomProps
 			Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().enabled = true;
 			Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindProjectorTrigger.enabled = true;
 
+			Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindSlideProjector._mindProjectorImageEffect = GameObject.Find("Player_Body/PlayerCamera").GetComponent<MindProjectorImageEffect>();
+			// TODO: MindSlideProjector._mindProjectorImageEffect is null
+			// it should be Player_Body/PlayerCamera.GetComponent<MindProjectorImageEffect>()
+
             // SETTING THE MUSIC
 
 			// TODO: this is not right. one of the mind slide components tries to start music itself
@@ -31,8 +35,8 @@ namespace AltEnding.CustomProps
 
             // SETTING THE SLIDES
 
-            // SlideCollectionContainer slides = Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindSlideProjector.mindSlideCollection.slideCollectionContainer;
-            // slides.ClearSlides();
+            SlideCollectionContainer slides = Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindSlideProjector.mindSlideCollection.slideCollectionContainer;
+            slides.ClearSlides();
 
             // for loop
                 // Slide s = new Slide(){ _image = someTexture2D; };
