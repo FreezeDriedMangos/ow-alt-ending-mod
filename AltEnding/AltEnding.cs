@@ -22,17 +22,6 @@ namespace AltEnding
 
         public static INewHorizons newHorizonsAPI;
 
-        delegate void Printer(string s, MessageType t);
-        private static Printer printer;
-
-        public static void PrintToModConsole(string s)
-        {
-            if (printer == null) return;
-
-            printer(s, MessageType.Debug);
-        }
-
-
 
         private void Awake()
         {
@@ -68,8 +57,6 @@ namespace AltEnding
 
             // Starting here, you'll have access to OWML's mod helper.
             ModHelper.Console.WriteLine($"My mod {nameof(AltEnding)} is loaded!", MessageType.Success);
-            printer = ModHelper.Console.WriteLine;
-
 
             newHorizonsAPI.GetChangeStarSystemEvent().AddListener(OnStarSystemChange); 
             newHorizonsAPI.GetStarSystemLoadedEvent().AddListener(OnStarSystemLoaded);

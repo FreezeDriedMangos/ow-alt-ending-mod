@@ -10,15 +10,16 @@ namespace AltEnding.CustomProps
 {
 	public static class VisionTorchItemConstructor
     {
-		public static GameObject CreateMemoryStaff(string targetTag = null)
+		public static GameObject InitializeMemoryStaff(GameObject nhConstructedVisionTorchItem, string targetTag = null)
         {
             // CODE FOR CUSTOM MEMORY STAFF ITEM:
 
             // SPAWNING
 
-            GameObject visionTorchItemPrefab = GameObject.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem");
-            GameObject Prefab_IP_VisionTorchItem = GameObject.Instantiate(visionTorchItemPrefab);
+			// "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem"
+            GameObject Prefab_IP_VisionTorchItem = nhConstructedVisionTorchItem;
             // // Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindSlideProjector.mindSlideCollection
+			Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindProjectorTrigger.enabled = true;
 
             // SETTING THE MUSIC
 
@@ -87,6 +88,28 @@ namespace AltEnding.CustomProps
 
         // TOOD: OnTriggerVolumeExit
     }
+
+	[HarmonyPatch]
+	public static class VisionTorchItemPatches
+    {
+		// This is some dark magic
+		// this creates a method called base_DropItem that basically just calls OWItem.PickUpItem whenever it (VisionTorchItemPatches.base_PickUpItem) is called
+		[HarmonyReversePatch]
+		[HarmonyPatch(typeof(OWItem), nameof(OWItem.DropItem))]
+		private static void base_DropItem(OWItem instance, Vector3 position, Vector3 normal, Transform parent, Sector sector, IItemDropTarget customDropTarget) { }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(VisionTorchItem), nameof(VisionTorchItem.DropItem))]
+		public static bool VisionTorchItem_DropItem(VisionTorchItem __instance, Vector3 position, Vector3 normal, Transform parent, Sector sector, IItemDropTarget customDropTarget)
+		{
+			if (!Locator.GetDreamWorldController().IsInDream())
+			{
+				base_DropItem(__instance, position, normal, parent, sector, customDropTarget);
+			}
+
+			return true;
+		}
+	}
 }
 
 // From MindSlideProjector

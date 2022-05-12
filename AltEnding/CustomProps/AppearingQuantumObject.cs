@@ -40,20 +40,24 @@ namespace AltEnding.CustomProps
             
             if (IsPresenting != oldIsPresenting) IsPresenting = oldIsPresenting;
 
-            return !(
-                IsPlayerEntangled()
-                ? CheckIllumination()
-                : (
-                    CheckIllumination() 
-                    ? CheckVisibilityInstantly() 
-                    : CheckPointInside(Locator.GetPlayerCamera().transform.position)
-                ) 
-            );
+            return CheckIllumination() 
+                ? CheckVisibilityInstantly() 
+                : CheckPointInside(Locator.GetPlayerCamera().transform.position);
+
+            //return !(
+            //    IsPlayerEntangled()
+            //    ? CheckIllumination()
+            //    : (
+            //        CheckIllumination() 
+            //        ? CheckVisibilityInstantly() 
+            //        : CheckPointInside(Locator.GetPlayerCamera().transform.position)
+            //    ) 
+            //);
         }
 
         public override bool ChangeQuantumState(bool skipInstantVisibilityCheck)
         {
-            AltEnding.PrintToModConsole($"Changing quantum state for {gameObject.name}");
+            AltEnding.Instance.ModHelper.Console.WriteLine($"Changing quantum state for {gameObject.name}");
             UnityEngine.Debug.Log($"Changing quantum state for {gameObject.name}");
 
 

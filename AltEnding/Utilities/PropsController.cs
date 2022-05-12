@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using AltEnding.Utilities.ModAPIs;
+using AltEnding.CustomProps;
 
 namespace AltEnding.Utilities
 {
@@ -22,7 +23,7 @@ namespace AltEnding.Utilities
 
         public void SpawnMainSystemProps(INewHorizons newHorizonsAPI)
         {
-            AltEnding.PrintToModConsole("LOAIDING MAIN PROPS");
+            AltEnding.Instance.ModHelper.Console.WriteLine("LOAIDING MAIN PROPS");
             UnityEngine.Debug.Log($"LOADING MAIN PROPSS");
 
             // TESTING
@@ -47,14 +48,13 @@ namespace AltEnding.Utilities
             GameObject memoryStaff = GameObject.Instantiate(prefab, thSector.transform);
 
 
-            path ="RingWorld_Body/Sector_RingWorld/Sector_SecretEntrance/Interactibles_SecretEntrance/Experiment_3/VisionTorchApparatus";
-            Sector s = GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp").GetComponent<Sector>();
-            newHorizonsAPI.SpawnObject(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), path, Vector3.zero, Vector3.zero, 1, false);
-            
+            // path = "RingWorld_Body/Sector_RingWorld/Sector_SecretEntrance/Interactibles_SecretEntrance/Experiment_3/VisionTorchApparatus";
+            path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem";
+            //Sector s = GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp").GetComponent<Sector>();
+            position = new Vector3( 25.06051f, -42.64357f, 184.141f); 
+            GameObject staff = newHorizonsAPI.SpawnObject(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), path, position, rotation, 1, false);
+            VisionTorchItemConstructor.InitializeMemoryStaff(staff);
 
-            // "path" : "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle", 
-			// "position" : {"x": 18.06051, "y": -50.64357, "z": 183.141},  
-			// "rotation" : {"x":311.8565, "y": 287.9388, "z": 254.72}
         }
         
         public void SpawnEndingProps()
