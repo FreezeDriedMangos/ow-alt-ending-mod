@@ -28,11 +28,19 @@ namespace AltEnding.Utilities
 
             // TESTING
 
+                // TODO: wrap all SpawnObject calls
                 string path = "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle";
 				Vector3 position = new Vector3( 18.06051f, -50.64357f, 183.141f); 
 				Vector3 rotation = new Vector3(311.8565f,  287.9388f,  254.72f);
                 
                 newHorizonsAPI.SpawnObject(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), path, position, rotation, 1, false);
+
+                // spawn a trigger for the vision torch
+                path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head/PrisonerHeadDetector";
+                position = new Vector3(17.30891f, -41.28941f, 187.1373f);
+                newHorizonsAPI.SpawnObject(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), path, position, rotation, 1, false);
+
+                // TODO: try changing the tag on the above, and then passing that tag to InitializeMemoryStaff to see if that works
 
             // TODO: spawn these items for testing
             // RingWorld_Body/Sector_RingWorld/Sector_SecretEntrance/Interactibles_SecretEntrance/Experiment_3/VisionTorchApparatus
@@ -43,9 +51,9 @@ namespace AltEnding.Utilities
             // DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem
             // TODO: modify the above item for actual use purposes
 
-            Sector thSector = Locator._timberHearth.GetRootSector();
-            GameObject prefab = GameObject.Find("RingWorld_Body/Sector_RingWorld/Sector_SecretEntrance/Interactibles_SecretEntrance/Experiment_3/VisionTorchApparatus");
-            GameObject memoryStaff = GameObject.Instantiate(prefab, thSector.transform);
+            //Sector thSector = Locator._timberHearth.GetRootSector();
+            //GameObject prefab = GameObject.Find("RingWorld_Body/Sector_RingWorld/Sector_SecretEntrance/Interactibles_SecretEntrance/Experiment_3/VisionTorchApparatus");
+            //GameObject memoryStaff = GameObject.Instantiate(prefab, thSector.transform);
 
 
             // path = "RingWorld_Body/Sector_RingWorld/Sector_SecretEntrance/Interactibles_SecretEntrance/Experiment_3/VisionTorchApparatus";

@@ -66,7 +66,7 @@ namespace AltEnding.CustomProps
         [HarmonyPatch(typeof(MindProjectorTrigger), nameof(MindProjectorTrigger.OnTriggerVolumeEntry))]
         public static bool MindProjectorTrigger_OnTriggerVolumeEntry(MindProjectorTrigger __instance, GameObject hitObj)
         {
-			// TODO: get target tag from a child gameobject
+			AltEnding.Instance.ModHelper.Console.WriteLine("MIND PROJECTOR TRIGGER");
 
 			string targetTag = __instance.gameObject.transform.Find("TargetTagHolder")?.GetComponent<TargetTagHolder>()?.targetTag;
 			if (targetTag == null) return true;
