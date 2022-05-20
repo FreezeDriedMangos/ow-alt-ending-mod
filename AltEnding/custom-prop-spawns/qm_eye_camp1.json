@@ -1,0 +1,754 @@
+{
+  "Scatter": null,
+  "Details": [
+    {
+      "path": "CaveTwin_Body/Sector_CaveTwin/Sector_SouthHemisphere/Sector_SouthUnderground/Sector_City/Sector_ChildDistrict/Props_FossilDistrict/OtherComponentsGroup/Furniture_FossilDistrict/Prefab_NOM_Bed/Props_NOM_Bed",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -15.07505,
+        "Y": -65.17473,
+        "Z": 24.3423061
+      },
+      "rotation": {
+        "X": 15.2228642,
+        "Y": 111.245529,
+        "Z": 155.945236
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "CaveTwin_Body/Sector_CaveTwin/Sector_SouthHemisphere/Sector_SouthUnderground/Sector_City/Sector_ChildDistrict/Props_FossilDistrict/OtherComponentsGroup/Furniture_FossilDistrict/Prefab_NOM_Bed/Props_NOM_Bed",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -16.7275867,
+        "Y": -65.8805847,
+        "Z": 22.4996376
+      },
+      "rotation": {
+        "X": 20.166254,
+        "Y": 120.677109,
+        "Z": 167.494751
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 0.99999994
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Toys",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -13.0260248,
+        "Y": -66.44459,
+        "Z": 21.773241
+      },
+      "rotation": {
+        "X": 7.9532156,
+        "Y": 100.12426,
+        "Z": 160.937256
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.0
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThin",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -13.0114174,
+        "Y": -67.55332,
+        "Z": 19.3524361
+      },
+      "rotation": {
+        "X": 287.6891,
+        "Y": 185.107971,
+        "Z": 3.30155672E-05
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000024
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThin",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -13.9478836,
+        "Y": -65.0465,
+        "Z": 25.92143
+      },
+      "rotation": {
+        "X": 14.3194027,
+        "Y": 132.916153,
+        "Z": 166.2559
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -11.9233742,
+        "Y": -67.2851257,
+        "Z": 20.0101738
+      },
+      "rotation": {
+        "X": 2.71707463,
+        "Y": 71.84382,
+        "Z": 158.374786
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000024
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -15.3837233,
+        "Y": -66.9832,
+        "Z": 20.1424866
+      },
+      "rotation": {
+        "X": 5.099915,
+        "Y": 80.62651,
+        "Z": 166.9238
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -16.0329247,
+        "Y": -66.9382858,
+        "Z": 19.97129
+      },
+      "rotation": {
+        "X": 7.036403,
+        "Y": 89.30998,
+        "Z": 167.843628
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000024
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -15.8495541,
+        "Y": -66.8487549,
+        "Z": 20.4938545
+      },
+      "rotation": {
+        "X": 14.0025167,
+        "Y": 146.817184,
+        "Z": 179.3058
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.0
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -13.3829288,
+        "Y": -65.14016,
+        "Z": 25.6840248
+      },
+      "rotation": {
+        "X": 0.934820354,
+        "Y": 90.2023544,
+        "Z": 160.273315
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000036
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_Treepot",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -14.04441,
+        "Y": -67.17616,
+        "Z": 19.1137943
+      },
+      "rotation": {
+        "X": 358.812042,
+        "Y": 53.4047432,
+        "Z": 157.3207
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_Treepot",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -15.9305782,
+        "Y": -64.18229,
+        "Z": 28.2468071
+      },
+      "rotation": {
+        "X": 11.68319,
+        "Y": 101.939674,
+        "Z": 154.50444
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_Container",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -11.9169827,
+        "Y": -67.75981,
+        "Z": 18.06423
+      },
+      "rotation": {
+        "X": 354.733,
+        "Y": 45.81207,
+        "Z": 171.05751
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000024
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThick",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -14.2558022,
+        "Y": -66.9493256,
+        "Z": 20.7775288
+      },
+      "rotation": {
+        "X": 356.147369,
+        "Y": 93.6812439,
+        "Z": 163.33606
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThick",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -12.0217876,
+        "Y": -65.04796,
+        "Z": 25.6385384
+      },
+      "rotation": {
+        "X": 4.70284557,
+        "Y": 124.726677,
+        "Z": 157.802322
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000036
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThick",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -14.5108089,
+        "Y": -67.6591339,
+        "Z": 17.2205544
+      },
+      "rotation": {
+        "X": 355.4514,
+        "Y": 58.0073967,
+        "Z": 167.392746
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.0
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThick",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -19.4907913,
+        "Y": -66.831955,
+        "Z": 17.5723267
+      },
+      "rotation": {
+        "X": 4.930933,
+        "Y": 51.7227936,
+        "Z": 151.574738
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000036
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThick",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -19.160717,
+        "Y": -65.80047,
+        "Z": 21.75078
+      },
+      "rotation": {
+        "X": 19.1903381,
+        "Y": 151.9262,
+        "Z": 183.792542
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.0
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_Treepot",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -19.9723015,
+        "Y": -65.93266,
+        "Z": 20.4534378
+      },
+      "rotation": {
+        "X": 21.04637,
+        "Y": 111.422752,
+        "Z": 173.66716
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_Treepot",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -18.2090836,
+        "Y": -66.81105,
+        "Z": 18.8721981
+      },
+      "rotation": {
+        "X": 348.577881,
+        "Y": 9.55831,
+        "Z": 166.857513
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_Container",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -20.34697,
+        "Y": -66.1891,
+        "Z": 18.9563789
+      },
+      "rotation": {
+        "X": 9.860197,
+        "Y": 63.0389442,
+        "Z": 159.967331
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -18.9585629,
+        "Y": -66.30898,
+        "Z": 20.0618286
+      },
+      "rotation": {
+        "X": 13.221508,
+        "Y": 91.95507,
+        "Z": 165.471466
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 0.9999998
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -18.7622032,
+        "Y": -66.1450958,
+        "Z": 20.8215427
+      },
+      "rotation": {
+        "X": 16.9866085,
+        "Y": 109.881607,
+        "Z": 170.18103
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.0
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -17.1435471,
+        "Y": -67.00934,
+        "Z": 18.9906273
+      },
+      "rotation": {
+        "X": 353.931854,
+        "Y": 41.2654381,
+        "Z": 155.616089
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -18.19756,
+        "Y": -66.41733,
+        "Z": 20.29323
+      },
+      "rotation": {
+        "X": 16.5260048,
+        "Y": 173.839172,
+        "Z": 190.5894
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -18.2123127,
+        "Y": -65.82294,
+        "Z": 22.4499035
+      },
+      "rotation": {
+        "X": 19.534687,
+        "Y": 142.69455,
+        "Z": 180.725922
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.0
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -20.924139,
+        "Y": -65.4655457,
+        "Z": 21.0965614
+      },
+      "rotation": {
+        "X": 15.7488031,
+        "Y": 81.49005,
+        "Z": 164.095932
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.0
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -17.8597031,
+        "Y": -67.23713,
+        "Z": 17.6018829
+      },
+      "rotation": {
+        "X": 348.315582,
+        "Y": 317.850159,
+        "Z": 184.102356
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.0
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Box (10)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -18.78272,
+        "Y": -67.26583,
+        "Z": 17.0593014
+      },
+      "rotation": {
+        "X": 352.9,
+        "Y": 352.346527,
+        "Z": 174.677658
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThin",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -17.6798458,
+        "Y": -66.70385,
+        "Z": 19.75616
+      },
+      "rotation": {
+        "X": 14.1264954,
+        "Y": 88.79187,
+        "Z": 164.2557
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 0.9999998
+    },
+    {
+      "path": "CaveTwin_Body/Sector_CaveTwin/Sector_SouthHemisphere/Sector_SouthUnderground/Sector_City/Sector_ChildDistrict/Props_FossilDistrict/OtherComponentsGroup/Furniture_FossilDistrict/Prefab_NOM_Bed_Child",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -15.9586439,
+        "Y": -65.8186951,
+        "Z": 23.6891613
+      },
+      "rotation": {
+        "X": 13.6801472,
+        "Y": 119.668587,
+        "Z": 168.554565
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 0.99999994
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Staff (1)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -15.412632,
+        "Y": -67.44616,
+        "Z": 17.3763828
+      },
+      "rotation": {
+        "X": 28.1116142,
+        "Y": 21.208128,
+        "Z": 161.502
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000012
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Staff (1)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -15.2642746,
+        "Y": -64.86806,
+        "Z": 26.3637238
+      },
+      "rotation": {
+        "X": 351.203857,
+        "Y": 337.022522,
+        "Z": 168.024139
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.0000006
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_OldSettlement/Fragment OldSettlement 3/Core_OldSettlement 3/Interactables_Core_OldSettlement3/VisibleFrom_BH/NomaiTree (1)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -20.4300137,
+        "Y": -66.6998749,
+        "Z": 16.586132
+      },
+      "rotation": {
+        "X": 359.870758,
+        "Y": 26.6202641,
+        "Z": 148.242081
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 0.99999994
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_OldSettlement/Fragment OldSettlement 3/Core_OldSettlement 3/Interactables_Core_OldSettlement3/VisibleFrom_BH/NomaiTree (1)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -18.1086864,
+        "Y": -66.22118,
+        "Z": 21.0822372
+      },
+      "rotation": {
+        "X": 2.98401928,
+        "Y": 222.08197,
+        "Z": 199.327347
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000024
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_OldSettlement/Fragment OldSettlement 1/Core_OldSettlement 1/Interactables_Core_OldSettlement1/NomaiTree (1)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -13.6953354,
+        "Y": -64.51644,
+        "Z": 27.3727646
+      },
+      "rotation": {
+        "X": 347.07193,
+        "Y": 311.867,
+        "Z": 196.801376
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 0.999999762
+    },
+    {
+      "path": "BrittleHollow_Body/Sector_BH/Sector_OldSettlement/Fragment OldSettlement 1/Core_OldSettlement 1/Interactables_Core_OldSettlement1/NomaiTree (1)",
+      "objFilePath": null,
+      "mtlFilePath": null,
+      "assetBundle": null,
+      "position": {
+        "X": -9.15848351,
+        "Y": -67.65891,
+        "Z": 15.894453
+      },
+      "rotation": {
+        "X": 4.34977865,
+        "Y": 18.95599,
+        "Z": 179.703979
+      },
+      "alignToNormal": false,
+      "removeChildren": null,
+      "removeComponents": false,
+      "scale": 1.00000024
+    }
+  ],
+  "Rafts": null,
+  "Geysers": null,
+  "Tornados": null,
+  "Volcanoes": null,
+  "Dialogue": null,
+  "Reveal": null,
+  "EntryLocation": null,
+  "NomaiText": null,
+  "SlideShows": null
+}

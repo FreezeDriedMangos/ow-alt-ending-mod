@@ -52,7 +52,7 @@ namespace AltEnding
             // =======
 
             newHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
-            // newHorizonsAPI.LoadConfigs(this); // TODO: uncomment this
+            newHorizonsAPI.LoadConfigs(this); // TODO: uncomment this
 
 
             // Starting here, you'll have access to OWML's mod helper.
@@ -77,24 +77,24 @@ namespace AltEnding
                 this.propsController = new PropsController();
 
                 
-                // TESTING AppearingQuantumObject
-                var campsite = UnityEngine.GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Props_StartingCamp/OtherComponentsGroup");
-                List<AppearingQuantumObject> aqos = new List<AppearingQuantumObject>();
+                //// TESTING AppearingQuantumObject
+                //var campsite = UnityEngine.GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Props_StartingCamp/OtherComponentsGroup");
+                //List<AppearingQuantumObject> aqos = new List<AppearingQuantumObject>();
             
-                foreach(UnityEngine.Transform prop in campsite.transform)
-                {
-                    aqos.Add(prop.gameObject.AddComponent<AppearingQuantumObject>());
-                }
+                //foreach(UnityEngine.Transform prop in campsite.transform)
+                //{
+                //    aqos.Add(prop.gameObject.AddComponent<AppearingQuantumObject>());
+                //}
 
-                for (int i = 0; i < aqos.Count; i++)
-                {
-                    for (int j = i+1; j < aqos.Count; j++)
-                    {
-                        aqos[i].AddEntangledObject(aqos[j]);
-                    }
-                    aqos[i].IsPresenting = false;
-                }
-                aqos[0].IsPresenting = true;
+                //for (int i = 0; i < aqos.Count; i++)
+                //{
+                //    for (int j = i+1; j < aqos.Count; j++)
+                //    {
+                //        aqos[i].AddEntangledObject(aqos[j]);
+                //    }
+                //    aqos[i].IsPresenting = false;
+                //}
+                //aqos[0].IsPresenting = true;
             };
         }
 

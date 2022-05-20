@@ -16,6 +16,12 @@ namespace AltEnding.CustomProps
 
             // SPAWNING
 
+
+			// TODO: don't change the tag of the prisoner detector, but add the slides to it as a child
+			// in the overload for the scan, if the hit detector has a child with the slides container component, set the projector's slide container to that before playing
+
+
+
 			// "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem"
             GameObject Prefab_IP_VisionTorchItem = nhConstructedVisionTorchItem;
             // // Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindSlideProjector.mindSlideCollection
@@ -77,6 +83,7 @@ namespace AltEnding.CustomProps
 
             if(hitObj.CompareTag(targetTag)) //"PrisonerDetector"))
 		    {
+				AltEnding.Instance.ModHelper.Console.WriteLine("MIND PROJECTOR CUSTOM TRIGGER");
 			    __instance.OnBeamStartHitPrisoner.Invoke();
 			    __instance._mindProjector.Play(reset: true);
 			    __instance._mindProjector.OnProjectionStart += new OWEvent.OWCallback(__instance.OnProjectionStart);
