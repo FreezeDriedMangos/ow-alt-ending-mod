@@ -11,6 +11,13 @@ namespace AltEnding
 {
     // looking at the game's source: 1) open ilspy 2) open OuterWilds_Data/Managed/Assembly-CSharp.dll 3) open the "{} -" dropdown
 
+
+
+    // TODO: if prisoner has been met, spawn a signal source here: Log : Raycast hit "position": {"x": -174.0865, "y": -134.4167, "z": -189.1588}, "normal": {"x": -0.2941437, "y": 0.9556881, "z": -0.01182878} on [RingWorld_Body] at [RingWorld_Body]
+    // this is the location of the hidden memory staff
+    // make sure to disable this signal source once the staff has been picked up
+
+
     public class AltEnding : ModBehaviour
     {
         public static AltEnding Instance;
