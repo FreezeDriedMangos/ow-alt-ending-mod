@@ -10,21 +10,14 @@ namespace AltEnding.CustomProps
 {
 	public static class VisionTorchItemConstructor
     {
-		public static GameObject InitializeMemoryStaff(GameObject nhConstructedVisionTorchItem, string targetTag = null)
+		public static GameObject InitializeMemoryStaff(GameObject nhConstructedVisionTorchItem)
         {
             // CODE FOR CUSTOM MEMORY STAFF ITEM:
 
             // SPAWNING
 
-
-			// TODO: don't change the tag of the prisoner detector, but add the slides to it as a child
-			// in the overload for the scan, if the hit detector has a child with the slides container component, set the projector's slide container to that before playing
-
-
-
 			// "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem"
             GameObject Prefab_IP_VisionTorchItem = nhConstructedVisionTorchItem;
-            // // Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindSlideProjector.mindSlideCollection
 			Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().enabled = true;
 			Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindProjectorTrigger.enabled = true;
 
@@ -55,18 +48,13 @@ namespace AltEnding.CustomProps
             // TODO: check the code for MindProjectorTrigger.OnTriggerVolumeEntry to look for specific references to the Prisoner
             // Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindProjectorTrigger.OnTriggerVolumeEntry() // this method is called by the base game I believe whenever the player points it at something. when that something is the prisoner's head, it plays the memory slides
 
-			GameObject targetTagHolder = new GameObject("TargetTagHolder");
-			targetTagHolder.transform.parent = Prefab_IP_VisionTorchItem.transform;
-			TargetTagHolder tth = targetTagHolder.AddComponent<TargetTagHolder>();
-			tth.targetTag = targetTag;
-
 			return Prefab_IP_VisionTorchItem;
         }
     }
 
-	public class TargetTagHolder : MonoBehaviour
+	public class VisionTorchTarget : MonoBehaviour
     {
-		public string targetTag;
+		public MindSlideCollection slideCollection;
     }
 	
     [HarmonyPatch]
@@ -78,11 +66,13 @@ namespace AltEnding.CustomProps
         {
 			AltEnding.Instance.ModHelper.Console.WriteLine("MIND PROJECTOR TRIGGER");
 
-			string targetTag = __instance.gameObject.transform.Find("TargetTagHolder")?.GetComponent<TargetTagHolder>()?.targetTag;
-			if (targetTag == null) return true;
-
-            if(hitObj.CompareTag(targetTag)) //"PrisonerDetector"))
+			VisionTorchTarget t = hitObj.GetComponent<VisionTorchTarget>();
+            if (t != null) //(hitObj.CompareTag("PrisonerDetector"))
 		    {
+				// TODO: do I need to set slideCollectionContainer too?
+				//Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindSlideProjector.mindSlideCollection.slideCollectionContainer = t.slideCollectionContainer;
+				__instance._mindProjector._mindSlideCollection = t.slideCollection;
+
 				AltEnding.Instance.ModHelper.Console.WriteLine("MIND PROJECTOR CUSTOM TRIGGER");
 			    __instance.OnBeamStartHitPrisoner.Invoke();
 			    __instance._mindProjector.Play(reset: true);
@@ -94,8 +84,6 @@ namespace AltEnding.CustomProps
             }
 
             return true;
-
-            // return trueIfIWantTheOriginalMethodToRun;
         }
 
         // TOOD: OnTriggerVolumeExit

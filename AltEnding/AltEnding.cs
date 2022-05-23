@@ -59,7 +59,7 @@ namespace AltEnding
             // =======
 
             newHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
-            newHorizonsAPI.LoadConfigs(this); // TODO: uncomment this
+            newHorizonsAPI.LoadConfigs(this);
 
 
             // Starting here, you'll have access to OWML's mod helper.
