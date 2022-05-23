@@ -45,46 +45,53 @@ namespace AltEnding.Utilities
                 VisionTorchItemConstructor.InitializeMemoryStaff(staff1);
 
                 // spawn a trigger for the vision torch
-                path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head/PrisonerHeadDetector";
                 position = new Vector3(17.30891f, -41.28941f, 187.1373f);
-                GameObject g = newHorizonsAPI.SpawnObject(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), path, position, rotation, 1, false);
-                g.name = "VisionStaffDetector";
-                VisionTorchTarget t = g.AddComponent<VisionTorchTarget>();
-                SlideCollectionContainer c = g.AddComponent<SlideCollectionContainer>();
-                t.slideCollection = new MindSlideCollection();
-                t.slideCollection._slideCollectionContainer = c;
+                
 
-                SlideInfo[] slides = new SlideInfo[0];
-                var slidesCount = slides.Length >= 15 ? 15 : slides.Length
-                t.slideCollection._slideCollectionContainer.slideCollection = new SlideCollection(slidesCount);
-                var slideCollection = t.slideCollection._slideCollectionContainer.slideCollection;
-                // The base game ones only have 15 slides max
-                var textures = new Texture2D[slidesCount];
+                //public class ProjectionInfo
+                //{
+                //    public MVector3 position;
+                //    public MVector3 rotation;
+                //    public string[] reveals;
+                //    public SlideInfo[] slides;
+                //    public string type;
 
-                for (int i = 0; i < slidesCount; i++)
+                //    public ProjectionInfo();
+                //}
+                //public class SlideInfo
+                //{
+                //    public string imagePath;
+                //    public string beatAudio;
+                //    public float beatDelay;
+                //    public string backdropAudio;
+                //    public float backdropFadeTime;
+                //    public float ambientLightIntensity;
+                //    public float ambientLightRange;
+                //    public MColor ambientLightColor;
+                //    public float spotIntensityMod;
+                //    public float playTimeDuration;
+                //    public float blackFrameDuration;
+                //    public string reveal;
+
+                //    public SlideInfo();
+                //}
+
+
+                ProjectionInfo info = new ProjectionInfo()
                 {
-                    var slide = new Slide();
-                    var slideInfo = slides[i];
-
-                    var texture = ImageUtilities.GetTexture(AltEnding.Instance, slideInfo.imagePath);
-                    slide.textureOverride = ImageUtilities.Invert(texture);
-
-                    // Track the first 15 to put on the slide reel object
-                    if (i < 15) textures[i] = texture;
-
-                    AddModules(slideInfo, ref slide);
-
-                    slideCollection.slides[i] = slide;
-                }
-
-                // Else when you put them down you can't pick them back up
-                slideReelObj.GetComponent<OWCollider>()._physicsRemoved = false;
-
-                slideCollectionContainer.slideCollection = slideCollection;
-
-                // Idk why but it wants reveals to be comma delimited not a list
-                if (info.reveals != null) slideCollectionContainer._shipLogOnComplete = string.Join(",", info.reveals);
-
+                    position=position,
+                    type="visionTorch",
+                    slides=new SlideInfo[]
+                    {
+                        new SlideInfo() { imagePath="images/test1.png" }, 
+                        new SlideInfo() { imagePath="images/test2.png" }, 
+                        new SlideInfo() { imagePath="images/test3.png" }, 
+                        new SlideInfo() { imagePath="images/test4.png" }, 
+                        new SlideInfo() { imagePath="images/test5.png" }, 
+                        new SlideInfo() { imagePath="images/test6.png" }, 
+                    }
+                };
+                ProjectionBuilder.MakeMindSlidesTarget(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), info, AltEnding.Instance);
                 
 
                 //g.tag = "SolanumVisionStaffTarget";

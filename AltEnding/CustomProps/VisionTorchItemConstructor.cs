@@ -51,67 +51,6 @@ namespace AltEnding.CustomProps
 			return Prefab_IP_VisionTorchItem;
         }
     }
-
-	public class VisionTorchTarget : MonoBehaviour
-    {
-		public MindSlideCollection slideCollection;
-		public SlideCollectionContainer slideCollectionContainer;
-    }
-	
-    [HarmonyPatch]
-    public static class MindProjectorTriggerPatches
-    {
-        [HarmonyPrefix]
-        [HarmonyPatch(typeof(MindProjectorTrigger), nameof(MindProjectorTrigger.OnTriggerVolumeEntry))]
-        public static bool MindProjectorTrigger_OnTriggerVolumeEntry(MindProjectorTrigger __instance, GameObject hitObj)
-        {
-			AltEnding.Instance.ModHelper.Console.WriteLine("MIND PROJECTOR TRIGGER");
-
-			VisionTorchTarget t = hitObj.GetComponent<VisionTorchTarget>();
-            if (t != null) //(hitObj.CompareTag("PrisonerDetector"))
-		    {
-				// TODO: do I need to set slideCollectionContainer too?
-				//Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindSlideProjector.mindSlideCollection.slideCollectionContainer = t.slideCollectionContainer;
-				__instance._mindProjector._mindSlideCollection = t.slideCollection;
-				__instance._mindProjector._slideCollectionItem = t.slideCollectionContainer;
-
-				AltEnding.Instance.ModHelper.Console.WriteLine("MIND PROJECTOR CUSTOM TRIGGER");
-			    __instance.OnBeamStartHitPrisoner.Invoke();
-			    __instance._mindProjector.Play(reset: true);
-			    __instance._mindProjector.OnProjectionStart += new OWEvent.OWCallback(__instance.OnProjectionStart);
-			    __instance._mindProjector.OnProjectionComplete += new OWEvent.OWCallback(__instance.OnProjectionComplete);
-			    Locator.GetPlayerTransform().GetComponent<PlayerLockOnTargeting>().LockOn(hitObj.transform, Vector3.zero);
-			    __instance._playerLockedOn = true;
-                return false;
-            }
-
-            return true;
-        }
-
-        // TOOD: OnTriggerVolumeExit
-    }
-
-	[HarmonyPatch]
-	public static class VisionTorchItemPatches
-    {
-		// This is some dark magic
-		// this creates a method called base_DropItem that basically just calls OWItem.PickUpItem whenever it (VisionTorchItemPatches.base_PickUpItem) is called
-		[HarmonyReversePatch]
-		[HarmonyPatch(typeof(OWItem), nameof(OWItem.DropItem))]
-		private static void base_DropItem(OWItem instance, Vector3 position, Vector3 normal, Transform parent, Sector sector, IItemDropTarget customDropTarget) { }
-
-        [HarmonyPrefix]
-        [HarmonyPatch(typeof(VisionTorchItem), nameof(VisionTorchItem.DropItem))]
-		public static bool VisionTorchItem_DropItem(VisionTorchItem __instance, Vector3 position, Vector3 normal, Transform parent, Sector sector, IItemDropTarget customDropTarget)
-		{
-			if (!Locator.GetDreamWorldController().IsInDream())
-			{
-				base_DropItem(__instance, position, normal, parent, sector, customDropTarget);
-			}
-
-			return true;
-		}
-	}
 }
 
 // From MindSlideProjector
