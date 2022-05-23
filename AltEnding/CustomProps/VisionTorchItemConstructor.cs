@@ -55,6 +55,7 @@ namespace AltEnding.CustomProps
 	public class VisionTorchTarget : MonoBehaviour
     {
 		public MindSlideCollection slideCollection;
+		public SlideCollectionContainer slideCollectionContainer;
     }
 	
     [HarmonyPatch]
@@ -72,6 +73,7 @@ namespace AltEnding.CustomProps
 				// TODO: do I need to set slideCollectionContainer too?
 				//Prefab_IP_VisionTorchItem.GetComponent<VisionTorchItem>().mindSlideProjector.mindSlideCollection.slideCollectionContainer = t.slideCollectionContainer;
 				__instance._mindProjector._mindSlideCollection = t.slideCollection;
+				__instance._mindProjector._slideCollectionItem = t.slideCollectionContainer;
 
 				AltEnding.Instance.ModHelper.Console.WriteLine("MIND PROJECTOR CUSTOM TRIGGER");
 			    __instance.OnBeamStartHitPrisoner.Invoke();
