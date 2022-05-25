@@ -39,10 +39,12 @@ namespace AltEnding.Utilities
                 // newHorizonsAPI.SpawnObject(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), path, position, rotation, 1, false);
 
                 path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem";
-                //Sector s = GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp").GetComponent<Sector>();
+                ////Sector s = GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp").GetComponent<Sector>();
                 position = new Vector3( 25.06051f, -42.64357f, 184.141f); 
                 GameObject staff1 = newHorizonsAPI.SpawnObject(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), path, position, rotation, 1, false);
-                VisionTorchItemConstructor.InitializeMemoryStaff(staff1);
+                //VisionTorchItemConstructor.InitializeMemoryStaff(staff1);
+                //GameObject staff1 = DetailBuilder.MakeVisionTorch(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), position, rotation, 1, false);
+
 
                 // spawn a trigger for the vision torch
                 position = new Vector3(17.30891f, -41.28941f, 187.1373f);
@@ -79,7 +81,8 @@ namespace AltEnding.Utilities
 
                 ProjectionInfo info = new ProjectionInfo()
                 {
-                    position=position,
+                    position=new Vector3(17.30891f, -41.28941f, 187.1373f),
+                    rotation=new Vector3(0, 90, 90),
                     type="visionTorch",
                     slides=new SlideInfo[]
                     {
@@ -91,7 +94,12 @@ namespace AltEnding.Utilities
                         new SlideInfo() { imagePath="images/test6.png" }, 
                     }
                 };
+
                 ProjectionBuilder.MakeMindSlidesTarget(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), info, AltEnding.Instance);
+
+                info.position = new Vector3(19.3818f, -41.0982f, 185.1091f);
+                info.rotation = new Vector3(0.8406f, 97.5621f, 106.7233f);
+                ProjectionBuilder.MakeStandingVisionTorch(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), info, AltEnding.Instance);
                 
 
                 //g.tag = "SolanumVisionStaffTarget";
@@ -148,18 +156,18 @@ namespace AltEnding.Utilities
             position = new Vector3(-174.992325f,-134.213821f,-189.465027f);
             rotation = new Vector3(2.85523677f,327.847168f,293.827332f);
             GameObject staff = newHorizonsAPI.SpawnObject(Locator._ringWorld.gameObject, Locator._ringWorld.GetRootSector(), path, position, rotation, 1, false);
-            VisionTorchItemConstructor.InitializeMemoryStaff(staff);
+            //VisionTorchItemConstructor.InitializeMemoryStaff(staff);
 
-            // config file isn't working for some reason, so I'll just spawn the chair and table manually
-            path = "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ProjectionHouse_Zone1/SmallProps_ProjectionHouse_Zone1/OtherComponentsGroup/Props_IP_Stool";
-            position = new Vector3( -174.408813f, -132.208527f, -190.9654f );
-            rotation = new Vector3( 29.48426f, 306.406647f, 270.6115f );
-            newHorizonsAPI.SpawnObject(Locator._ringWorld.gameObject, Locator._ringWorld.GetRootSector(), path, position, rotation, 1, false);
+   //         // config file isn't working for some reason, so I'll just spawn the chair and table manually
+   //         path = "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ProjectionHouse_Zone1/SmallProps_ProjectionHouse_Zone1/OtherComponentsGroup/Props_IP_Stool";
+   //         position = new Vector3( -174.408813f, -132.208527f, -190.9654f );
+   //         rotation = new Vector3( 29.48426f, 306.406647f, 270.6115f );
+   //         newHorizonsAPI.SpawnObject(Locator._ringWorld.gameObject, Locator._ringWorld.GetRootSector(), path, position, rotation, 1, false);
 					 
-            path = "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ProjectionHouse_Zone1/Props_ProjectionHouse_Zone1/OtherComponentsGroup/Prefab_IP_Chair/";
-            position = new Vector3( -175.350372f, -133.245285f, -190.25087f );
-            rotation = new Vector3( 336.052f, 306.467468f, 270.643555f );
-			newHorizonsAPI.SpawnObject(Locator._ringWorld.gameObject, Locator._ringWorld.GetRootSector(), path, position, rotation, 1, false);
+   //         path = "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ProjectionHouse_Zone1/Props_ProjectionHouse_Zone1/OtherComponentsGroup/Prefab_IP_Chair/";
+   //         position = new Vector3( -175.350372f, -133.245285f, -190.25087f );
+   //         rotation = new Vector3( 336.052f, 306.467468f, 270.643555f );
+			//newHorizonsAPI.SpawnObject(Locator._ringWorld.gameObject, Locator._ringWorld.GetRootSector(), path, position, rotation, 1, false);
         }
         
         public void SpawnEndingProps()
