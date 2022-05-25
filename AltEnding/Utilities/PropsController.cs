@@ -83,9 +83,21 @@ namespace AltEnding.Utilities
                 {
                     position=new Vector3(17.30891f, -41.28941f, 187.1373f),
                     rotation=new Vector3(0, 90, 90),
-                    type="visionTorch",
+                    type=ProjectionInfo.SlideShowType.VisionTorchTarget,
                     slides=new SlideInfo[]
                     {
+                        new SlideInfo() { imagePath="images/test1.png" }, 
+                        new SlideInfo() { imagePath="images/test2.png" }, 
+                        new SlideInfo() { imagePath="images/test3.png" }, 
+                        new SlideInfo() { imagePath="images/test4.png" }, 
+                        new SlideInfo() { imagePath="images/test5.png" }, 
+                        new SlideInfo() { imagePath="images/test6.png" }, 
+                        new SlideInfo() { imagePath="images/test1.png" }, 
+                        new SlideInfo() { imagePath="images/test2.png" }, 
+                        new SlideInfo() { imagePath="images/test3.png" }, 
+                        new SlideInfo() { imagePath="images/test4.png" }, 
+                        new SlideInfo() { imagePath="images/test5.png" }, 
+                        new SlideInfo() { imagePath="images/test6.png" }, 
                         new SlideInfo() { imagePath="images/test1.png" }, 
                         new SlideInfo() { imagePath="images/test2.png" }, 
                         new SlideInfo() { imagePath="images/test3.png" }, 
@@ -134,19 +146,19 @@ namespace AltEnding.Utilities
 
                 Func<bool, NewHorizons.External.Modules.SignalModule.SignalInfo> makeSignalInfo = (insideCloak) => {
                     return  new NewHorizons.External.Modules.SignalModule.SignalInfo(){ 
-				        AudioClip = "OW Finally Set Free 072021_2 AP", //.wav",
-				        Frequency = "Traveler",
-				        DetectionRadius = 400,
-				        IdentificationRadius = 10,
-				        SourceRadius = 0.5f,
-				        Name = "Vision Torch",
-                        Position = new Vector3(-174.0865f, -134.4167f, -189.1588f),
-                        OnlyAudibleToScope = true,
-                        InsideCloak = insideCloak
+				        audioClip = "OW Finally Set Free 072021_2 AP", //.wav",
+				        frequency = "Traveler",
+				        detectionRadius = 400,
+				        identificationRadius = 10,
+				        sourceRadius = 0.5f,
+				        name = "Vision Torch",
+                        position = new Vector3(-174.0865f, -134.4167f, -189.1588f),
+                        onlyAudibleToScope = true,
+                        insideCloak = insideCloak
                     };
                 };
                 
-                SignalBuilder.Make(Locator._ringWorld.gameObject, interior, makeSignalInfo(false), AltEnding.Instance);;
+                SignalBuilder.Make(Locator._ringWorld.gameObject, interior, makeSignalInfo(false), AltEnding.Instance);
                 SignalBuilder.Make(Locator._ringWorld.gameObject, interior, makeSignalInfo(true), AltEnding.Instance);
 
                 
