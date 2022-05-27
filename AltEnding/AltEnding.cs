@@ -83,7 +83,7 @@ namespace AltEnding
                 this.blinkController = new BlinkController(FindObjectOfType<PlayerCameraEffectController>());
                 this.propsController = new PropsController();
 
-                
+
                 //// TESTING AppearingQuantumObject
                 //var campsite = UnityEngine.GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Props_StartingCamp/OtherComponentsGroup");
                 //List<AppearingQuantumObject> aqos = new List<AppearingQuantumObject>();
