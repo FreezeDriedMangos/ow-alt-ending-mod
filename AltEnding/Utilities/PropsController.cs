@@ -65,23 +65,23 @@ namespace AltEnding.Utilities
 
             // TESTING
 
-                // TODO: wrap all SpawnObject calls
-                string path = "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle";
-				Vector3 position = new Vector3( 18.06051f, -50.64357f, 183.141f); 
-				Vector3 rotation = new Vector3(311.8565f,  287.9388f,  254.72f);
+    //            // TODO: wrap all SpawnObject calls
+    //            string path = "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle";
+				//Vector3 position = new Vector3( 18.06051f, -50.64357f, 183.141f); 
+				//Vector3 rotation = new Vector3(311.8565f,  287.9388f,  254.72f);
                 
-                // newHorizonsAPI.SpawnObject(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), path, position, rotation, 1, false);
+    //            // newHorizonsAPI.SpawnObject(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), path, position, rotation, 1, false);
 
-                path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem";
-                ////Sector s = GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp").GetComponent<Sector>();
-                position = new Vector3( 25.06051f, -42.64357f, 184.141f); 
-                GameObject staff1 = newHorizonsAPI.SpawnObject(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), path, position, rotation, 1, false);
-                //VisionTorchItemConstructor.InitializeMemoryStaff(staff1);
-                //GameObject staff1 = DetailBuilder.MakeVisionTorch(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), position, rotation, 1, false);
+    //            path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem";
+    //            ////Sector s = GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp").GetComponent<Sector>();
+    //            position = new Vector3( 25.06051f, -42.64357f, 184.141f); 
+    //            GameObject staff1 = newHorizonsAPI.SpawnObject(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), path, position, rotation, 1, false);
+    //            //VisionTorchItemConstructor.InitializeMemoryStaff(staff1);
+    //            //GameObject staff1 = DetailBuilder.MakeVisionTorch(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), position, rotation, 1, false);
 
 
-                // spawn a trigger for the vision torch
-                position = new Vector3(17.30891f, -41.28941f, 187.1373f);
+    //            // spawn a trigger for the vision torch
+    //            position = new Vector3(17.30891f, -41.28941f, 187.1373f);
                 
 
                 //public class ProjectionInfo
@@ -113,27 +113,27 @@ namespace AltEnding.Utilities
                 //}
 
 
-                ProjectionInfo info = new ProjectionInfo()
-                {
-                    position=new Vector3(17.30891f, -41.28941f, 187.1373f),
-                    rotation=new Vector3(0, 90, 90),
-                    type=ProjectionInfo.SlideShowType.VisionTorchTarget,
-                    slides=new SlideInfo[]
-                    {
-                        new SlideInfo() { imagePath="images/test1.png" }, 
-                        new SlideInfo() { imagePath="images/test2.png" }, 
-                        new SlideInfo() { imagePath="images/test3.png" }, 
-                        new SlideInfo() { imagePath="images/test4.png" }, 
-                        new SlideInfo() { imagePath="images/test5.png" }, 
-                        new SlideInfo() { imagePath="images/test6.png" }, 
-                    }
-                };
+                //ProjectionInfo info = new ProjectionInfo()
+                //{
+                //    position=new Vector3(17.30891f, -41.28941f, 187.1373f),
+                //    rotation=new Vector3(0, 90, 90),
+                //    type=ProjectionInfo.SlideShowType.VisionTorchTarget,
+                //    slides=new SlideInfo[]
+                //    {
+                //        new SlideInfo() { imagePath="images/test1.png" }, 
+                //        new SlideInfo() { imagePath="images/test2.png" }, 
+                //        new SlideInfo() { imagePath="images/test3.png" }, 
+                //        new SlideInfo() { imagePath="images/test4.png" }, 
+                //        new SlideInfo() { imagePath="images/test5.png" }, 
+                //        new SlideInfo() { imagePath="images/test6.png" }, 
+                //    }
+                //};
 
-                ProjectionBuilder.MakeMindSlidesTarget(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), info, AltEnding.Instance);
+                //ProjectionBuilder.MakeMindSlidesTarget(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), info, AltEnding.Instance);
 
-                info.position = new Vector3(19.3818f, -41.0982f, 185.1091f);
-                info.rotation = new Vector3(0.8406f, 97.5621f, 106.7233f);
-                ProjectionBuilder.MakeStandingVisionTorch(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), info, AltEnding.Instance);
+                //info.position = new Vector3(19.3818f, -41.0982f, 185.1091f);
+                //info.rotation = new Vector3(0.8406f, 97.5621f, 106.7233f);
+                //ProjectionBuilder.MakeStandingVisionTorch(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), info, AltEnding.Instance);
                 
 
                 //g.tag = "SolanumVisionStaffTarget";
@@ -186,9 +186,12 @@ namespace AltEnding.Utilities
                 
             }
 
-            path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem";
-            position = new Vector3(-174.992325f,-134.213821f,-189.465027f);
-            rotation = new Vector3(2.85523677f,327.847168f,293.827332f);
+            // Orbital probe cannon rotation
+            // 0.7309 253.6321 258.8564
+
+            var path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem";
+            var position = new Vector3(-174.992325f,-134.213821f,-189.465027f);
+            var rotation = new Vector3(2.85523677f,327.847168f,293.827332f);
             GameObject staff = newHorizonsAPI.SpawnObject(Locator._ringWorld.gameObject, Locator._ringWorld.GetRootSector(), path, position, rotation, 1, false);
             //VisionTorchItemConstructor.InitializeMemoryStaff(staff);
 
