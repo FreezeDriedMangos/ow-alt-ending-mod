@@ -6,6 +6,7 @@ using HarmonyLib;
 using System.Reflection;
 using AltEnding.CustomProps;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 namespace AltEnding
 {
@@ -45,6 +46,18 @@ namespace AltEnding
         // BLINK ANIMATION:
         // https://discord.com/channels/929708786027999262/929787137895854100/973267691827769404
         // https://github.com/Vesper-Works/AutoResume/blob/master/ModTemplate/MainBehaviour.cs
+
+        private void Update()
+        {
+            if (Keyboard.current[Key.O].wasReleasedThisFrame)
+            {
+                TimeLoop.SetSecondsRemaining(30);
+            }
+            if (Keyboard.current[Key.L].wasReleasedThisFrame)
+            {
+                TimeLoop.SetSecondsRemaining(120);
+            }
+        }
 
         private void Start()
         {
