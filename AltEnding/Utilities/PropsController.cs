@@ -9,6 +9,8 @@ using AltEnding.CustomProps;
 using NewHorizons.Builder.Props;
 using static NewHorizons.External.Modules.PropModule;
 using NewHorizons.Utility;
+using NewHorizons.Handlers;
+using NewHorizons.External.Configs;
 
 namespace AltEnding.Utilities
 {
@@ -24,10 +26,42 @@ namespace AltEnding.Utilities
             }
         }
 
+        public void SpawnDysonSwarm()
+        { 
+            // look at AsteroidBeltBuilder.Make
+            // make a random with a set hardcoded seed
+            // set semiMajorAxis to baseDistance + satelliteDistance*i
+            // set inclination and longitudeofascending to random
+            // set eccentricity to 0
+
+            //PlanetConfig conf = new PlanetConfig()
+            //{
+            //    name="swarmsatellite",
+            //    Orbit = 
+            //        new OrbitModule()
+            //        {
+            //            semiMajorAxis= 1300,
+            //            inclination= 0,
+            //            primaryBody= "TIMBER_HEARTH",
+            //            isMoon= true,
+            //            isTidallyLocked= true,
+            //            longitudeOfAscendingNode= 0,
+            //            eccentricity= 0,
+            //            argumentOfPeriapsis= 0
+            //        },
+
+            //};
+            //PlanetCreationHandler.LoadBody(new NewHorizonsBody(conf, AltEnding.Instance, null));
+        }
+
         public void SpawnMainSystemProps(INewHorizons newHorizonsAPI)
         {
             AltEnding.Instance.ModHelper.Console.WriteLine("LOAIDING MAIN PROPS");
             UnityEngine.Debug.Log($"LOADING MAIN PROPSS");
+
+            
+            
+
 
             // TESTING
 
@@ -86,18 +120,6 @@ namespace AltEnding.Utilities
                     type=ProjectionInfo.SlideShowType.VisionTorchTarget,
                     slides=new SlideInfo[]
                     {
-                        new SlideInfo() { imagePath="images/test1.png" }, 
-                        new SlideInfo() { imagePath="images/test2.png" }, 
-                        new SlideInfo() { imagePath="images/test3.png" }, 
-                        new SlideInfo() { imagePath="images/test4.png" }, 
-                        new SlideInfo() { imagePath="images/test5.png" }, 
-                        new SlideInfo() { imagePath="images/test6.png" }, 
-                        new SlideInfo() { imagePath="images/test1.png" }, 
-                        new SlideInfo() { imagePath="images/test2.png" }, 
-                        new SlideInfo() { imagePath="images/test3.png" }, 
-                        new SlideInfo() { imagePath="images/test4.png" }, 
-                        new SlideInfo() { imagePath="images/test5.png" }, 
-                        new SlideInfo() { imagePath="images/test6.png" }, 
                         new SlideInfo() { imagePath="images/test1.png" }, 
                         new SlideInfo() { imagePath="images/test2.png" }, 
                         new SlideInfo() { imagePath="images/test3.png" }, 

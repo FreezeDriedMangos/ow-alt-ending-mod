@@ -17,21 +17,15 @@
 		"details" :
 		[
 			{ 
-				"assetBundle": "SwarmSatellite",
-				"path": "Assets/SwarmSatellite.prefab"
-				"position" : {"x": 12.0282, "y": -45.4429,"z": 185.0175},  
+				"assetBundle": "planets/swarmsatellite",
+				"path": "Assets/uncertainFutures/SwarmSatellite.prefab",
+				"position" : {"x": 12.2282, "y": -45.392,"z": 186.4862},   
 				"rotation" : {"x":5.426, "y": 99.0692,"z": 105.8894}
 			},
 			{ 
 				"path" : "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle", 
 				"position" : {"x": 18.06051, "y": -50.64357, "z": 183.141},  
 				"rotation" : {"x":311.8565, "y": 287.9388, "z": 254.72}
-			},
-			{
-				"assetBundle": "planets/bundle/test",
-				"path":"Assets/Prefabs/ArtificialGravity.prefab",
-				"position": {"x": 400,"y": 0,"z": 0},
-				"scale" : 50
 			},
 			{
 				"path": "GiantsDeep_Body/Sector_GD/Sector_GDInterior/Jellyfish_GDInterior/Jellyfish_Pivot (1)/Jellyfish_Body/Beast_GD_Jellyfish_v4",
