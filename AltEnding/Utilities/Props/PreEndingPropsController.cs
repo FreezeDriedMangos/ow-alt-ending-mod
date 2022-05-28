@@ -43,8 +43,7 @@ namespace AltEnding.Utilities.Props
             var path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem";
             var position = new Vector3(-174.992325f,-134.213821f,-189.465027f);
             var rotation = new Vector3(2.85523677f,327.847168f,293.827332f);
-            GameObject staff = DetailBuilder.MakeDetail(Locator._ringWorld.gameObject, Locator._ringWorld.GetRootSector(), path, position, rotation, 1, false);
-            
+            GameObject staff = DetailBuilder.MakeDetail(Locator._ringWorld.gameObject, Locator._ringWorld.GetRootSector(), path, position, rotation, 1, false); 
 
             //
             // Vision Target
@@ -101,17 +100,28 @@ namespace AltEnding.Utilities.Props
             };
 
             GameObject visionTarget = ProjectionBuilder.MakeMindSlidesTarget(Locator._quantumMoon.gameObject, Locator._quantumMoon._sector, info, AltEnding.Instance);
-            visionTarget.transform.parent = GameObject.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE").transform;
-
-            
+            //GameObject.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE").transform;
+            visionTarget.transform.parent = 
+                GameObject.Find("QuantumMoon_Body/Sector_QuantumMoon")
+                .GetComponentsInChildren<Transform>(true)
+                .Where(t => t.gameObject.name == "State_EYE")
+                .First(); // All because Find doesn't work on inactive game objects :/
+        
+        
             // make Solanum have the proper reaction after the vision ends
-            NomaiWallText responseText = GameObject.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/NomaiConversation/ResponseStone/ArcSocket/Arc_QM_SolanumConvo_Explain+Eye").GetComponent<NomaiWallText>();
+            //GameObject.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/NomaiConversation/ResponseStone/ArcSocket/Arc_QM_SolanumConvo_Explain+Eye").GetComponent<NomaiWallText>();
+            NomaiWallText responseText = 
+                Resources.FindObjectsOfTypeAll<NomaiWallText>()
+                .Where(text => text.gameObject.name == "Arc_QM_SolanumConvo_Explain+Eye")
+                .First();
 
-            var nomaiConversationManager = GameObject.FindObjectOfType<NomaiConversationManager>();
+            var nomaiConversationManager = Resources.FindObjectsOfTypeAll<NomaiConversationManager>().First(); //GameObject.FindObjectOfType<NomaiConversationManager>();
             var myConversationManager = nomaiConversationManager.gameObject.AddComponent<UncertainFutures_SolanumVisionResponse>();
             myConversationManager._nomaiConversationManager = nomaiConversationManager;
             myConversationManager._solanumAnimController = nomaiConversationManager._solanumAnimController;
             myConversationManager.solanumVisionResponse = responseText;
+
+            visionTarget.GetComponent<VisionTorchTarget>().onSlidesComplete = myConversationManager.OnVisionEnd;
         }
         
     }

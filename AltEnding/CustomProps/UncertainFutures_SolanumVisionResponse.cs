@@ -42,10 +42,13 @@ namespace AltEnding.CustomProps
 			}
         }
 
-        void OnVisionEnd()
+        public void OnVisionEnd()
         {
+            AltEnding.Instance.ModHelper.Console.WriteLine("PROJECTION COMPLETE");
             _nomaiConversationManager.enabled = false;
+            visionEnded = true;
             waitFrames = MAX_WAIT_FRAMES;
+            // TODO: disable the "press E to talk to Solanum"
         }
     }
     // hijacking Solanum's conversation controller:
