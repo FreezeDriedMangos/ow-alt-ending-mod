@@ -7,6 +7,7 @@ using System.Reflection;
 using AltEnding.CustomProps;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using AltEnding.Utilities.Props;
 
 namespace AltEnding
 {
@@ -25,7 +26,6 @@ namespace AltEnding
 
         private bool initialized = false;
         private BlinkController blinkController;
-        private PropsController propsController;
 
 
         public static INewHorizons newHorizonsAPI;
@@ -94,7 +94,6 @@ namespace AltEnding
                 if (initialized) return;
                 initialized = true;
                 this.blinkController = new BlinkController(FindObjectOfType<PlayerCameraEffectController>());
-                this.propsController = new PropsController();
 
 
                 //// TESTING AppearingQuantumObject
@@ -130,17 +129,16 @@ namespace AltEnding
             //TODO: on this event, check the system name and spawn any manual props (eg, the memory staves)
             ModHelper.Console.WriteLine("LOADED SYSTEM " + systemName);
 
+            PropsController.SpawnProps(systemName);
+
             if (systemName == "SolarSystem")
             {
                 ModHelper.Console.WriteLine("Loading main props!");
-                propsController.SpawnMainSystemProps(newHorizonsAPI);
             }
             else if (systemName == "clay.AltEnding.PostEndingSolarSystem")
             {
-                // TODO: teleport the player to the atp
+                // TODO: teleport the player to the atp, set spawn point to quantum moon south pole, enable quantum moon eye aspect
                 // TODO: delete atp lights
-
-                propsController.SpawnEndingProps();
             }
         }
     }
