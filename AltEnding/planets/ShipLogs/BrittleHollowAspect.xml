@@ -67,32 +67,15 @@
     </Entry>
 
 
-	
-	<!-- TODO: The below belong to the Eye Aspect of the Quantum Moon -->
-
     <Entry> <!-- Create another entry -->
-        <ID>EYE_ASPECT_QUANTUM_TUNNEL</ID> <!-- Make sure IDs are unique! -->
-        <Name>Quantum Tunnel</Name>
+        <ID>EYE_ASPECT_POEM_HINT</ID> <!-- Make sure IDs are unique! -->
+        <Name>Quantum Poem</Name>
+        
         <ExploreFact> <!-- An explore fact that belongs to this entry -->
-            <ID>EYE_ASPECT_QUANTUM_TUNNEL</ID> <!-- The ID of this fact -->
-            <Text>I found a dark tunnel on the eye aspect of the moon. When I entered it, I was turned around.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
-			<SourceID>EYE_ASPECT_WARP_TOWERS_HINT</SourceID>
-
-			<AltText> <!-- Text to display for this fact if another fact is known -->
-                <Text>I found a dark tunnel on the eye aspect of the moon. When I entered it after taking a picture of myself, I was able to exit the other side.</Text> <!-- The text to display -->
-                <Condition>EYE_ASPECT_WARP_TOWERS</Condition> <!-- The fact that needs to be known to make this text display -->
-            </AltText>
+            <ID>EYE_ASPECT_POEM_HINT_FACT</ID> <!-- The ID of this fact -->
+            <Text>I found a poem that told me that in order to reach my future, I need to follow the path of the one watched by the Eye.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
         </ExploreFact>
     </Entry>
 	
-    <Entry> <!-- Create another entry -->
-        <ID>EYE_ASPECT_WARP_TOWERS</ID> <!-- Make sure IDs are unique! -->
-        <Name>Eye Aspect Warp Towers Location</Name>
-        <ExploreFact> <!-- An explore fact that belongs to this entry -->
-            <ID>EYE_ASPECT_WARP_TOWERS_FACT</ID> <!-- The ID of this fact -->
-            <Text>I found warp towers on the other side of the quantum tunnel.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
-			<SourceID>EYE_ASPECT_QUANTUM_TUNNEL</SourceID>
-        </ExploreFact>
-    </Entry>
 
 </AstroObjectEntry>

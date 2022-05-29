@@ -1,0 +1,44 @@
+<!-- Example File -->
+<!-- All files must have "AstroObjectEntry" as their root element, the xmlns:xsi=... and xsi:noNamespaceSchemaLocation=... is optional but heavily encouraged to reduce errors -->
+<AstroObjectEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
+    <ID>THE_STRANGER</ID> <!-- The ID of the planet this xml file is for -->
+
+    <Entry> <!-- An Entry For This Planet -->
+        <ID>THE_STAFF</ID> <!-- The ID of this entry -->
+        <Name>The Staff</Name> <!-- The name to show for this entry both on the card and in map mode -->
+        <IgnoreMoreToExplore/> <!-- Don't show a "more to explore" icon -->
+
+        <!--       -->
+        <!-- FACTS -->
+        <!--       -->
+        <ExploreFact> <!-- An explore fact that belongs to this entry -->
+            <ID>THE_STAFF_DISCOVERY</ID> <!-- The ID of this fact -->
+            <Text>I discovered a functioning vision torch on board the Stranger.</Text>
+        </ExploreFact>
+        
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>THE_STAFF_HINT</ID> <!-- The ID of this fact -->
+            <Text>Can be used to overcome language barriers.</Text>
+        </RumorFact>
+
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>THE_STAFF_RECOVERY</ID> <!-- The ID of this fact -->
+            <Text>Solanum led a team to recover this same staff using my memories of where it was located.</Text>
+            <SourceID>NOMAI_STAFF_RECOVERY</SourceID>
+        </RumorFact>
+        
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>THE_STAFF_VISION_FOR_FELDSPAR</ID> <!-- The ID of this fact -->
+            <Text>Feldspar recieved a vision demonstrating the instability of the Swarm and the concequences of its possible collapse. The vision also proposed a solution - Feldspar would fly Pye to the Sun Station and dock manually.</Text>
+            <!-- VISION_FOR_FELDSPAR: <SourceID>THE_STAFF_VISION_FOR_FELDSPAR</SourceID> -->
+        </RumorFact>
+
+
+        <!--          -->
+        <!-- CHILDREN -->
+        <!--          -->
+
+    </Entry>
+
+</AstroObjectEntry>
