@@ -16,6 +16,8 @@ namespace AltEnding.Patches
         [HarmonyPatch(typeof(VesselWarpController), nameof(VesselWarpController.OnSlotActivated))]
 	    private static bool VesselWarpController_OnSlotActivated(VesselWarpController __instance, NomaiInterfaceSlot slot)
         {
+            // TODO: Clone ScreenPromptCanvas/ScreenPromptListBottomLeft/ScreenPrompt (the one with the two children)
+            // and replace the text with "Emergency Code" and the image with the emergency code image
 
             // TODO: display emergency coords in bottom left corner if the fact has been revealed
             if (slot == __instance._warpVesselSlot && __instance._hasPower)
