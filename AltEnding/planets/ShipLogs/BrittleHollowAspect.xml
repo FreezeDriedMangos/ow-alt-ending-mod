@@ -1,0 +1,98 @@
+<!-- Example File -->
+<!-- All files must have "AstroObjectEntry" as their root element, the xmlns:xsi=... and xsi:noNamespaceSchemaLocation=... is optional but heavily encouraged to reduce errors -->
+<AstroObjectEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
+    <ID>QUANTUM_MOON_BRITTLE_HOLLOW_ASPECT</ID> <!-- The ID of the planet this xml file is for -->
+
+    <Entry> <!-- An Entry For This Planet -->
+        <ID>THE_VISION</ID> <!-- The ID of this entry -->
+        <Name>The Vision</Name> <!-- The name to show for this entry both on the card and in map mode -->
+        <Curiosity>THE_VISION</Curiosity> <!-- The curiosity this entry belongs to (optional) in this case, it belongs to itself -->
+        <IsCuriosity/> <!-- Marks this entry as a curiosity, makes it bigger in rumor mode and allows custom colors -->
+        <!-- <IgnoreMoreToExplore/> Don't show a "more to explore" icon -->
+        <AltPhotoCondition>EXAMPLE_EXPLORE_FACT</AltPhotoCondition> <!-- Show an alternate picture if a fact is known -->
+
+        <RumorFact> <!-- A rumor fact that belongs to this entry -->
+            <ID>THE_VISION_HINT</ID> <!-- The ID of this fact -->
+            <RumorName>Watched by the Eye</RumorName> <!-- The name of the rumor this fact relates to -->
+            <Text>Solanum describes that she feels as though she is being observed by the eye.</Text> <!-- The Text to display for this fact -->
+        </RumorFact>
+
+        <RumorFact> <!-- A rumor fact that belongs to this entry -->
+            <ID>THE_VISION_EXPLANATION</ID> <!-- The ID of this fact -->
+            <RumorName>The Vision</RumorName> <!-- The name of the rumor this fact relates to -->
+            <Text>Solanum explains that she recieved of all of my memories as "a vision" while standing beneath the reflection of the Eye while on the quantum moon.</Text> <!-- The Text to display for this fact -->
+        </RumorFact>
+
+        <RumorFact> <!-- A rumor fact that belongs to this entry -->
+            <ID>THE_VISION_DISCUSSION</ID> <!-- The ID of this fact -->
+            <RumorName>The Vision Discussion</RumorName> <!-- The name of the rumor this fact relates to -->
+            <Text>Solanum told the other Nomai about the vision she recieved while on the Quantum Moon. Some believe her, while others seem to doubt her vision's contents as factually accurate.</Text> <!-- The Text to display for this fact -->
+        </RumorFact>
+    </Entry>
+
+    <Entry> <!-- Create another entry -->
+        <ID>THE_COMET</ID> <!-- Make sure IDs are unique! -->
+        <Name>The Comet</Name>
+        <Curiosity>THE_VISION</Curiosity> <!-- Set this entry's curiosity to the other one we defined -->
+        <!-- <IgnoreMoreToExploreCondition>EXAMPLE_EXPLORE_FACT_2</IgnoreMoreToExploreCondition> Don't show a more to explore icon if a fact is known -->
+
+        <!-- Make some facts for this second entry -->
+        <RumorFact>
+            <ID>THE_COMET_WARNING</ID>
+            <SourceID>THE_VISION</SourceID> <!-- Set SourceID to connect a line from one entry to another -->
+            <RumorName>Warning of the Comet</RumorName>
+            <Text>The first thing Solanum shared from her vision was the impending disaster, triggered by the soon-to-be arriving comet. Some Nomai were skeptical, but still kept their eye out for the potential discovery.</Text>
+        </RumorFact>
+		
+        <RumorFact>
+            <ID>THE_COMET_SIGHTING</ID>
+            <SourceID>THE_VISION</SourceID> <!-- Set SourceID to connect a line from one entry to another -->
+            <RumorName>Discovery of the Comet</RumorName>
+            <Text>(TODO: nomai name) observed the comet described to them by Solanum. Strong energy readings quickly quieted most skepticsm about the validity of the vision.</Text>
+        </RumorFact>
+    </Entry>
+
+	
+    <Entry> <!-- Create another entry -->
+        <ID>EYE_ASPECT_WARP_TOWERS_HINT</ID> <!-- Make sure IDs are unique! -->
+        <Name>Dark Quantum Tunnel</Name>
+        <!-- <Curiosity>THE_VISION</Curiosity> Set this entry's curiosity to the other one we defined -->
+        <!-- <IgnoreMoreToExploreCondition>EXAMPLE_EXPLORE_FACT_2</IgnoreMoreToExploreCondition> Don't show a more to explore icon if a fact is known -->
+        
+        <ExploreFact> <!-- An explore fact that belongs to this entry -->
+            <ID>QUANTUM_TUNNEL_TUTORIAL</ID> <!-- The ID of this fact -->
+            <Text>I found a dark tunnel that, when I entered, I was turned around and walked back out the way I came in. I took a picture of myself, and I was able to exit the tunnel's other side. <![CDATA[<color=orange>This is orange</color>]]></Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+        </ExploreFact>
+    </Entry>
+
+
+	
+	<!-- TODO: The below belong to the Eye Aspect of the Quantum Moon -->
+
+    <Entry> <!-- Create another entry -->
+        <ID>EYE_ASPECT_QUANTUM_TUNNEL</ID> <!-- Make sure IDs are unique! -->
+        <Name>Quantum Tunnel</Name>
+        <ExploreFact> <!-- An explore fact that belongs to this entry -->
+            <ID>EYE_ASPECT_QUANTUM_TUNNEL</ID> <!-- The ID of this fact -->
+            <Text>I found a dark tunnel on the eye aspect of the moon. When I entered it, I was turned around.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>EYE_ASPECT_WARP_TOWERS_HINT</SourceID>
+
+			<AltText> <!-- Text to display for this fact if another fact is known -->
+                <Text>I found a dark tunnel on the eye aspect of the moon. When I entered it after taking a picture of myself, I was able to exit the other side.</Text> <!-- The text to display -->
+                <Condition>EYE_ASPECT_WARP_TOWERS</Condition> <!-- The fact that needs to be known to make this text display -->
+            </AltText>
+        </ExploreFact>
+    </Entry>
+	
+    <Entry> <!-- Create another entry -->
+        <ID>EYE_ASPECT_WARP_TOWERS</ID> <!-- Make sure IDs are unique! -->
+        <Name>Eye Aspect Warp Towers Location</Name>
+        <ExploreFact> <!-- An explore fact that belongs to this entry -->
+            <ID>EYE_ASPECT_WARP_TOWERS_FACT</ID> <!-- The ID of this fact -->
+            <Text>I found warp towers on the other side of the quantum tunnel.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>EYE_ASPECT_QUANTUM_TUNNEL</SourceID>
+        </ExploreFact>
+    </Entry>
+
+</AstroObjectEntry>
