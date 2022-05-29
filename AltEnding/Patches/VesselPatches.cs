@@ -17,6 +17,7 @@ namespace AltEnding.Patches
 	    private static bool VesselWarpController_OnSlotActivated(VesselWarpController __instance, NomaiInterfaceSlot slot)
         {
 
+            // TODO: display emergency coords in bottom left corner if the fact has been revealed
             if (slot == __instance._warpVesselSlot && __instance._hasPower)
             {
 
