@@ -8,6 +8,9 @@
 		"surfaceGravity" : 2.5,
 		"hasMapMarker" : true
 	},
+	"Star": {
+		"size": 303
+	},
 	"Orbit" : 
 	{
 		"primaryBody": "Timber Hearth",
