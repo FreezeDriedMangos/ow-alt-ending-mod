@@ -27,6 +27,7 @@ namespace AltEnding.CustomProps
 
         void Update()
         {
+            // TODO: if game paused, return
             if (!on) return;
             if (autoOffTime > 0 && frameTimer >= autoOffTime) SetLightOn(false);
 
