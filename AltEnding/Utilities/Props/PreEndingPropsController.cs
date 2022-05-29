@@ -12,12 +12,16 @@ namespace AltEnding.Utilities.Props
 {
     public static class PreEndingPropsController
     {
+        public static VesselWarningLightController vesselWarningLightController;
+
         public static void DEBUG_SpawnVisionTorchAtCamp()
         {
 			Vector3 _rotation = new Vector3(311.8565f,  287.9388f,  254.72f);
             var _path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem";
             var p = new Vector3( 25.06051f, -42.64357f, 184.141f); 
             GameObject staff1 = DetailBuilder.MakeDetail(Locator._timberHearth.gameObject, Locator._timberHearth.GetRootSector(), _path, p, _rotation, 1, false);
+            
+            Light l = staff1.AddComponent<Light>();
         }
 
         public static void SpawnProps()
@@ -49,6 +53,7 @@ namespace AltEnding.Utilities.Props
             // Vision Target
             //
             SpawnSolanumProps();
+
         }
 
         private static void SpawnStaffSignals()

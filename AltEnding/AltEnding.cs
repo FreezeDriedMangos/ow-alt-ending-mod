@@ -49,14 +49,14 @@ namespace AltEnding
 
         private void Update()
         {
-            if (Keyboard.current[Key.O].wasReleasedThisFrame)
-            {
-                TimeLoop.SetSecondsRemaining(30);
-            }
-            if (Keyboard.current[Key.L].wasReleasedThisFrame)
-            {
-                TimeLoop.SetSecondsRemaining(120);
-            }
+            //if (Keyboard.current[Key.O].wasReleasedThisFrame)
+            //{
+            //    TimeLoop.SetSecondsRemaining(30);
+            //}
+            //if (Keyboard.current[Key.L].wasReleasedThisFrame)
+            //{
+            //    TimeLoop.SetSecondsRemaining(120);
+            //}
         }
 
         private void Start()

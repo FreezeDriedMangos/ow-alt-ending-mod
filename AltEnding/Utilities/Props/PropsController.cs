@@ -15,14 +15,37 @@ using NewHorizons.External.Modules;
 
 namespace AltEnding.Utilities.Props
 {
-    class PropsController
+    public class PropsController
     {
+        public static VesselWarningLightController vesselWarningLightController;
+
         public static void SpawnProps(string system)
         {
             if (system == "SolarSystem")
             {
                 PreEndingPropsController.SpawnProps();
             }
+
+            SpawnUniversalProps();
+        }
+
+        public static void SpawnUniversalProps()
+        {
+            //
+            // Vessel Warning Light  
+            //
+
+            var vesselSectorGameObject = GameObject.Find("DB_VesselDimension_Body");
+            var lightObject = new GameObject("Warning Light");
+            lightObject.transform.parent = vesselSectorGameObject.transform;
+            lightObject.transform.localPosition = new Vector3(191.4552f, 45.0478f, -15.27039f);
+            lightObject.name = "Warning Light";
+            var light = lightObject.AddComponent<Light>();
+            light.color = Color.red;
+            light.range = 100;
+            light.intensity = 0;
+            vesselWarningLightController = lightObject.AddComponent<VesselWarningLightController>();
+            //vesselWarningLightController.SetLightOn(true);
         }
 
         public void SpawnDysonSwarm()

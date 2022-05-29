@@ -1,0 +1,19 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name" : "Test Sun Moon",
+	"Base" : 
+	{
+		"groundSize" : 300,
+		"surfaceSize" : 303,
+		"surfaceGravity" : 2.5,
+		"hasMapMarker" : true
+	},
+	"Orbit" : 
+	{
+		"primaryBody": "Timber Hearth",
+		"semiMajorAxis": 1060,
+		"inclination": 5,
+		"longitudeOfAscendingNode": 90,
+		"trueAnomaly": 240
+	}
+}
