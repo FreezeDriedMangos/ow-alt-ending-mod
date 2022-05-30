@@ -3,7 +3,7 @@
 	"name" : "Test Sun Moon",
 	"Base" : 
 	{
-		"groundSize" : 300,
+		"groundSize" : 0,
 		"surfaceSize" : 303,
 		"surfaceGravity" : 2.5,
 		"hasMapMarker" : true

@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name" : "Test Sun Moon Satellite",
+	"Base" : 
+	{
+		"groundSize" : 0,
+		"surfaceSize" : 10,
+		"surfaceGravity" : 0,
+		"hasMapMarker" : true
+	},
+	"Orbit" : 
+	{
+		"primaryBody": "Test Sun Moon",
+		"semiMajorAxis": 330,
+		"inclination": 5,
+		"longitudeOfAscendingNode": 90,
+		"trueAnomaly": 240,
+		"isTidallyLocked": true
+	},
+	"Props" : 
+	{
+		"details" :
+		[
+			{ 
+				"assetBundle": "planets/sunstuff",
+				"path": "Assets/Quantum Moon Sun Station.prefab",
+				"position" : {"x": 0, "y": -10.5164,"z": 35.3019},
+				"rotation" : {"x": 0, "y": 0, "z": 270}
+			}
+		]
+	}
+}
