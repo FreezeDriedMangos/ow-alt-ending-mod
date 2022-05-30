@@ -57,6 +57,13 @@ namespace AltEnding
             //{
             //    TimeLoop.SetSecondsRemaining(120);
             //}
+
+            if (Keyboard.current[Key.O].wasReleasedThisFrame)
+            {
+                //_spawner.DebugWarp(_spawner.GetSpawnPoint(SpawnLocation.Comet));
+                var spawner = UnityEngine.GameObject.Find("Player_Body").GetComponent<PlayerSpawner>();
+                spawner.DebugWarp(InEndingPropsController.stationSpawnPoint);        
+            }
         }
 
         private void Start()

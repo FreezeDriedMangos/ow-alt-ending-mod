@@ -21,6 +21,9 @@ namespace AltEnding.Utilities.Props
 
         public static void SpawnProps(string system)
         {
+            InEndingPropsController.SpawanProps(); // DEBUG LINE
+
+
             if (system == "SolarSystem")
             {
                 PreEndingPropsController.SpawnProps();

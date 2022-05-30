@@ -5,7 +5,7 @@
 	{
 		"groundSize" : 0,
 		"surfaceSize" : 10,
-		"surfaceGravity" : 0,
+		"surfaceGravity" : 2.5,
 		"hasMapMarker" : true
 	},
 	"Orbit" : 
@@ -24,8 +24,11 @@
 			{ 
 				"assetBundle": "planets/sunstuff",
 				"path": "Assets/Quantum Moon Sun Station.prefab",
-				"position" : {"x": 0, "y": -10.5164,"z": 35.3019},
-				"rotation" : {"x": 0, "y": 0, "z": 270}
+				"position" : {"x": 0, "y": -10.5164,"z": 35.3019}
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/Prefab_HEA_Campfire",
+				"position": {"x": -15.1791, "y": 20.8606, "z": -0.3655}
 			}
 		]
 	}

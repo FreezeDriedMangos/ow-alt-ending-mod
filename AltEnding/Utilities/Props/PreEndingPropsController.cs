@@ -33,6 +33,9 @@ namespace AltEnding.Utilities.Props
     // TimberHearth_Body/Sector_TH/Prefab_HEA_Campfire(Clone)/AttachPoint.InteractReciever._playerCam 
     // it should be set to Player_Body/PlayerCamera.OWCamera
 
+
+
+
     public static class PreEndingPropsController
     {
         public static VesselWarningLightController vesselWarningLightController;
