@@ -1,0 +1,127 @@
+<!-- Example File -->
+<!-- All files must have "AstroObjectEntry" as their root element, the xmlns:xsi=... and xsi:noNamespaceSchemaLocation=... is optional but heavily encouraged to reduce errors -->
+<AstroObjectEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
+    <ID>QUANTUM_MOON_GIANTS_DEEP_ASPECT</ID> <!-- The ID of the planet this xml file is for -->
+
+    <Entry> <!-- An Entry For This Planet -->
+        <ID>THE_BUNKER</ID> <!-- The ID of this entry -->
+        <Name>The Bunker</Name> <!-- The name to show for this entry both on the card and in map mode -->
+        <Curiosity>THE_BUNKER</Curiosity> <!-- The curiosity this entry belongs to (optional) in this case, it belongs to itself -->
+        <IsCuriosity/> <!-- Marks this entry as a curiosity, makes it bigger in rumor mode and allows custom colors -->
+        <!-- <IgnoreMoreToExplore/> Don't show a "more to explore" icon -->
+
+        <!--       -->
+        <!-- FACTS -->
+        <!--       -->
+        <ExploreFact> <!-- An explore fact that belongs to this entry -->
+            <ID>THE_BUNKER_DISCOVER</ID> <!-- The ID of this fact -->
+            <Text>I found a Nomai submersible bunker. It looks like it's been under water for a very long time. It shows signs that it was inhabited by many individuals at the same time.</Text>
+        </ExploreFact>
+
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>THE_BUNKER_PLANS</ID> <!-- The ID of this fact -->
+            <Text>After learning of the coming disaster, the Nomai discussed what to do in preparation. (TODO: Nomai name) suggested they build a bunker deep in Giant's Deep.</Text>
+            <SourceID>THE_COMET</SourceID>
+        </RumorFact>
+
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>THE_BUNKER_CONSTRUCTION</ID> <!-- The ID of this fact -->
+            <Text>(TODO: Nomai name, name, and name) discussed how an underwater bunker might be built. (TODO: Nomai name, name) began construction, with assistance from (TODO: name and name).</Text>
+            <SourceID>THE_SWARM</SourceID>
+        </RumorFact>
+
+
+
+
+        <!--          -->
+        <!-- CHILDREN -->
+        <!--          -->
+        
+        <!-- TODO: should this card have children? -->
+
+    </Entry>
+
+
+
+
+    <!-- These facts form their own separate chain -->
+
+    <Entry> <!-- Create another entry -->
+        <ID>MAKING_PLANS</ID> <!-- Make sure IDs are unique! -->
+        <Name>Making Plans</Name>
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>MAKING_PLANS_FACT</ID> <!-- The ID of this fact -->
+            <Text>The Nomai discussed what to do after they leave the bunker. Solanum shares that the sun station fails and (TODO: name and name) discuss how they should move forward.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>THE_BUNKER</SourceID>
+        </RumorFact>
+    </Entry>
+
+    <Entry>
+        <ID>GHOST_MATTER_DISCOVERY</ID> <!-- Make sure IDs are unique! -->
+        <Name>Ghost Matter Discovery</Name>
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>GHOST_MATTER_DISCOVERY_FACT</ID> <!-- The ID of this fact -->
+            <Text>After the comet has exploded, the Nomai find that ghost matter blankets the whole system, rendering it uninhabitable.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>THE_BUNKER</SourceID>
+        </RumorFact>
+
+        <!-- (which Pye reprimands Solanum for not sharing this info, and Solanum takes away from this that she didn't think hard enough about the information she has, and resolves to try harder (but all of that is not in the entry))  -->
+    </Entry>
+
+	<Entry> <!-- Create another entry -->
+        <ID>REGROUPING</ID> <!-- Make sure IDs are unique! -->
+        <Name>Regrouping</Name>
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>REGROUPING_FACT</ID> <!-- The ID of this fact -->
+            <Text>The Nomai discuss changing their plans. (TODO: name) suggests leaving the system, while (TODO: name) says that they cannot give up on the search for the Eye. (TODO: name) says that, now that they know what Solanum has told them, they have a responsibility to stay.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>MAKING_PLANS</SourceID>
+            <SourceID>GHOST_MATTER_DISCOVERY</SourceID>
+
+			<AltText> <!-- Text to display for this fact if another fact is known -->
+                <Text>The Nomai discuss changing their plans. (TODO: name) suggests leaving the system, while (TODO: name) says that they cannot give up on the search for the Eye. (TODO: name) says that, now that they know that we (the Hearthians) will evolve just before the supernova, they have a responsibility to stay.</Text>
+                <Condition>REGROUPING_HEARTHIAN_EVOLUTION</Condition> <!-- The fact that needs to be known to make this text display -->
+            </AltText>
+        </RumorFact>
+
+        
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>REGROUPING_HEARTHIAN_EVOLUTION</ID> <!-- The ID of this fact -->
+            <Text>Solanum shares with the other Nomai that we (the Hearthians) will eventually evolve in this system, but will do so just before our sun goes supernova.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+        </RumorFact>
+        
+        
+        
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>REGROUPING_QUANTUM_MOON_PLAN</ID> <!-- The ID of this fact -->
+            <Text>In an attempt to make up for her previous mistakes, Solanum thinks on her vision and realizes that the sixth location of the quanum moon is safe. She shares this information with the other Nomai.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>MAKING_PLANS</SourceID>
+            <SourceID>GHOST_MATTER_DISCOVERY</SourceID>
+        </RumorFact>
+        
+        
+    </Entry>
+
+    <Entry>
+        <ID>STAFF_RECOVERY</ID> <!-- Make sure IDs are unique! -->
+        <Name>Staff Recovery</Name>
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>STAFF_RECOVERY_FACT</ID> <!-- The ID of this fact -->
+            <Text>Continuing to attempt to take responsibility, Solanum leads a group of Nomai to the Stranger in order to recover the same vision torch I used to ask her for help, thinking it may become useful.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>REGROUPING</SourceID>
+        </RumorFact>
+    </Entry>
+
+    
+    <Entry>
+        <ID>STAFF_RECOVERY</ID> <!-- Make sure IDs are unique! -->
+        <Name>Staff Recovery</Name>
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>STAFF_RECOVERY_FACT</ID> <!-- The ID of this fact -->
+            <Text>Continuing to attempt to take responsibility, Solanum leads a group of Nomai to the Stranger in order to recover the same vision torch I used to ask her for help, thinking it may become useful.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>REGROUPING</SourceID>
+        </RumorFact>
+    </Entry>
+    
+
+</AstroObjectEntry>
