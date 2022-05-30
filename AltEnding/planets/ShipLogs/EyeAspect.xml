@@ -14,14 +14,25 @@
         <!--       -->
         <!-- FACTS -->
         <!--       -->
+        <ExploreFact> <!-- An explore fact that belongs to this entry -->
+            <ID>REFUGEE_CAMP_DISCOVERY</ID> <!-- The ID of this fact -->
+            <Text>I discovered what seems to be a Nomaian refugee camp. Only parts of it appeared at a time during the quantum storm.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+        </ExploreFact>
+
         <RumorFact> <!-- An explore fact that belongs to this entry -->
             <ID>REFUGEE_CAMP_LEADERSHIP_1</ID> <!-- The ID of this fact -->
             <Text>Solanum advocated for bringing trees and other non-necessary supplies to help the other Nomai, especially children, feel more comfortable and less afraid.</Text>
         </RumorFact>
 
         <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>REFUGEE_CAMP_SWARM</ID> <!-- The ID of this fact -->
+            <Text>After the Swarm was completed, Solanum and the other Nomai arrived at the refugee camp.</Text>
+            <SourceID>THE_SWARM</SourceID>
+        </RumorFact>
+
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
             <ID>REFUGEE_CAMP_LEADERSHIP_2</ID> <!-- The ID of this fact -->
-            <Text>Solanum made a final headcount and confirmed that every Nomai of their clan was present at the camp..</Text>
+            <Text>Solanum made a final headcount and confirmed that every Nomai of their clan was present at the camp.</Text>
         </RumorFact>
 
 
