@@ -6,6 +6,9 @@
 
     <Entry> <!-- Create another entry -->
         <ID>A_NEW_FUTURE</ID> <!-- Make sure IDs are unique! -->
+        <Curiosity>A_NEW_FUTURE</Curiosity> 
+        <IsCuriosity/>
+        
         <Name>A New Future</Name>
         <UncertainCondition>REFUGEE_CAMP_TIME_SKIP</UncertainCondition> <!-- This card will be glitchy until this fact is revealed -->
 

@@ -44,6 +44,8 @@
         <Entry> <!-- Create another entry -->
             <ID>REFUGEE_CAMP_TIME_SKIP</ID> <!-- Make sure IDs are unique! -->
             <Name>Time Skip</Name>
+            <Curiosity>REFUGEE_CAMP</Curiosity>
+
             <RumorFact> <!-- An explore fact that belongs to this entry -->
                 <ID>REFUGEE_CAMP_TIME_SKIP_FACT</ID> <!-- The ID of this fact -->
                 <Text>Although it appeared to the Nomai that they had only been at the camp for a short time, when they began to depart the quantum moon, they discovered they had been camped for over 300,000 years.</Text>
@@ -53,6 +55,7 @@
         <Entry> <!-- Create another entry -->
             <ID>REFUGEE_CAMP_QUANTUM_SIGHTING</ID> <!-- Make sure IDs are unique! -->
             <Name>Quantum Sighting</Name>
+            <Curiosity>REFUGEE_CAMP</Curiosity>
 
             <ExploreFact> <!-- An explore fact that belongs to this entry -->
                 <ID>REFUGEE_CAMP_QUANTUM_SIGHTING_HATCHLING</ID> <!-- The ID of this fact -->
