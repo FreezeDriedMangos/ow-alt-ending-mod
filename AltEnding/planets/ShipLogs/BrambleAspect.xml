@@ -1,0 +1,56 @@
+<!-- Example File -->
+<!-- All files must have "AstroObjectEntry" as their root element, the xmlns:xsi=... and xsi:noNamespaceSchemaLocation=... is optional but heavily encouraged to reduce errors -->
+<AstroObjectEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
+    <ID>QUANTUM_MOON_DARK_BRAMBLE_ASPECT</ID> <!-- The ID of the planet this xml file is for -->
+
+    <Entry> <!-- Create another entry -->
+        <ID>SWARM_MISALIGNMENT</ID> <!-- Make sure IDs are unique! -->
+        <Name>Swarm Misalignment</Name>
+        <Curiosity>A_NEW_FUTURE</Curiosity>
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>SWARM_MISALIGNMENT_FACT</ID> <!-- The ID of this fact -->
+            <Text>The Nomai realized that the Swarm was out of alignment and in danger of total collapse. They were very upset over this.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+
+			<SourceID>THE_SWARM</SourceID>
+            
+			<AltText> <!-- Text to display for this fact if another fact is known -->
+                <Text>Upon arriving in our present time, the Nomai realized that the Swarm was out of alignment and in danger of total collapse. They were very upset over this.</Text> <!-- The text to display -->
+                <Condition>REFUGEE_CAMP_TIME_SKIP</Condition> <!-- The fact that needs to be known to make this text display -->
+                <SourceID>A_NEW_FUTURE</SourceID>
+            </AltText>
+        </RumorFact>
+
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>SWARM_MISALIGNMENT_FIX</ID> <!-- The ID of this fact -->
+            <Text>In order to fix the Swarm, a Nomai involved in its construction needed to use a console located onboard the Sun Station.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+        </RumorFact>
+
+        <Entry>
+            <ID>SWARM_MISALIGNMENT_TELEPORTER_FAILURE</ID>
+            <Name>Teleporter Failure</Name>
+            <Curiosity>A_NEW_FUTURE</Curiosity>
+            <RumorFact> <!-- An explore fact that belongs to this entry -->
+                <ID>SWARM_MISALIGNMENT_TELEPORTER_FAILURE_FACT</ID> <!-- The ID of this fact -->
+                <Text>The Nomai were distraught to find that the sun station warp pad was buried under meters of sand, and they wouldn't have time to excavate it.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+            </RumorFact>
+            
+            <RumorFact> <!-- An explore fact that belongs to this entry -->
+                <ID>SWARM_MISALIGNMENT_TELEPORTER_FAILURE_PLAN</ID> <!-- The ID of this fact -->
+                <Text>Solanum said she had a plan, and though it was very risky, Pye volunteered for the mission. Solanum said it involved "finding a traveller".</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+            </RumorFact>
+        </Entry>
+    </Entry>
+
+    
+    <Entry>
+        <ID>VISION_FOR_FELDSPAR</ID>
+        <Curiosity>A_NEW_FUTURE</Curiosity>
+        <Name>Vision for Feldspar</Name>
+        <ExploreFact> <!-- An explore fact that belongs to this entry -->
+            <ID>VISION_FOR_FELDSPAR_FACT</ID> <!-- The ID of this fact -->
+            <Text>I watched a vision meant for Feldspar. It showed the Swarm collapsing, allowing the sun to explode. It then proposed a solution: Feldspar flying two Nomai to the Sun Station and manually docking.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+        </ExploreFact>
+    </Entry>
+
+</AstroObjectEntry>
