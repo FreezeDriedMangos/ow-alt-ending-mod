@@ -1,0 +1,17 @@
+<!-- Example File -->
+<!-- All files must have "AstroObjectEntry" as their root element, the xmlns:xsi=... and xsi:noNamespaceSchemaLocation=... is optional but heavily encouraged to reduce errors -->
+<AstroObjectEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
+    <ID>QUANTUM_MOON_SUN_ASPECT</ID> <!-- The ID of the planet this xml file is for -->
+
+    <Entry> <!-- Create another entry -->
+        <ID>FELDSPARS_FLIGHT</ID> <!-- Make sure IDs are unique! -->
+        <Name>Feldspar's Flight</Name>
+        <ExploreFact> <!-- An explore fact that belongs to this entry -->
+            <ID>FELDSPARS_FLIGHT_VISION</ID> <!-- The ID of this fact -->
+            <Text>I recieved a vision of Feldspar's flight to the sun station. They passed by many small satellites, and had two Nomai on board.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>VISION_FOR_FELDSPAR</SourceID>
+        </ExploreFact>
+    </Entry>
+
+</AstroObjectEntry>
