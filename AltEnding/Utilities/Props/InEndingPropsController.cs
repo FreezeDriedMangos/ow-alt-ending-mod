@@ -15,10 +15,25 @@ namespace AltEnding.Utilities.Props
     {
         public static SpawnPoint stationSpawnPoint;
 
+        // sun aspect clouds
+        // QuantumMoon_Body/Clouds_QM
+
         public static void SpawanProps()
         {
             CreateSunAspectSpawnPoint();
 
+            /*
+                 "Atmosphere": {
+		            "size" : 400,
+		            "clouds": {
+			            "innerCloudRadius": 330,
+			            "outerCloudRadius": 400,
+
+			            "texturePath": "images/Clouds_QM_Top_d.png",
+			            "unlit": true
+		            }
+	            },
+             */
         
             // sun station props
             /* TestSunMoonSatellite_Body/Sector/Prefab_HEA_Campfire(Clone)
@@ -28,8 +43,13 @@ namespace AltEnding.Utilities.Props
              * 
              */
 
-            var station = AstroObjectLocator.GetAstroObject("Test Sun Moon Satellite");
+            var station = AstroObjectLocator.GetAstroObject("QM Sun Station");
             SpawnVisionTorchAndChair(station.gameObject, station._rootSector, new Vector3(-15.4589f, 20.7242f, -7.8966f), new Vector3(0f, 9.2435f, 0f), null);
+
+        
+            //GameObject clouds = GameObject.Instantiate(GameObject.Find("QuantumMoon_Body/Clouds_QM"));
+            //clouds.transform.parent = AstroObjectLocator.GetAstroObject("QM Sun Aspect").transform;
+            //clouds.transform.localPosition = Vector3.zero;
         }
 
         public static void FixStationGlass()
@@ -45,7 +65,7 @@ namespace AltEnding.Utilities.Props
         public static void CreateSunAspectSpawnPoint()
         {
             // -16.7344 20.7243 -7.5293
-            var station = AstroObjectLocator.GetAstroObject("Test Sun Moon Satellite");
+            var station = AstroObjectLocator.GetAstroObject("QM Sun Station");
             SpawnModule s = new SpawnModule()
             {
                 playerSpawnPoint = new Vector3(-16.7344f, 20.7243f, -7.5293f)

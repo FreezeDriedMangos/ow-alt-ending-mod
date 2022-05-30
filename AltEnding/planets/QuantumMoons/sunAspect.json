@@ -11,12 +11,6 @@
 	"Star": {
 		"size": 303
 	},
-	"Atmosphere": {
-		"clouds": {
-			"innerCloudRadius": 330,
-			"outerCloudRadius": 330
-		}
-	},
 	"Orbit" : 
 	{
 		"primaryBody": "Timber Hearth",
@@ -28,15 +22,6 @@
 
 
 	"ShipLog": {
-		"xmlFile": "planets/ShipLogs/SunAspect.xml",
-		"entryPositions": [
-		  {
-			"id": "EXAMPLE_ENTRY",
-			"position": {
-			  "x": 100,
-			  "y": 200
-			}
-		  }
-		]
+		"xmlFile": "planets/ShipLogs/SunAspect.xml"
 	}
 }
