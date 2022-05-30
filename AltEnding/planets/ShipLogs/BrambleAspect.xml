@@ -35,6 +35,12 @@
                 <Text>The Nomai were distraught to find that the sun station warp pad was buried under meters of sand, and they wouldn't have time to excavate it.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
             </RumorFact>
             
+
+            <!-- 
+                Solanum: We have one more option, though I do not know if I can ask it. It carries great risk.  
+                Pye: We must do whatever it takes to save the others. I am with you on whatever it is you ask, Solanum. 
+                Solanum: ... My gratitude Pye. This means more to me than you know. Come. We have a traveller to find.
+            -->
             <RumorFact> <!-- An explore fact that belongs to this entry -->
                 <ID>SWARM_MISALIGNMENT_TELEPORTER_FAILURE_PLAN</ID> <!-- The ID of this fact -->
                 <Text>Solanum said she had a plan, and though it was very risky, Pye volunteered for the mission. Solanum said it involved "finding a traveller".</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->

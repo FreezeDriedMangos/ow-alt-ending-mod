@@ -16,7 +16,8 @@
 				"rotation" : {"x":5.426, "y": 99.0692,"z": 105.8894}
 			},
 			{ 
-				"path" : "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_AlarmTotem", 
+				"assetBundle": "planets/sunstuff",
+				"path": "Assets/SwarmSatellite.prefab",
 				"position" : {"x": 18.06051, "y": -50.64357, "z": 183.141},  
 				"rotation" : {"x":311.8565, "y": 287.9388, "z": 254.72}
 			},

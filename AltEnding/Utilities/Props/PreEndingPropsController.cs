@@ -13,6 +13,26 @@ namespace AltEnding.Utilities.Props
     // WARP TOWERS: TowerTwin_Body/Sector_TowerTwin/Sector_Tower_GD/Geometry_Tower_GD/ControlledByProxy_Arch/Structure_HT_TT_Tower_GD
     // TowerTwin_Body/Sector_TowerTwin/Sector_Tower_BH/Geometry_Tower_BH
 
+
+    //
+    // CAMPFIRE FIXING:
+    //
+
+    // BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/Prefab_HEA_Campfire
+    /*
+     NullReferenceException: Object reference not set to an instance of an object
+    Stacktrace: SingleInteractionVolume.UpdatePromptVisibility () (at <8c964ab98b85490196fd7e9ef29f2234>:0)
+    SingleInteractionVolume.UpdateInteractVolume () (at <8c964ab98b85490196fd7e9ef29f2234>:0)
+    FirstPersonManipulator.Update () (at <8c964ab98b85490196fd7e9ef29f2234>:0)
+    OWML	22
+     */
+    // every exception thrown causes another input prompt to appear I think
+
+    // the below property needs to be set
+    // note the property is from InteractVolume originally
+    // TimberHearth_Body/Sector_TH/Prefab_HEA_Campfire(Clone)/AttachPoint.InteractReciever._playerCam 
+    // it should be set to Player_Body/PlayerCamera.OWCamera
+
     public static class PreEndingPropsController
     {
         public static VesselWarningLightController vesselWarningLightController;

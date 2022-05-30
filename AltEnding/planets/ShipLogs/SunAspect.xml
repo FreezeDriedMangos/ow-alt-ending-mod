@@ -7,6 +7,8 @@
     <Entry> <!-- Create another entry -->
         <ID>FELDSPARS_FLIGHT</ID> <!-- Make sure IDs are unique! -->
         <Name>Feldspar's Flight</Name>
+        <Curiosity>A_NEW_FUTURE</Curiosity>
+
         <ExploreFact> <!-- An explore fact that belongs to this entry -->
             <ID>FELDSPARS_FLIGHT_VISION</ID> <!-- The ID of this fact -->
             <Text>I recieved a vision of Feldspar's flight to the sun station. They passed by many small satellites, and had two Nomai on board.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
