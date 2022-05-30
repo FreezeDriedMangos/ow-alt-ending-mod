@@ -10,7 +10,7 @@
         <Curiosity>THE_VISION</Curiosity> <!-- The curiosity this entry belongs to (optional) in this case, it belongs to itself -->
         <IsCuriosity/> <!-- Marks this entry as a curiosity, makes it bigger in rumor mode and allows custom colors -->
         <!-- <IgnoreMoreToExplore/> Don't show a "more to explore" icon -->
-        <AltPhotoCondition>EXAMPLE_EXPLORE_FACT</AltPhotoCondition> <!-- Show an alternate picture if a fact is known -->
+        <!-- <AltPhotoCondition>EXAMPLE_EXPLORE_FACT</AltPhotoCondition>  Show an alternate picture if a fact is known -->
 
         <RumorFact> <!-- A rumor fact that belongs to this entry -->
             <ID>THE_VISION_HINT</ID> <!-- The ID of this fact -->

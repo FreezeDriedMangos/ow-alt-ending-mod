@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-	"name" : "Test Sun Moon Satellite",
+	"name" : "QM Sun Station",
 	"Base" : 
 	{
 		"groundSize" : 0,
@@ -10,7 +10,7 @@
 	},
 	"Orbit" : 
 	{
-		"primaryBody": "Test Sun Moon",
+		"primaryBody": "QM Sun Aspect",
 		"semiMajorAxis": 330,
 		"inclination": 5,
 		"longitudeOfAscendingNode": 90,

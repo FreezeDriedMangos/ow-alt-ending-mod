@@ -1,0 +1,172 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+  "Base": {
+    "surfaceSize": 150.0
+  },
+  "canShowOnTitle": true,
+  "name": "Timber Hearth",
+  "Orbit": {
+    "semiMajorAxis": 0.0
+  },
+  "Props": {
+    "details": [
+      {
+        "assetBundle": "planets/sunstuff",
+        "path": "Assets/SwarmSatellite.prefab",
+        "position": {
+          "x": 12.2281694,
+          "y": -45.392,
+          "z": 186.4861
+        },
+        "rotation": {
+          "x": 5.4260006,
+          "y": 99.06919,
+          "z": 105.8894
+        }
+      },
+      {
+        "assetBundle": "planets/sunstuff",
+        "path": "Assets/SwarmSatellite.prefab",
+        "position": {
+          "x": 18.0605354,
+          "y": -50.64357,
+          "z": 183.141235
+        },
+        "rotation": {
+          "x": 311.856476,
+          "y": 287.9388,
+          "z": 254.72
+        }
+      },
+      {
+        "path": "GiantsDeep_Body/Sector_GD/Sector_GDInterior/Jellyfish_GDInterior/Jellyfish_Pivot (1)/Jellyfish_Body/Beast_GD_Jellyfish_v4",
+        "position": {
+          "x": 28.6312561,
+          "y": -46.67,
+          "z": 185.680176
+        },
+        "rotation": {
+          "x": 78.00004,
+          "y": 189.0,
+          "z": 180.0
+        },
+        "scale": 0.08
+      },
+      {
+        "path": "Anglerfish_Body/Beast_Anglerfish",
+        "position": {
+          "x": 23.9989185,
+          "y": -39.3724,
+          "z": 186.4623
+        },
+        "removeChildren": [
+          "B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end"
+        ],
+        "rotation": {
+          "x": 78.00004,
+          "y": 189.0,
+          "z": 180.0
+        },
+        "scale": 0.02
+      },
+      {
+        "path": "Anglerfish_Body/Beast_Anglerfish_Collision",
+        "position": {
+          "x": 23.9989185,
+          "y": -39.3724,
+          "z": 186.4623
+        },
+        "rotation": {
+          "x": 78.00004,
+          "y": 189.0,
+          "z": 180.0
+        },
+        "scale": 0.02
+      },
+      {
+        "path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Characters_StartingCamp/Villager_HEA_Slate",
+        "position": {
+          "x": 18.25465,
+          "y": -40.6567,
+          "z": 185.6922
+        },
+        "removeChildren": [
+          "ConversationZone_RSci"
+        ],
+        "rotation": {
+          "x": 82.11059,
+          "y": 107.398125,
+          "z": 103.934029
+        }
+      },
+      {
+        "path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ProjectionHouse_Zone1/Interactables_ProjectionHouse_Zone1/TheatreRoom_ProjectionHouse_Zone1/Prefab_IP_SlideProjector_Ring",
+        "position": {
+          "x": 32.1645737,
+          "y": -32.99,
+          "z": 189.10994
+        },
+        "rotation": {
+          "x": 350.6663,
+          "y": 80.1437,
+          "z": 111.6283
+        }
+      },
+      {
+        "path": "RingWorld_Body/Sector_RingInterior/Sector_Zone3/Sector_HiddenGorge/Sector_DreamFireHouse_Zone3/Interactables_DreamFireHouse_Zone3/Lanterns_DFH_Zone3/Prefab_IP_SimpleLanternItem_Zone3DFH_5",
+        "position": {
+          "x": 32.2473755,
+          "y": -29.1062,
+          "z": 189.752777
+        },
+        "rotation": {
+          "x": 4.568699,
+          "y": 266.860962,
+          "z": 237.479279
+        }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District2/Interactables_HangingCity_District2/VisibleFrom_HangingCity/Props_NOM_Whiteboard (1)",
+        "position": {
+          "x": 33.127655,
+          "y": -37.9262,
+          "z": 184.553116
+        },
+        "rotation": {
+          "x": 80.0000153,
+          "y": 191.1707,
+          "z": 180.0
+        }
+      },
+      {
+        "path": "BackerSatellite_Body/Sector_BackerSatellite/Geometry_BackerSatellite",
+        "position": {
+          "x": 27.1176548,
+          "y": -55.1385,
+          "z": 189.642868
+        },
+        "rotation": {
+          "x": 0.8455,
+          "y": 22.3546982,
+          "z": -5.33666622E-08
+        }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/Prefab_HEA_Campfire",
+        "position": {
+          "x": 17.7822227,
+          "y": -47.47554,
+          "z": 184.013474
+        },
+        "rotation": {
+          "x": 323.2558,
+          "y": 84.3894653,
+          "z": 108.213051
+        }
+      }
+    ]
+  },
+  "ShipLog": {
+    "mapMode": {}
+  }
+}

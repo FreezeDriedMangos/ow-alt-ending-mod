@@ -1,47 +1,66 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-  "Name": "RingWorld",
+  "name": "RingWorld",
+  
+	"ShipLog": {
+		"xmlFile": "planets/ShipLogs/TheStranger.xml",
+		"entryPositions": [
+		  {
+        "id": "THE_STAFF",
+        "position": {
+          "x": 100,
+          "y": 200
+        }
+		  }
+		],
+    
+    "initialReveal": [
+      "THE_STAFF_DISCOVERY"
+    ]
+	},
+
+
   "Props": {
     "details": [
       {
         "path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ProjectionHouse_Zone1/SmallProps_ProjectionHouse_Zone1/OtherComponentsGroup/Props_IP_Stool",
         "position": {
-          "X": -174.408813,
-          "Y": -132.208527,
-          "Z": -190.9654
+          "x": -174.4089,
+          "y": -132.208054,
+          "z": -190.965912
         },
         "rotation": {
-          "X": 29.48426,
-          "Y": 306.406647,
-          "Z": 270.6115
+          "x": 29.48426,
+          "y": 306.406677,
+          "z": 270.6115
         },
         "scale": 0.9999999
       },
       {
         "path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ProjectionHouse_Zone1/Props_ProjectionHouse_Zone1/OtherComponentsGroup/Prefab_IP_Chair/",
         "position": {
-          "X": -175.350372,
-          "Y": -133.245285,
-          "Z": -190.25087
+          "x": -175.350815,
+          "y": -133.245544,
+          "z": -190.251
         },
         "rotation": {
-          "X": 336.052,
-          "Y": 306.467468,
-          "Z": 270.643555
+          "x": 336.052,
+          "y": 306.467468,
+          "z": 270.6435
         },
         "scale": 0.999999762
       },
       {
         "path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem",
         "position": {
-          "X": -174.992325,
-          "Y": -134.213821,
-          "Z": -189.465027
+          "x": -174.992249,
+          "y": -134.2142,
+          "z": -189.465179
         },
         "rotation": {
-          "X": 2.85523677,
-          "Y": 327.847168,
-          "Z": 293.827332
+          "x": 2.85524631,
+          "y": 327.847168,
+          "z": 293.827332
         },
         "scale": 1.00000012
       }

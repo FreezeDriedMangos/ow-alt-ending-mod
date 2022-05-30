@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-	"name" : "Test Sun Moon",
+	"name" : "QM Sun Aspect",
 	"Base" : 
 	{
 		"groundSize" : 0,
@@ -11,6 +11,12 @@
 	"Star": {
 		"size": 303
 	},
+	"Atmosphere": {
+		"clouds": {
+			"innerCloudRadius": 330,
+			"outerCloudRadius": 330
+		}
+	},
 	"Orbit" : 
 	{
 		"primaryBody": "Timber Hearth",
@@ -18,5 +24,19 @@
 		"inclination": 5,
 		"longitudeOfAscendingNode": 90,
 		"trueAnomaly": 240
+	},
+
+
+	"ShipLog": {
+		"xmlFile": "planets/ShipLogs/SunAspect.xml",
+		"entryPositions": [
+		  {
+			"id": "EXAMPLE_ENTRY",
+			"position": {
+			  "x": 100,
+			  "y": 200
+			}
+		  }
+		]
 	}
 }

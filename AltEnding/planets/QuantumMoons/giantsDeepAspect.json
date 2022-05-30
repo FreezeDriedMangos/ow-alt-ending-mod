@@ -1,0 +1,12 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"canShowOnTitle": false,
+	"name": "QM Giant's Deep Aspect",
+	
+	"Base": {},
+
+	"ShipLog": {
+		"xmlFile": "planets/ShipLogs/GiantsDeepAspect.xml",
+		"entryPositions": []
+	}
+}

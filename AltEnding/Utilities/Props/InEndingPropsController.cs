@@ -51,6 +51,7 @@ namespace AltEnding.Utilities.Props
                 playerSpawnPoint = new Vector3(-16.7344f, 20.7243f, -7.5293f)
             };
             stationSpawnPoint = SpawnPointBuilder.Make(station.gameObject, s, station._owRigidbody);
+            stationSpawnPoint.transform.position = stationSpawnPoint.transform.position - stationSpawnPoint.transform.TransformDirection(Vector3.up) * 3.9f;
         }
 
         public static void SpawnVisionTorchAndChair(GameObject g, Sector s, Vector3 pos, Vector3 rot, PropModule.ProjectionInfo projectionInfo)
