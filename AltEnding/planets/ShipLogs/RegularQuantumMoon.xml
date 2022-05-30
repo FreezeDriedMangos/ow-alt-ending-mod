@@ -1,0 +1,17 @@
+<!-- Example File -->
+<!-- All files must have "AstroObjectEntry" as their root element, the xmlns:xsi=... and xsi:noNamespaceSchemaLocation=... is optional but heavily encouraged to reduce errors -->
+<AstroObjectEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
+    <ID>QUANTUM_MOON</ID> <!-- The ID of the planet this xml file is for -->
+
+    <Entry> <!-- Create another entry -->
+        <ID>EMERGENCY_CODE</ID> <!-- Make sure IDs are unique! -->
+        <Name>Nomai Emergency Code</Name>
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>EMERGENCY_CODE_FACT</ID> <!-- The ID of this fact -->
+            <Text>After showing Solanum a vision of my journy, she gave me the common Nomai emergency code. She said she didn't know if the Vessel would recognize it.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>THE_STAFF</SourceID>
+        </RumorFact>
+    </Entry>
+
+</AstroObjectEntry>

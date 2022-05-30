@@ -1,0 +1,27 @@
+<!-- Example File -->
+<!-- All files must have "AstroObjectEntry" as their root element, the xmlns:xsi=... and xsi:noNamespaceSchemaLocation=... is optional but heavily encouraged to reduce errors -->
+<AstroObjectEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
+    <ID>TIMBER_HEARTH</ID> <!-- The ID of the planet this xml file is for -->
+
+    <Entry> <!-- Create another entry -->
+        <ID>A_NEW_FUTURE</ID> <!-- Make sure IDs are unique! -->
+        <Name>A New Future</Name>
+        <UncertainCondition>REFUGEE_CAMP_TIME_SKIP</UncertainCondition> <!-- This card will be glitchy until this fact is revealed -->
+
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>A_NEW_FUTURE_REVEAL</ID> <!-- The ID of this fact -->
+            <Text>After Solanum gave me the emergency code, this entry appeared in my log all on its own.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>REFUGEE_CAMP_TIME_SKIP</SourceID>
+            <SourceID>EMERGENCY_CODE</SourceID>
+            
+			<AltText> <!-- Text to display for this fact if another fact is known -->
+                <Text>After Solanum gave me the emergency code, this entry seemed to appear in my log all on its own. In reality, I added it in another quantum possibility.</Text> <!-- The text to display -->
+                <Condition>EMERGENCY_CODE</Condition> <!-- The fact that needs to be known to make this text display -->
+            </AltText>
+        </RumorFact>
+    </Entry>
+
+    <!-- TODO: lots more, depending on what happens on Timber Hearth. if I decide to add ship logs to that. probably not though -->
+
+</AstroObjectEntry>
