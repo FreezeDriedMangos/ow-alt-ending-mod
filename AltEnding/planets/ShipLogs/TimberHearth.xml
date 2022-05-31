@@ -20,7 +20,7 @@
             
 			<AltText> <!-- Text to display for this fact if another fact is known -->
                 <Text>After Solanum gave me the emergency code, this entry seemed to appear in my log all on its own. In reality, I added it in another quantum possibility.</Text> <!-- The text to display -->
-                <Condition>EMERGENCY_CODE</Condition> <!-- The fact that needs to be known to make this text display -->
+                <Condition>REFUGEE_CAMP_TIME_SKIP_FACT</Condition> <!-- The fact that needs to be known to make this text display -->
             </AltText>
         </RumorFact>
     </Entry>

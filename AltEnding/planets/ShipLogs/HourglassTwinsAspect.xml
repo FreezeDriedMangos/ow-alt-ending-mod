@@ -52,16 +52,16 @@
 
 
     <Entry> <!-- Create another entry -->
-        <ID>SWARM_SATELLITE</ID> <!-- Make sure IDs are unique! -->
+        <ID>SWARM_SATELLITE_DISCOVERY</ID> <!-- Make sure IDs are unique! -->
         <Name>Small Satellite</Name>
         <Curiosity>THE_SWARM</Curiosity>
         <ExploreFact> <!-- An explore fact that belongs to this entry -->
-            <ID>SWARM_SATELLITE_DISCOVERY</ID> <!-- The ID of this fact -->
+            <ID>SWARM_SATELLITE_DISCOVERY_FACT</ID> <!-- The ID of this fact -->
             <Text>I found a small satellite that looks similar to the sun station's control module.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
 
 			<AltText> <!-- Text to display for this fact if another fact is known -->
                 <Text>I found an extra swarm satellite that was not launched. It looks similar to the sun station's control module.</Text> <!-- The text to display -->
-                <Condition>THE_SWARM</Condition> <!-- The fact that needs to be known to make this text display -->
+                <Condition>THE_SWARM_DESIGN</Condition> <!-- The fact that needs to be known to make this text display -->
             </AltText>
         </ExploreFact>
     </Entry>

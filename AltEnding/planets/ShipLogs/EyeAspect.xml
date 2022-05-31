@@ -84,13 +84,13 @@
         <ID>EYE_ASPECT_QUANTUM_TUNNEL</ID> <!-- Make sure IDs are unique! -->
         <Name>Quantum Tunnel</Name>
         <ExploreFact> <!-- An explore fact that belongs to this entry -->
-            <ID>EYE_ASPECT_QUANTUM_TUNNEL</ID> <!-- The ID of this fact -->
-            <Text>I found a dark tunnel on the eye aspect of the moon. When I entered it, I was turned around.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+            <ID>EYE_ASPECT_QUANTUM_TUNNEL_FACT</ID> <!-- The ID of this fact -->
+            <Text>I found a dark tunnel on the eye aspect of the quantum moon. When I entered it, I was turned around.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
 			<SourceID>EYE_ASPECT_WARP_TOWERS_HINT</SourceID>
 
 			<AltText> <!-- Text to display for this fact if another fact is known -->
-                <Text>I found a dark tunnel on the eye aspect of the moon. When I entered it after taking a picture of myself, I was able to exit the other side.</Text> <!-- The text to display -->
-                <Condition>EYE_ASPECT_WARP_TOWERS</Condition> <!-- The fact that needs to be known to make this text display -->
+                <Text>I found a dark tunnel on the eye aspect of the quantum moon. When I entered it after taking a picture of myself, I was able to exit the other side.</Text> <!-- The text to display -->
+                <Condition>QUANTUM_TUNNEL_TUTORIAL</Condition> <!-- The fact that needs to be known to make this text display -->
             </AltText>
         </ExploreFact>
     </Entry>

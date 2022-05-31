@@ -16,7 +16,7 @@
             
 			<AltText> <!-- Text to display for this fact if another fact is known -->
                 <Text>Upon arriving in our present time, the Nomai realized that the Swarm was out of alignment and in danger of total collapse. They were very upset over this.</Text> <!-- The text to display -->
-                <Condition>REFUGEE_CAMP_TIME_SKIP</Condition> <!-- The fact that needs to be known to make this text display -->
+                <Condition>REFUGEE_CAMP_TIME_SKIP_FACT</Condition> <!-- The fact that needs to be known to make this text display -->
                 <SourceID>A_NEW_FUTURE</SourceID>
             </AltText>
         </RumorFact>

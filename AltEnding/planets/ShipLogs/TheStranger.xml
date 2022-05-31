@@ -25,7 +25,7 @@
         <RumorFact> <!-- An explore fact that belongs to this entry -->
             <ID>THE_STAFF_RECOVERY</ID> <!-- The ID of this fact -->
             <Text>Solanum led a team to recover this same staff using my memories of where it was located.</Text>
-            <SourceID>NOMAI_STAFF_RECOVERY</SourceID>
+            <SourceID>STAFF_RECOVERY</SourceID>
         </RumorFact>
         
         <RumorFact> <!-- An explore fact that belongs to this entry -->
