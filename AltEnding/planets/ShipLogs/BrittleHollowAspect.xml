@@ -46,7 +46,7 @@
         <RumorFact>
             <ID>THE_COMET_SIGHTING</ID>
             <SourceID>THE_VISION</SourceID> <!-- Set SourceID to connect a line from one entry to another -->
-            <RumorName>Discovery of the Comet</RumorName>
+            <RumorName>The Comet</RumorName>
             <Text>(TODO: nomai name) observed the comet described to them by Solanum. Strong energy readings quickly quieted most skepticsm about the validity of the vision.</Text>
         </RumorFact>
     </Entry>

@@ -1,4 +1,5 @@
-﻿using NewHorizons.Builder.General;
+﻿using NewHorizons.Builder.Atmosphere;
+using NewHorizons.Builder.General;
 using NewHorizons.Builder.Props;
 using NewHorizons.External.Modules;
 using NewHorizons.Utility;
@@ -20,6 +21,8 @@ namespace AltEnding.Utilities.Props
 
         public static void SpawanProps()
         {
+            CreateSunAspectClouds();
+
             CreateSunAspectSpawnPoint();
 
             /*
@@ -50,6 +53,21 @@ namespace AltEnding.Utilities.Props
             //GameObject clouds = GameObject.Instantiate(GameObject.Find("QuantumMoon_Body/Clouds_QM"));
             //clouds.transform.parent = AstroObjectLocator.GetAstroObject("QM Sun Aspect").transform;
             //clouds.transform.localPosition = Vector3.zero;
+        }
+
+        public static void CreateSunAspectClouds()
+        {
+            var sunAspect = AstroObjectLocator.GetAstroObject("QM Sun Aspect");
+            var cloudsModule = new AtmosphereModule()
+            {
+                clouds = new AtmosphereModule.CloudInfo()
+                {
+                    innerCloudRadius = 500,
+                    outerCloudRadius = 600,
+                    useBasicCloudShader = true
+                }
+            };
+            CloudsBuilder.Make(sunAspect.gameObject, sunAspect._rootSector, cloudsModule, AltEnding.Instance);
         }
 
         public static void FixStationGlass()

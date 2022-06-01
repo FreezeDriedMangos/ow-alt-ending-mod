@@ -8,7 +8,6 @@
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/GiantsDeepAspect.xml",
 		"entryPositions": [
-			{ "id": "STAFF_RECOVERY", "position": {"x": 3815.1, "y": -542.7} },
 			{ "id": "REGROUPING", "position": {"x": 4853.5, "y": -733.6} },
 			{ "id": "GHOST_MATTER_DISCOVERY", "position": {"x": 5199.1, "y": -118.9} },
 			{ "id": "MAKING_PLANS", "position": {"x": 5234.9, "y": -890.7} },
@@ -39,8 +38,7 @@
 			"GHOST_MATTER_DISCOVERY_FACT",
 			"REGROUPING_FACT",
 			"REGROUPING_HEARTHIAN_EVOLUTION",
-			"REGROUPING_QUANTUM_MOON_PLAN",
-			"STAFF_RECOVERY_FACT"
+			"REGROUPING_QUANTUM_MOON_PLAN"
 		]
 	}
 }

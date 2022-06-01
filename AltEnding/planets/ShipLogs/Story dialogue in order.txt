@@ -1,0 +1,184 @@
+below is all the dialogue for the mod, arranged by which fact it reveals, and listed in chronological order according to the story
+
+
+//
+// Brittle Hollow Aspect
+// Character Goals: 
+// demonstrate that Solanum is taking everything lightly and is over excited,
+// demonstrate Pye reprimanding her almost like a mother
+//
+// Plot Goals:
+// establish that Solanum recieved all of the Hatchling's memories as a vision, 
+// establish the comet arrival and the Nomai understanding the concequences,
+//
+
+THE_VISION_HINT
+[Computer text]
+Solanum: This feels strange....
+Solanum: It feels as though I am being observed by the eye.
+Solanum: That can't be valid... can it?
+
+
+THE_VISION_EXPLANATION
+TODO
+
+THE_VISION_DISCUSSION
+TODO
+
+THE_COMET_WARNING
+Solanum: Friends, I have one more piece of exciting news, that I think you will enjoy!
+	Solanum: A comet will be arriving in our system soon, and it is filled with explosive exotic matter!
+TODO: add more
+
+
+THE_COMET_SIGHTING
+[scroll 1]
+TODOname1: Friends, a discovery: I have spotted the comet Solanum described.
+	TODOname2: I am detecting abnormally high energy readings from this comet. Perhaps it does contain exotic matter as she described.
+	Pye: Solanum - you said this comet was filled with explosive exotic matter. Did you see anything else about this matter in your vision?
+		Solanum: It was incredible Pye! In the vision, we did not know of the comet in advance, so when it exploded, none of us survived! However, I am not worried now that you all know of its arrival.
+			Pye: That is incredibly alarming, Solanum. If this is true, the comet is grave news. We need you to tell us more, Solanum.
+				[scroll2 goes here]
+			TODOname1: We do not have time to eject the comet from our system. It will reach the sun regardless of what we do at this point.
+				TODOname3: Yes. We need another solution.
+
+[scroll 2]
+Solanum: I am not worried, Pye. Yourself and the others will figure out how to keep us safe, I'm sure. I'm excited to observe the comet explode!
+	Pye: Solanum! This is very serious! Right now, you are the only Nomai with any knowledge on this comet, and every second counts. We are not infallible. We need to know what you know.
+		Solanum: Well... I believe the comet explodes when it nears our sun. 
+			Pye: We're going to need you to be certain, Solanum.
+				Solanum: The vision only knew that secondhand, so it's not verifiable...
+					TODOname2: So it will explode when it nears the sun. Then we do not have much time.
+						TODOname3: Whatever solution we decide on, we must commit to. There will not be time to try something else.
+		Solanum: The matter is deadly on contact and it will reach every corner of our system. But! It evaporates though! Do not worry!
+			Pye: I am very worried. We need more, Solanum. Is there any way to protect against this matter?
+				Solanum: Well... 
+					Pye: What is it?
+						Solanum: It is weak to water, I believe. Um... yes. It dissapates on contact.
+							Pye: Solanum.
+								Solanum: Yes! It dissapates on contact with water!
+				TODOname2: As am I.
+
+[scroll 3]
+Cassava: You are not very good with children, Pye.
+	Pye: Solanum is no child, Cassava. She needs to learn that she has a responsibility.
+
+
+
+EYE_ASPECT_POEM_HINT_FACT
+Plan your path
+Across the quantum sky
+To follow the one
+Watched by the eye
+
+
+//
+// Giant's Deep Aspect
+// Character Goals:
+// More reprimanding
+// Solanum starts to think about what Pye said
+// Solanum comes to the conclusion that she needs to be ordering everyone around, but with her heart in the right place
+// Grattitude and relief among the secondary characters (the ones that are named in the base game, excluding Solanum) 
+// General panic among the public
+//
+// Plot goals:
+// the bunker is planned as a way to keep the clan safe and is constructed
+// all nomai are evacuated to the bunker
+// the bunker successfully protects them
+// the nomai discover that the ghost matter isn't going away
+// minor: the nomai discover that ghost matter isn't visible to the naked eye and attempt some experiments on it before concluding it's too dangerous without serious preparation
+// the quantum moon refugee camp is proposed (without context of why it's a good idea (Solanum has a feeling they'll be able to time travel with it, but doesn't tell anyone), but the other Nomai figure that since the 6th location wouldn't have any ghost matter it will work as a better place to camp since there's much more space than in the bunker)
+// major: establish that the swarm will be constructed, and that it will happen BEFORE the architects settle in at the camp
+//
+ 
+THE_BUNKER_PLANS
+TODO
+
+THE_BUNKER_CONSTRUCTION
+TODO
+
+MAKING_PLANS_FACT
+TODO
+// note: this fact is from before the comet explodes
+
+-=-Bonus: the comet explodes-=-
+TODO
+// note: ghost matter is not visible to the naked eye, this is when the Nomai learn how to detect it (perhaps they can see it through their suit cameras?)
+
+
+GHOST_MATTER_DISCOVERY_FACT
+TODOname1: I am detecting energy readings consistent with ghost matter still blanketing the entire system.
+	TODOname2: Perhaps we must wait longer for it to evaporate?
+		TODOname1: It has already been thirty two days, TODOname2. The readings have not changed even slightly.
+			TODOname3: it will not evaporate any time soon. Perhaps not even within our lifetimes.
+	Pye: Solanum! You said the ghost matter would evaporate! Did you know how long it would be here for?
+		Solanum: No! Well, perhaps, but I-
+			Pye: You have a responsibility, Solanum! You now have knowledge no other Nomai possesses. 
+			Pye: It may have been fine as a child to rely on your elders to work things out for you, but it's different now Solanum. We need your help.
+			Pye: The lives of our whole clan depend on whether or not you cooperate. Myself and the others cannot do this alone.
+				Pye: we have an impossible task. Impossible, but for the knowledge of the future that you posess. Please, Solanum. We need you to be an adult.
+
+
+-=-BONUS: Solanum's monologue-=-
+Solanum: Pye told me I have a responsibility now. 
+	Solanum: I do not understand. The others are incredible! They can do anything!
+		Solanum: I suppose that they may be Nomai just like me, though older and more experienced. That... that is a strange thought.
+	Solanum: What could that responsibility mean? What can I do?
+		Solanum: They do not know what will come. I could tell them what I saw in my vision, though there is so much I will never be able to give them every detail.
+		Solanum: I think... I think I must lead. I cannot do what they can yet, though I can show them where to go.
+			Solanum: Yes! With my clan behind me, there is nothing we cannot do!
+
+
+
+"REGROUPING_FACT",
+"REGROUPING_HEARTHIAN_EVOLUTION",
+"REGROUPING_QUANTUM_MOON_PLAN",
+
+
+//
+// the hourglass twins aspect
+// Character Goals:
+// Solanum leads an expedition to the Stranger to recover the Staff, where she gives orders but doesn't listen to the other exporers. She doesn't give any debreifing or context before the expedition either
+// Solanum reevaluates again (and learns to listen) after an accident at the stranger where someone gets hurt because she wasn't listening to what they were saying
+// Pye is not present for any of this 
+//
+// Plot Goals:
+//
+
+"STAFF_RECOVERY_FACT"
+TODO: copy text from phone of Solanum proposing the mission
+TODO: dialogue from after the mission recounting how one of the expedition members got hurt because Solanum didn't listen to what they were telling her and kept giving orders
+I need something to be different about the Stranger compared to when we explore it. Different in a dangerous way that Solanum wouldn't expect.
+
+"THE_SWARM_DESCRIPTION",
+"THE_SWARM_DESIGN",
+"THE_SWARM_PRUPOSE",
+
+
+// 
+// Eye aspect
+// Character Goals:
+// Solanum starts to prove herself and learn to be a real leader
+//
+//
+
+"REFUGEE_CAMP_DISCOVERY",
+"REFUGEE_CAMP_LEADERSHIP_1",
+"REFUGEE_CAMP_SWARM",
+"REFUGEE_CAMP_LEADERSHIP_2",
+"REFUGEE_CAMP_TIME_SKIP_FACT",
+"REFUGEE_CAMP_QUANTUM_SIGHTING_HATCHLING",
+"REFUGEE_CAMP_QUANTUM_SIGHTING_NOMAI",
+"REFUGEE_CAMP_QUANTUM_SIGHTING_TIME_TO_GO",
+TODO: where Solanum proves herself - she shares exactly what's going on, listens to the others, and then comes to the conclusion that it's time to leave. She then takes responsibility by telling everyone that it's time to pack up even though they "just got here". people aren't really happy
+
+//
+// Dark Bramble Aspect
+// Character Goals:
+// climax of Solanum's character arc - she proposes Feldpar's Flight and gives full discloure and takes full responsibility for whatever could go wrong, and Pye is proud of her and says she'll do whatever Solanum thinks is neccessary
+//
+
+"SWARM_MISALIGNMENT_FACT",
+"SWARM_MISALIGNMENT_FIX",
+"SWARM_MISALIGNMENT_TELEPORTER_FAILURE_FACT",
+"SWARM_MISALIGNMENT_TELEPORTER_FAILURE_PLAN",

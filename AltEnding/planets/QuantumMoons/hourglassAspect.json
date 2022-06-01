@@ -8,6 +8,7 @@
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/HourglassTwinsAspect.xml",
 		"entryPositions": [
+			{ "id": "STAFF_RECOVERY", "position": {"x": 3815.1, "y": -542.7} },
 			{ "id": "SWARM_SATELLITE_DISCOVERY", "position": {"x": 4649.3, "y": -225.1} },
 			{ "id": "SWARM_SATELLITE_CONSTRUCTION_AND_LAUNCH_FACILITY", "position": {"x": 4640.9, "y": -430.2} },
 			{ "id": "THE_SWARM", "position": {"x": 4374.0, "y": -362.5} }
@@ -30,6 +31,7 @@
 			}
 		],
 		"initialReveal": [
+			"STAFF_RECOVERY_FACT",
 			"THE_SWARM_DESCRIPTION",
 			"THE_SWARM_DESIGN",
 			"THE_SWARM_PRUPOSE",

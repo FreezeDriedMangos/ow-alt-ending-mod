@@ -60,7 +60,8 @@ namespace AltEnding.Utilities.Props
             // Staff signal
             // 
 
-            if (PlayerData._currentGameSave.GetPersistentCondition("MET_PRISONER"))
+            AltEnding.Instance.ModHelper.Console.WriteLine("Player has met prisoner: " + PlayerData._currentGameSave.GetPersistentCondition("MET_PRISONER"));
+            if (PlayerData._currentGameSave.GetPersistentCondition("MET_PRISONER") || true)
             {
                 SpawnStaffSignals();
             }

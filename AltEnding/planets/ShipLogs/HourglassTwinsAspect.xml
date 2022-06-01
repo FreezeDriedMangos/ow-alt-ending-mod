@@ -4,6 +4,18 @@
                   xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
     <ID>QUANTUM_MOON_HOURGLASS_TWINS_ASPECT</ID> <!-- The ID of the planet this xml file is for -->
 
+    
+    <Entry>
+        <ID>STAFF_RECOVERY</ID> <!-- Make sure IDs are unique! -->
+        <Name>Staff Recovery</Name>
+        <RumorFact> <!-- An explore fact that belongs to this entry -->
+            <ID>STAFF_RECOVERY_FACT</ID> <!-- The ID of this fact -->
+            <Text>Continuing to attempt to take responsibility, Solanum leads a group of Nomai to the Stranger in order to recover the same vision torch I used to ask her for help, thinking it may become useful.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+			<SourceID>REGROUPING</SourceID>
+        </RumorFact>
+    </Entry>
+    
+
     <Entry> <!-- An Entry For This Planet -->
         <ID>THE_SWARM</ID> <!-- The ID of this entry -->
         <Name>The Swarm</Name> <!-- The name to show for this entry both on the card and in map mode -->

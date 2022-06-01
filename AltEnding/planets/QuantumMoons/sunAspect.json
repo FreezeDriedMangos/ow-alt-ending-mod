@@ -5,7 +5,7 @@
 	{
 		"groundSize" : 0,
 		"surfaceSize" : 303,
-		"surfaceGravity" : 2.5,
+		"surfaceGravity" : 35,
 		"hasMapMarker" : true
 	},
 	"Star": {
