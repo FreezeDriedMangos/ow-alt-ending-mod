@@ -14,6 +14,23 @@
 			{ "id": "MAKING_PLANS", "position": {"x": 5234.9, "y": -890.7} },
 			{ "id": "THE_BUNKER", "position": {"x": 5648.2, "y": -853.1} }
 		],	
+		"curiosities": [
+			{
+			  "id": "THE_BUNKER",
+			  "color": {
+				"r": 232,
+				"g": 215,
+				"b": 130,
+				"a": 255
+			  },
+			  "highlightColor": {
+				"r": 201,
+				"g": 180,
+				"b": 71,
+				"a": 255
+			  }
+			}
+		],
 		"initialReveal": [
 			"THE_BUNKER_DISCOVER",
 			"THE_BUNKER_PLANS",

@@ -14,6 +14,23 @@
 			{ "id": "EYE_ASPECT_WARP_TOWERS", "position": {"x": 5745.5, "y": 388.2} },
 			{ "id": "EYE_ASPECT_QUANTUM_TUNNEL", "position": {"x": 5394.0, "y": 401.8} }
 		],
+		"curiosities": [
+			{
+			  "id": "REFUGEE_CAMP",
+			  "color": {
+				"r": 232,
+				"g": 215,
+				"b": 130,
+				"a": 255
+			  },
+			  "highlightColor": {
+				"r": 201,
+				"g": 180,
+				"b": 71,
+				"a": 255
+			  }
+			}
+		],
 		"initialReveal": [
 			"REFUGEE_CAMP_DISCOVERY",
 			"REFUGEE_CAMP_LEADERSHIP_1",

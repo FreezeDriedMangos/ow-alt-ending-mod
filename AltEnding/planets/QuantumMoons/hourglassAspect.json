@@ -12,6 +12,23 @@
 			{ "id": "SWARM_SATELLITE_CONSTRUCTION_AND_LAUNCH_FACILITY", "position": {"x": 4640.9, "y": -430.2} },
 			{ "id": "THE_SWARM", "position": {"x": 4374.0, "y": -362.5} }
 		],
+		"curiosities": [
+			{
+			  "id": "THE_SWARM",
+			  "color": {
+				"r": 232,
+				"g": 215,
+				"b": 130,
+				"a": 255
+			  },
+			  "highlightColor": {
+				"r": 201,
+				"g": 180,
+				"b": 71,
+				"a": 255
+			  }
+			}
+		],
 		"initialReveal": [
 			"THE_SWARM_DESCRIPTION",
 			"THE_SWARM_DESIGN",

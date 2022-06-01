@@ -84,6 +84,8 @@ namespace AltEnding.Utilities.Props
 
         private static void SpawnStaffSignals()
         {
+            AltEnding.Instance.ModHelper.Console.WriteLine("SPAWNING STAFF SIGNALS");
+
             // public static void Make(GameObject planetGO, Sector sector, SignalModule.SignalInfo info, IModBehaviour mod)
             Sector interior = null;
             foreach (Transform s in Locator._ringWorld.gameObject.transform)
@@ -111,6 +113,8 @@ namespace AltEnding.Utilities.Props
                 
             SignalBuilder.Make(Locator._ringWorld.gameObject, interior, makeSignalInfo(false), AltEnding.Instance);
             SignalBuilder.Make(Locator._ringWorld.gameObject, interior, makeSignalInfo(true), AltEnding.Instance);
+        
+            AltEnding.Instance.ModHelper.Console.WriteLine("SPAWNED STAFF SIGNALS");
         }
 
         private static void SpawnSolanumProps()

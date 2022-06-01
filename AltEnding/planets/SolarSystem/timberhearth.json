@@ -10,6 +10,23 @@
     "entryPositions": [
       { "id": "A_NEW_FUTURE", "position": {"x": 3859.818, "y": 383.6365} }
     ],
+		"curiosities": [
+			{
+			  "id": "A_NEW_FUTURE",
+			  "color": {
+				"r": 232,
+				"g": 215,
+				"b": 130,
+				"a": 255
+			  },
+			  "highlightColor": {
+				"r": 201,
+				"g": 180,
+				"b": 71,
+				"a": 255
+			  }
+			}
+		],
     "initialReveal": [
       "A_NEW_FUTURE_REVEAL"
     ]
