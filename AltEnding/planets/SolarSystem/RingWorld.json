@@ -5,17 +5,14 @@
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/TheStranger.xml",
 		"entryPositions": [
-		  {
-        "id": "THE_STAFF",
-        "position": {
-          "x": 100,
-          "y": 200
-        }
-		  }
+		  { "id": "THE_STAFF", "position": {"x": 3146.0, "y": -125.1} }
 		],
     
     "initialReveal": [
-      "THE_STAFF_DISCOVERY"
+      "THE_STAFF_DISCOVERY",
+      "THE_STAFF_HINT",
+      "THE_STAFF_RECOVERY",
+      "THE_STAFF_VISION_FOR_FELDSPAR"
     ]
 	},
 

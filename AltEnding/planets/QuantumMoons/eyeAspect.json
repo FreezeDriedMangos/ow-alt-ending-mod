@@ -7,6 +7,24 @@
 
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/EyeAspect.xml",
-		"entryPositions": []
+		"entryPositions": [
+			{ "id": "REFUGEE_CAMP_QUANTUM_SIGHTING", "position": {"x": 4563.6, "y": 367.6} },
+			{ "id": "REFUGEE_CAMP_TIME_SKIP", "position": {"x": 4290.7, "y": 316.2} },
+			{ "id": "REFUGEE_CAMP", "position": {"x": 4425.8, "y": 360.4} },
+			{ "id": "EYE_ASPECT_WARP_TOWERS", "position": {"x": 5745.5, "y": 388.2} },
+			{ "id": "EYE_ASPECT_QUANTUM_TUNNEL", "position": {"x": 5394.0, "y": 401.8} }
+		],
+		"initialReveal": [
+			"REFUGEE_CAMP_DISCOVERY",
+			"REFUGEE_CAMP_LEADERSHIP_1",
+			"REFUGEE_CAMP_SWARM",
+			"REFUGEE_CAMP_LEADERSHIP_2",
+			"REFUGEE_CAMP_TIME_SKIP_FACT",
+			"REFUGEE_CAMP_QUANTUM_SIGHTING_HATCHLING",
+			"REFUGEE_CAMP_QUANTUM_SIGHTING_NOMAI",
+			"REFUGEE_CAMP_QUANTUM_SIGHTING_TIME_TO_GO",
+			"EYE_ASPECT_QUANTUM_TUNNEL_FACT",
+			"EYE_ASPECT_WARP_TOWERS_FACT"
+		]
 	}
 }

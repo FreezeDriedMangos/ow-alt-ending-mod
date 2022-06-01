@@ -7,6 +7,17 @@
 
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/BrambleAspect.xml",
-		"entryPositions": []
+		"entryPositions": [
+			{ "id": "VISION_FOR_FELDSPAR", "position": {"x": 3556.7, "y": -135.1} },
+			{ "id": "SWARM_MISALIGNMENT_TELEPORTER_FAILURE", "position": {"x": 3932.9, "y": -336.4} },
+			{ "id": "SWARM_MISALIGNMENT", "position": {"x": 3882.5, "y": -243.6} }
+		],
+		"initialReveal": [
+			"SWARM_MISALIGNMENT_FACT",
+			"SWARM_MISALIGNMENT_FIX",
+			"SWARM_MISALIGNMENT_TELEPORTER_FAILURE_FACT",
+			"SWARM_MISALIGNMENT_TELEPORTER_FAILURE_PLAN",
+			"VISION_FOR_FELDSPAR_FACT"
+		]
 	}
 }

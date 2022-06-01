@@ -5,9 +5,13 @@
   },
   "canShowOnTitle": true,
   "name": "Timber Hearth",
-  "Orbit": {
-    "semiMajorAxis": 0.0
+  "ShipLog": {
+		"xmlFile": "planets/ShipLogs/TimberHearth.xml",
+    "initialReveal": [
+      "A_NEW_FUTURE_REVEAL"
+    ]
   },
+
   "Props": {
     "details": [
       {
@@ -165,8 +169,5 @@
         }
       }
     ]
-  },
-  "ShipLog": {
-    "mapMode": {}
   }
 }

@@ -22,6 +22,12 @@
 
 
 	"ShipLog": {
-		"xmlFile": "planets/ShipLogs/SunAspect.xml"
+		"xmlFile": "planets/ShipLogs/SunAspect.xml",
+		"entryPositions": [
+			{ "id": "FELDSPARS_FLIGHT", "position": {"x": 3789.3, "y": -37.8} }
+		],
+		"initialReveal": [
+			"FELDSPARS_FLIGHT_VISION"
+		]
 	}
 }

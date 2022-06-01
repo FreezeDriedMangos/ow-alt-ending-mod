@@ -15,6 +15,7 @@
         <ExploreFact> <!-- An explore fact that belongs to this entry -->
             <ID>THE_STAFF_DISCOVERY</ID> <!-- The ID of this fact -->
             <Text>I discovered a functioning vision torch on board the Stranger.</Text>
+            <SourceID>IP_RING_WORLD</SourceID>
         </ExploreFact>
         
         <RumorFact> <!-- An explore fact that belongs to this entry -->

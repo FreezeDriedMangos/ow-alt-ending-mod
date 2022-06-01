@@ -4,6 +4,11 @@
   
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/RegularQuantumMoon.xml",
-		"entryPositions": []
+		"entryPositions": [
+			{ "id": "EMERGENCY_CODE", "position": {"x": 3443.5, "y": 136.4} }
+		],
+		"initialReveal": [
+			"EMERGENCY_CODE_FACT"
+		]
 	}
 }
