@@ -28,7 +28,6 @@
         <RumorFact> <!-- An explore fact that belongs to this entry -->
             <ID>THE_BUNKER_CONSTRUCTION</ID> <!-- The ID of this fact -->
             <Text>(TODO: Nomai name, name, and name) discussed how an underwater bunker might be built. (TODO: Nomai name, name) began construction, with assistance from (TODO: name and name).</Text>
-            <SourceID>THE_SWARM</SourceID>
         </RumorFact>
 
 
