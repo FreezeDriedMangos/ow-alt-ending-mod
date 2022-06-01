@@ -11,7 +11,7 @@
 			{ "id": "THE_COMET", "position": {"x": 5270.4, "y": -1436.7} },
 			{ "id": "THE_VISION", "position": {"x": 4614.0, "y": -1663.1} },
 			{ "id": "EYE_ASPECT_POEM_HINT", "position": {"x": 5394.0, "y": 646.9} },
-			{ "id": "EYE_ASPECT_WARP_TOWERS_HINT", "position": {"x": 800.0, "y": 0.0} }
+			{ "id": "EYE_ASPECT_WARP_TOWERS_HINT", "position": {"x": 5012.0, "y": 392.1818} }
 		],	
 		"initialReveal": [
 			"THE_VISION_HINT",

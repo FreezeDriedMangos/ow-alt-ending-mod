@@ -56,6 +56,8 @@
         <ExploreFact> <!-- An explore fact that belongs to this entry -->
             <ID>VISION_FOR_FELDSPAR_FACT</ID> <!-- The ID of this fact -->
             <Text>I watched a vision meant for Feldspar. It showed the Swarm collapsing, allowing the sun to explode. It then proposed a solution: Feldspar flying two Nomai to the Sun Station and manually docking.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+            <SourceID>THE_STAFF</SourceID>
+            <SourceID>SWARM_MISALIGNMENT</SourceID>
         </ExploreFact>
     </Entry>
 

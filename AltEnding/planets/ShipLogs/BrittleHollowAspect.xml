@@ -14,19 +14,17 @@
 
         <RumorFact> <!-- A rumor fact that belongs to this entry -->
             <ID>THE_VISION_HINT</ID> <!-- The ID of this fact -->
-            <RumorName>Watched by the Eye</RumorName> <!-- The name of the rumor this fact relates to -->
+            <!-- <RumorName>Watched by the Eye</RumorName> The name of the rumor this fact relates to -->
             <Text>Solanum describes that she feels as though she is being observed by the eye.</Text> <!-- The Text to display for this fact -->
         </RumorFact>
 
         <RumorFact> <!-- A rumor fact that belongs to this entry -->
             <ID>THE_VISION_EXPLANATION</ID> <!-- The ID of this fact -->
-            <RumorName>The Vision</RumorName> <!-- The name of the rumor this fact relates to -->
             <Text>Solanum explains that she recieved of all of my memories as "a vision" while standing beneath the reflection of the Eye while on the quantum moon.</Text> <!-- The Text to display for this fact -->
         </RumorFact>
 
         <RumorFact> <!-- A rumor fact that belongs to this entry -->
             <ID>THE_VISION_DISCUSSION</ID> <!-- The ID of this fact -->
-            <RumorName>The Vision Discussion</RumorName> <!-- The name of the rumor this fact relates to -->
             <Text>Solanum told the other Nomai about the vision she recieved while on the Quantum Moon. Some believe her, while others seem to doubt her vision's contents as factually accurate.</Text> <!-- The Text to display for this fact -->
         </RumorFact>
     </Entry>

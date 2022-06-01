@@ -17,6 +17,8 @@
         <ExploreFact> <!-- An explore fact that belongs to this entry -->
             <ID>REFUGEE_CAMP_DISCOVERY</ID> <!-- The ID of this fact -->
             <Text>I discovered what seems to be a Nomaian refugee camp. Only parts of it appeared at a time during the quantum storm.</Text> <!-- The Text to display for this fact, notice how you can use color just like in dialogue -->
+            <SourceID>REGROUPING</SourceID>
+            <SourceID>GHOST_MATTER_DISCOVERY</SourceID>
         </ExploreFact>
 
         <RumorFact> <!-- An explore fact that belongs to this entry -->

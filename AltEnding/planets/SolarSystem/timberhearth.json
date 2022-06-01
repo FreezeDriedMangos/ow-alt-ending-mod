@@ -7,6 +7,9 @@
   "name": "Timber Hearth",
   "ShipLog": {
 		"xmlFile": "planets/ShipLogs/TimberHearth.xml",
+    "entryPositions": [
+      { "id": "A_NEW_FUTURE", "position": {"x": 3859.818, "y": 383.6365} }
+    ],
     "initialReveal": [
       "A_NEW_FUTURE_REVEAL"
     ]
