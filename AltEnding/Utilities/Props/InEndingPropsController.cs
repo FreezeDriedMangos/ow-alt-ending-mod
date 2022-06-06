@@ -100,11 +100,11 @@ namespace AltEnding.Utilities.Props
             GameObject.Find("QMGiantsDeepAspect_Body/Sector/State_GD(Clone)/Effects_GDState/Ocean").SetActive(false);
 
 
-            var tides = new Vector3(2, 1.5f, 1);
+            //var tides = new Vector3(2, 1.5f, 1);
             GameObject water = GameObject.Find("QMGiantsDeepAspect_Body/Sector/Water");
             var originalScale = water.transform.localScale;
-            water.transform.localScale = new Vector3(originalScale.x*tides.x, originalScale.y*tides.y, originalScale.z*tides.z);
-
+            //water.transform.localScale = new Vector3(originalScale.x*tides.x, originalScale.y*tides.y, originalScale.z*tides.z);
+            water.AddComponent<TidesController>().Initialize(GameObject.Find("QMGiantsDeepAspect_Body").GetComponent<AstroObject>(), 80.5f, 70.5f);
 
             GameObject fluidVolumeGO = GameObject.Find("QMGiantsDeepAspect_Body/Sector/Water/WaterVolume");
             GameObject.Destroy(fluidVolumeGO.GetComponent<NHFluidVolume>());
@@ -119,6 +119,7 @@ namespace AltEnding.Utilities.Props
         {
 
             // destroy atmosphere.air   "QMSunAspect_Body/Sector/Air"
+            GameObject.Find("QMSunAspect_Body/Sector/Air").SetActive(false);
 
             //var sunAspect = AstroObjectLocator.GetAstroObject("QM Sun Aspect");
             //var cloudsModule = new AtmosphereModule()
