@@ -4,12 +4,12 @@
 	"Base" : 
 	{
 		"groundSize" : 0,
-		"surfaceSize" : 303,
-		"surfaceGravity" : 35,
+		"surfaceSize" : 150,
+		"surfaceGravity" : 10,
 		"hasMapMarker" : true
 	},
 	"Star": {
-		"size": 303
+		"size": 150
 	},
 	"Orbit" : 
 	{
@@ -18,6 +18,17 @@
 		"inclination": 5,
 		"longitudeOfAscendingNode": 90,
 		"trueAnomaly": 240
+	},
+	"Atmosphere": {
+		"size" : 250,
+		"clouds": {
+			"innerCloudRadius": 200,
+			"outerCloudRadius": 250,
+
+			"texturePath": "images/Clouds_QM_Top_d.png",
+			"capPath": "images/Clouds_QM_TopCap_d.png",
+			"rampPath": "images/Clouds_QM_Top_ramp.png"
+		}
 	},
 
 

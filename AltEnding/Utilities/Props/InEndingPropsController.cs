@@ -1,6 +1,8 @@
-﻿using NewHorizons.Builder.Atmosphere;
+﻿using AltEnding.CustomProps;
+using NewHorizons.Builder.Atmosphere;
 using NewHorizons.Builder.General;
 using NewHorizons.Builder.Props;
+using NewHorizons.Components;
 using NewHorizons.External.Modules;
 using NewHorizons.Utility;
 using System;
@@ -9,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using static NewHorizons.External.Modules.PropModule;
 
 namespace AltEnding.Utilities.Props
 {
@@ -19,11 +22,19 @@ namespace AltEnding.Utilities.Props
         // sun aspect clouds
         // QuantumMoon_Body/Clouds_QM
 
+
+        // TODO: delete this "QMGiantsDeepAspect_Body/Sector/State_GD(Clone)/Interactables_GDState/QuantumDeadNomaiSuit/"
+        // TODO: add this component to the fluid volume, and replace RadialFluidVolume: ElipsoidFluidVolume
         public static void SpawanProps()
         {
             CreateSunAspectClouds();
-
             CreateSunAspectSpawnPoint();
+
+            CreateGiantsDeepAspectTides();
+        
+            GameObject light = GameObject.Instantiate(GameObject.Find("QuantumMoon_Body/AmbientLight_QM"));
+            light.transform.parent = GameObject.Find("QMGiantsDeepAspect_Body").transform;
+            light.transform.localPosition = Vector3.zero;
 
             /*
                  "Atmosphere": {
@@ -33,6 +44,7 @@ namespace AltEnding.Utilities.Props
 			            "outerCloudRadius": 400,
 
 			            "texturePath": "images/Clouds_QM_Top_d.png",
+                        "capPath": "Clouds_QM_TopCap_d",
 			            "unlit": true
 		            }
 	            },
@@ -46,28 +58,79 @@ namespace AltEnding.Utilities.Props
              * 
              */
 
+            string[] files = System.IO.Directory.GetFiles(AltEnding.Instance.ModHelper.Manifest.ModFolderPath + "/images/vision1", "*.png");
+            files = new string[] { files[0], files[1] };
+            SlideInfo[] slides = files.Select(f => f.Remove(0, AltEnding.Instance.ModHelper.Manifest.ModFolderPath.Length)).Select(f => new SlideInfo() { imagePath=f }).ToArray();
+
+            // slides[0].backdropAudio = "SunStation"; // "OW_NM_SunStation";
+            // slides[251].backdropAudio = "SadNomaiTheme"; // "OW NM Nomai Ruins 081718 AP";
+
+            ProjectionInfo info = new ProjectionInfo()
+            {
+                position=new Vector3(-5.254965f, -70.73996f, 1.607201f),
+                rotation=new Vector3(0, 0, 0),
+                type=ProjectionInfo.SlideShowType.StandingVisionTorch,
+                slides=slides
+            };
+
             var station = AstroObjectLocator.GetAstroObject("QM Sun Station");
-            SpawnVisionTorchAndChair(station.gameObject, station._rootSector, new Vector3(-15.4589f, 20.7242f, -7.8966f), new Vector3(0f, 9.2435f, 0f), null);
+            SpawnVisionTorchAndChair(station.gameObject, station._rootSector, new Vector3(-15.4589f, 20.7242f, -7.8966f), new Vector3(0f, 9.2435f, 0f), info);
 
         
-            //GameObject clouds = GameObject.Instantiate(GameObject.Find("QuantumMoon_Body/Clouds_QM"));
-            //clouds.transform.parent = AstroObjectLocator.GetAstroObject("QM Sun Aspect").transform;
-            //clouds.transform.localPosition = Vector3.zero;
+            GameObject clouds1 = GameObject.Instantiate(GameObject.Find("QuantumMoon_Body/Clouds_QM"));
+            clouds1.transform.parent = AstroObjectLocator.GetAstroObject("QM Sun Aspect").transform;
+            clouds1.transform.localPosition = Vector3.zero;
+            clouds1.transform.localScale = Vector3.one*10;
+        }
+
+        private static void CreateGiantsDeepAspectTides()
+        {
+            //GameObject fluidVolume = GameObject.Find("QMGiantsDeepAspect_Body/Sector/State_GD(Clone)/Volumes_GDState/OceanFluidVolume");
+            //GameObject.Destroy(fluidVolume.GetComponent<RadialFluidVolume>());
+            //var newFluidVolume = fluidVolume.AddComponent<ElipsoidFluidVolume>();
+            //newFluidVolume._fluidType = FluidVolume.Type.WATER;
+            //newFluidVolume._baseRadius = 70.5f;
+            //fluidVolume.transform.localScale = new Vector3(3, 1.5f, 1);
+
+            //GameObject oceanVisual = GameObject.Find("QMGiantsDeepAspect_Body/Sector/State_GD(Clone)/Effects_GDState/Ocean");
+            //var originalScale = oceanVisual.transform.localScale;
+            //oceanVisual.transform.localScale = new Vector3(originalScale.x*3, originalScale.y*1.5f, originalScale.z*1);
+
+            GameObject.Find("QMGiantsDeepAspect_Body/Sector/State_GD(Clone)/Volumes_GDState/OceanFluidVolume").SetActive(false);
+            GameObject.Find("QMGiantsDeepAspect_Body/Sector/State_GD(Clone)/Effects_GDState/Ocean").SetActive(false);
+
+
+            var tides = new Vector3(2, 1.5f, 1);
+            GameObject water = GameObject.Find("QMGiantsDeepAspect_Body/Sector/Water");
+            var originalScale = water.transform.localScale;
+            water.transform.localScale = new Vector3(originalScale.x*tides.x, originalScale.y*tides.y, originalScale.z*tides.z);
+
+
+            GameObject fluidVolumeGO = GameObject.Find("QMGiantsDeepAspect_Body/Sector/Water/WaterVolume");
+            GameObject.Destroy(fluidVolumeGO.GetComponent<NHFluidVolume>());
+            var fluidVolume = fluidVolumeGO.AddComponent<ElipsoidFluidVolume>();
+            fluidVolume._fluidType = FluidVolume.Type.WATER;
+            fluidVolume._attachedBody = GameObject.Find("QMGiantsDeepAspect_Body").GetComponent<OWRigidbody>();
+            fluidVolume._triggerVolume = fluidVolumeGO.GetComponent<OWTriggerVolume>();
+            fluidVolume._layer = LayerMask.NameToLayer("BasicEffectVolume");
         }
 
         public static void CreateSunAspectClouds()
         {
-            var sunAspect = AstroObjectLocator.GetAstroObject("QM Sun Aspect");
-            var cloudsModule = new AtmosphereModule()
-            {
-                clouds = new AtmosphereModule.CloudInfo()
-                {
-                    innerCloudRadius = 500,
-                    outerCloudRadius = 600,
-                    useBasicCloudShader = true
-                }
-            };
-            CloudsBuilder.Make(sunAspect.gameObject, sunAspect._rootSector, cloudsModule, AltEnding.Instance);
+
+            // destroy atmosphere.air   "QMSunAspect_Body/Sector/Air"
+
+            //var sunAspect = AstroObjectLocator.GetAstroObject("QM Sun Aspect");
+            //var cloudsModule = new AtmosphereModule()
+            //{
+            //    clouds = new AtmosphereModule.CloudInfo()
+            //    {
+            //        innerCloudRadius = 500,
+            //        outerCloudRadius = 600,
+            //        useBasicCloudShader = true
+            //    }
+            //};
+            //CloudsBuilder.Make(sunAspect.gameObject, sunAspect._rootSector, cloudsModule, AltEnding.Instance);
         }
 
         public static void FixStationGlass()
@@ -76,7 +139,7 @@ namespace AltEnding.Utilities.Props
             var opcGo = GameObject.Find("OrbitalProbeCannon_Body/Sector_OrbitalProbeCannon/Geo_OrbitalProbeCannon/ControlledByProxy_OrbitalProbeCannon/Structure_NOM_OrbitalProbeCannon/OPC_Hub_Geo");
             var glassMat = opcGo.GetComponent<MeshRenderer>().sharedMaterials[3];
 
-            var glassFloorGo = GameObject.Find("TestSunMoonSatellite_Body/Sector/Quantum Moon Sun Station(Clone)/warp_ext/Glass Floor");
+            var glassFloorGo = GameObject.Find("QMSunStation_Body/Sector/Quantum Moon Sun Station(Clone)/warp_ext/Glass Floor");
             glassFloorGo.GetComponent<MeshRenderer>().sharedMaterial = glassMat;
         }
 

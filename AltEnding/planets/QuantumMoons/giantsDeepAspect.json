@@ -3,7 +3,49 @@
 	"canShowOnTitle": false,
 	"name": "QM Giant's Deep Aspect",
 	
-	"Base": {},
+	"Base" : 
+	{
+		"groundSize" : 0,
+		"surfaceSize" : 70,
+		"surfaceGravity" : 10,
+		"hasMapMarker" : true
+	},
+	"Orbit" : 
+	{
+		"primaryBody": "Timber Hearth",
+		"semiMajorAxis": 1060,
+		"inclination": 5,
+		"longitudeOfAscendingNode": 90,
+		"trueAnomaly": 60
+	},
+
+	"Atmosphere": {
+		"size" : 250,
+		"clouds": {
+			"cloudsPrefab": "quantumMoon",
+
+			"innerCloudRadius": 200,
+			"outerCloudRadius": 250,
+
+			"texturePath": "images/Clouds_QM_Top_d.png",
+			"capPath": "images/Clouds_QM_TopCap_d.png",
+			"rampPath": "images/Clouds_QM_Top_ramp.png"
+		}
+	},
+
+	"Props": {
+		"details": [
+			{
+				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_GD",
+				"position": {"x": 0, "y": 0, "z": 0},
+				"removeChildren": [
+					"Interactables_GDState/QuantumDeadNomaiSuit",
+					"Volumes_GDState/HurricaneFluidVolume",
+					"Effects_GDState/Effects_GD_Hurricane (1)"
+				]
+			}
+		]
+	},
 
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/GiantsDeepAspect.xml",
@@ -40,5 +82,9 @@
 			"REGROUPING_HEARTHIAN_EVOLUTION",
 			"REGROUPING_QUANTUM_MOON_PLAN"
 		]
+	},
+
+	"Water": {
+		"size": 70.5
 	}
 }

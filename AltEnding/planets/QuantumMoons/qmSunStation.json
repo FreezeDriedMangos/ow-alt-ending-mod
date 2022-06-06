@@ -5,13 +5,13 @@
 	{
 		"groundSize" : 0,
 		"surfaceSize" : 10,
-		"surfaceGravity" : 2.5,
+		"surfaceGravity" : 35,
 		"hasMapMarker" : true
 	},
 	"Orbit" : 
 	{
 		"primaryBody": "QM Sun Aspect",
-		"semiMajorAxis": 330,
+		"semiMajorAxis": 160,
 		"inclination": 5,
 		"longitudeOfAscendingNode": 90,
 		"trueAnomaly": 240,
