@@ -31,6 +31,7 @@ namespace AltEnding.Utilities.Props
             CreateSunAspectSpawnPoint();
 
             CreateGiantsDeepAspectTides();
+            CreateGiantsDeepAspectIslands();
         
             GameObject light = GameObject.Instantiate(GameObject.Find("QuantumMoon_Body/AmbientLight_QM"));
             light.transform.parent = GameObject.Find("QMGiantsDeepAspect_Body").transform;
@@ -83,29 +84,48 @@ namespace AltEnding.Utilities.Props
             clouds1.transform.localScale = Vector3.one*10;
         }
 
+        private static void CreateGiantsDeepAspectIslands()
+        {
+            var giantsDeepAspectGO = GameObject.Find("QMGiantsDeepAspect_Body");
+            var island = GameObject.Instantiate(GameObject.Find("GabbroIsland_Body"));
+            island.GetComponent<AlignWithTargetBody>()._targetBody = giantsDeepAspectGO.GetComponent<OWRigidbody>();
+            island.transform.position = giantsDeepAspectGO.transform.position + 90f*(new Vector3(1, 0, 0));
+            
+            var islandController = island.GetComponent<IslandController>();
+            islandController._barrierRepelFluids = island.GetComponentsInChildren<IslandRepelFluidVolume>();
+            islandController._campfire = island.GetComponentInChildren<Campfire>();
+            islandController._fluidDetector = island.GetComponentInChildren<DynamicFluidDetector>();
+            islandController._inheritanceFluid = island.GetComponentInChildren<InheritibleFluidVolume>();
+            islandController._islandBody = island.GetComponent<OWRigidbody>();
+            islandController._planetTransform = giantsDeepAspectGO.transform;
+            islandController._safetyTractorBeams = island.GetComponentsInChildren<SafetyTractorBeamController>();
+            islandController._transform = island.transform;
+            islandController._zeroGVolume = island.GetComponentInChildren<ZeroGVolume>();
+
+            island.GetComponent<OWRigidbody>()._origParentBody = giantsDeepAspectGO.GetComponent<OWRigidbody>();
+        }
+
+        // MultiStateQuantumObject guide
+        // make an empty go and add a MultiStateQuantumObject
+        // make some props that are considered different states of this object, and set their parent to the multistatequantumobject. add a QuantumState component to each
+        // make a visibility tracker for each state (add a BoxShape and a ShapeVisibilityTracker to each)
+        // set the _visibilityTrackers and _states properties on the MultiStateQuantumObject
+        // optionally set MultiStateQuantumObject._loop to true
+        //
+        // if you want to display a sequence, like the campfire on the eye, parent teh visibility trackers to their respective states, so only one will be active at a time
+        //
+        // if you want an object that appears and disapears, make one of the states just an empty game object
         private static void CreateGiantsDeepAspectTides()
         {
-            //GameObject fluidVolume = GameObject.Find("QMGiantsDeepAspect_Body/Sector/State_GD(Clone)/Volumes_GDState/OceanFluidVolume");
-            //GameObject.Destroy(fluidVolume.GetComponent<RadialFluidVolume>());
-            //var newFluidVolume = fluidVolume.AddComponent<ElipsoidFluidVolume>();
-            //newFluidVolume._fluidType = FluidVolume.Type.WATER;
-            //newFluidVolume._baseRadius = 70.5f;
-            //fluidVolume.transform.localScale = new Vector3(3, 1.5f, 1);
-
-            //GameObject oceanVisual = GameObject.Find("QMGiantsDeepAspect_Body/Sector/State_GD(Clone)/Effects_GDState/Ocean");
-            //var originalScale = oceanVisual.transform.localScale;
-            //oceanVisual.transform.localScale = new Vector3(originalScale.x*3, originalScale.y*1.5f, originalScale.z*1);
-
+            // delete original water
             GameObject.Find("QMGiantsDeepAspect_Body/Sector/State_GD(Clone)/Volumes_GDState/OceanFluidVolume").SetActive(false);
             GameObject.Find("QMGiantsDeepAspect_Body/Sector/State_GD(Clone)/Effects_GDState/Ocean").SetActive(false);
 
-
-            //var tides = new Vector3(2, 1.5f, 1);
+            // add tides
             GameObject water = GameObject.Find("QMGiantsDeepAspect_Body/Sector/Water");
-            var originalScale = water.transform.localScale;
-            //water.transform.localScale = new Vector3(originalScale.x*tides.x, originalScale.y*tides.y, originalScale.z*tides.z);
             water.AddComponent<TidesController>().Initialize(GameObject.Find("QMGiantsDeepAspect_Body").GetComponent<AstroObject>(), 80.5f, 70.5f);
 
+            // set up the water volume type that the tides require in order to function correctly
             GameObject fluidVolumeGO = GameObject.Find("QMGiantsDeepAspect_Body/Sector/Water/WaterVolume");
             GameObject.Destroy(fluidVolumeGO.GetComponent<NHFluidVolume>());
             var fluidVolume = fluidVolumeGO.AddComponent<ElipsoidFluidVolume>();
