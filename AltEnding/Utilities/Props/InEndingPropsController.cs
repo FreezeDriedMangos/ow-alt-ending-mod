@@ -88,8 +88,8 @@ namespace AltEnding.Utilities.Props
         {
             var giantsDeepAspectGO = GameObject.Find("QMGiantsDeepAspect_Body");
             var island = GameObject.Instantiate(GameObject.Find("GabbroIsland_Body"));
+            island.transform.position = giantsDeepAspectGO.transform.position + 75f*(new Vector3(1, 0, 0));
             island.GetComponent<AlignWithTargetBody>()._targetBody = giantsDeepAspectGO.GetComponent<OWRigidbody>();
-            island.transform.position = giantsDeepAspectGO.transform.position + 90f*(new Vector3(1, 0, 0));
             
             var islandController = island.GetComponent<IslandController>();
             islandController._barrierRepelFluids = island.GetComponentsInChildren<IslandRepelFluidVolume>();
@@ -103,6 +103,12 @@ namespace AltEnding.Utilities.Props
             islandController._zeroGVolume = island.GetComponentInChildren<ZeroGVolume>();
 
             island.GetComponent<OWRigidbody>()._origParentBody = giantsDeepAspectGO.GetComponent<OWRigidbody>();
+
+
+            // destroy unneeded components
+            GameObject.Find("GabbroIsland_Body(Clone)/Sector_GabbroIsland/Interactables_GabbroIsland/Signal_Flute").SetActive(false);
+            GameObject.Find("GabbroIsland_Body(Clone)/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro").SetActive(false);
+            GameObject.Find("GabbroIsland_Body(Clone)/GD_GABBRO_ISLAND").SetActive(false);
         }
 
         // MultiStateQuantumObject guide
