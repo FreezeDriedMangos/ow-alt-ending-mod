@@ -38,6 +38,23 @@ namespace AltEnding.Utilities.Props
             light.transform.localPosition = Vector3.zero;
 
             /*
+            
+			{
+				"path": "TowerTwin_Body/Sector_TowerTwin/Geometry_TowerTwin/OtherComponentsGroup/ControlledByProxy_Base/Terrain_HT_TowerTwin_TLD_Shell/TimeLoopShell/outerShell",
+				"position": {"x": 0, "y": 0, "z": 0},
+				"scale": 2
+			},
+			{
+				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_HT",
+				"position": {"x": 0, "y": 0, "z": 0},
+				"rotation": {"x": 90, "y": 0, "z": 0},
+				"removeChildren": [
+					"Interactables_HTState/QuantumDeadNomaiSuit"
+				]
+			}
+             */
+
+            /*
                  "Atmosphere": {
 		            "size" : 400,
 		            "clouds": {
@@ -103,7 +120,9 @@ namespace AltEnding.Utilities.Props
             islandController._zeroGVolume = island.GetComponentInChildren<ZeroGVolume>();
 
             island.GetComponent<OWRigidbody>()._origParentBody = giantsDeepAspectGO.GetComponent<OWRigidbody>();
-
+            var forceDetector = GameObject.Find("GabbroIsland_Body(Clone)/Detector_GabbroIsland").GetComponent<ConstantForceDetector>();
+            forceDetector._activeInheritedDetector = GameObject.Find("QMGiantsDeepAspect_Body/FieldDetector").GetComponent<ConstantForceDetector>();
+            forceDetector._detectableFields = new ForceVolume[]{ GameObject.Find("QMGiantsDeepAspect_Body/GravityWell").GetComponent<GravityVolume>() };
 
             // destroy unneeded components
             GameObject.Find("GabbroIsland_Body(Clone)/Sector_GabbroIsland/Interactables_GabbroIsland/Signal_Flute").SetActive(false);
