@@ -40,8 +40,8 @@
 				"position": {"x": 0, "y": 0, "z": 0}
 			},
 			{
-				"assetBundle": "planets/quantummoonhourglassaspect",
-				"path": "Assets/uncertainFutures/ht aspect Variant.prefab",
+				"assetBundle": "planets/hourglassaspect",
+				"path": "Assets/UncertainFutures/ht aspect Variant.prefab",
 				"position": {"x": 0, "y": 0, "z": 0}
 			}
 		]
