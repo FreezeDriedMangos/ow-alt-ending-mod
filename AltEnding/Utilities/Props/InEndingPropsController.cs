@@ -32,10 +32,6 @@ namespace AltEnding.Utilities.Props
 
             CreateGiantsDeepAspectTides();
             CreateGiantsDeepAspectIslands();
-        
-            GameObject light = GameObject.Instantiate(GameObject.Find("QuantumMoon_Body/AmbientLight_QM"));
-            light.transform.parent = GameObject.Find("QMGiantsDeepAspect_Body").transform;
-            light.transform.localPosition = Vector3.zero;
 
             /*
             
