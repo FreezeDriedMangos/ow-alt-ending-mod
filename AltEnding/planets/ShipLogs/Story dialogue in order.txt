@@ -1,6 +1,5 @@
 below is all the dialogue for the mod, arranged by which fact it reveals, and listed in chronological order according to the story
 
-
 //
 // Brittle Hollow Aspect
 // Character Goals: 
@@ -159,6 +158,7 @@ she doesn't take the river current seriously enough, despite protests from the e
 "THE_SWARM_DESIGN",
 "THE_SWARM_PRUPOSE",
 
+// TODO: add new ship log for the reproposal of the refugee camp, and link it from STAFF_RECOVERY to THE_REFUGEE_CAMP
 
 // 
 // Eye aspect

@@ -3,5 +3,6 @@ CREDITS
 Trifid - UV Unwrapping (Nomai Model)
 Besad - Music
 Nolram - Music
+Greenpixel - NomaiRuint Muisc Track
 Classic - Custom Subtitle Art
 CripticParrot - Writing Advice
