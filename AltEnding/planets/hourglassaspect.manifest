@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1415967748
+CRC: 1323174488
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cc5b1835e400609099cadf5ffe6d2dd9
+    Hash: d26e402558ea7880de8486385b69eec2
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f2e196cb29100818f2dc25b4a6ef2e3d
+    Hash: 09fc19e85dd0263dc8c9501fb9fbb94c
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -16,6 +16,8 @@ ClassTypes:
 - Class: 21
   Script: {instanceID: 0}
 - Class: 23
+  Script: {instanceID: 0}
+- Class: 28
   Script: {instanceID: 0}
 - Class: 33
   Script: {instanceID: 0}
@@ -33,5 +35,7 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/UncertainFutures/Meshes/ht aspect.fbx
+- Assets/UncertainFutures/Meshes/ht aspect v2.fbx
+- Assets/UncertainFutures/ht aspect v2 Variant.prefab
 - Assets/UncertainFutures/ht aspect Variant.prefab
 Dependencies: []

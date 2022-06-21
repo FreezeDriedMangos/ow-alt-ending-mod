@@ -32,7 +32,8 @@ namespace AltEnding.Utilities.Props
 
             CreateGiantsDeepAspectTides();
             CreateGiantsDeepAspectIslands();
-
+        
+            CreateHourglassTwinsAspectTides();
             /*
             
 			{
@@ -154,6 +155,13 @@ namespace AltEnding.Utilities.Props
             fluidVolume._attachedBody = GameObject.Find("QMGiantsDeepAspect_Body").GetComponent<OWRigidbody>();
             fluidVolume._triggerVolume = fluidVolumeGO.GetComponent<OWTriggerVolume>();
             fluidVolume._layer = LayerMask.NameToLayer("BasicEffectVolume");
+        }
+
+        private static void CreateHourglassTwinsAspectTides()
+        {
+            // add tides
+            GameObject sand = GameObject.Find("QMHourglassTwinsAspect_Body/Sector/Sand");
+            sand.AddComponent<TidesController>().Initialize(GameObject.Find("QMHourglassTwinsAspect_Body").GetComponent<AstroObject>(), 2*145, 2*135);
         }
 
         public static void CreateSunAspectClouds()

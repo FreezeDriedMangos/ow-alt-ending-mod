@@ -47,6 +47,10 @@
 		]
 	},
 
+	"Sand": {
+		"size": 135
+	},
+
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/HourglassTwinsAspect.xml",
 		"entryPositions": [

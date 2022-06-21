@@ -21,6 +21,13 @@ namespace AltEnding.Utilities.Props
 
         public static void SpawnProps(string system)
         {
+            // DEBUG:
+            // SkinReplacer.ReplaceSkin(GameObject.Find("Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo"), "Feldspar");
+            SkinReplacer.ReplaceSkin(GameObject.Find("Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo"), "Solanum");
+
+            // END DEBUG
+
+
             if (system == "SolarSystem")
             {
                 PreEndingPropsController.SpawnProps();

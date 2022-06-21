@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 3115420699
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: da08e60835cd64dbdf49218754eb7eaf
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3461ede6d622f5dafa1c1d131f5199b0
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/HL_Gordon_Skin.prefab
+- Assets/Prefabs/OW_Chert_Skin.prefab
+- Assets/Prefabs/OW_Riebeck_Skin.prefab
+- Assets/Prefabs/OW_Feldspar_Skin.prefab
+- Assets/Prefabs/HL_Scientist_1_Skin.prefab
+- Assets/Prefabs/HL_Scientist_3_Skin.prefab
+- Assets/Prefabs/HL_Scientist_4_Skin.prefab
+- Assets/Prefabs/HL_HEV_Skin.prefab
+- Assets/Prefabs/OW_Solanum_Skin.prefab
+- Assets/Prefabs/HL_Scientist_2_Skin.prefab
+- Assets/Prefabs/OW_Gabbro_Skin.prefab
+Dependencies: []
