@@ -24,6 +24,14 @@ namespace AltEnding.CustomProps
 
             var player = Locator.GetPlayerBody();
 
+            // Sometimes it won't detatch the player
+            if (player.transform.parent == _attachPoint.transform)
+            {
+                _attachPoint.enabled = true;
+                _attachPoint.DetachPlayer();
+                _attachPoint.enabled = false;
+            }
+
             var pos = transform.InverseTransformPoint(player.GetPosition());
 
             var planet = _pairedCampfire.GetAttachedOWRigidbody();
