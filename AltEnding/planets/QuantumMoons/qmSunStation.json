@@ -1,15 +1,14 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-	"name" : "QM Sun Station",
-	"Base" : 
-	{
-		"groundSize" : 0,
-		"surfaceSize" : 10,
-		"surfaceGravity" : 35,
-		"hasMapMarker" : true
+	"name": "QM Sun Station",
+	"starSystem": "clay.AltEnding",
+	"Base": {
+		"groundSize": 0,
+		"surfaceSize": 10,
+		"surfaceGravity": 35,
+		"hasMapMarker": true
 	},
-	"Orbit" : 
-	{
+	"Orbit": {
 		"primaryBody": "QM Sun Aspect",
 		"semiMajorAxis": 160,
 		"inclination": 5,
@@ -17,18 +16,24 @@
 		"trueAnomaly": 240,
 		"isTidallyLocked": true
 	},
-	"Props" : 
-	{
-		"details" :
-		[
-			{ 
+	"Props": {
+		"details": [
+			{
 				"assetBundle": "planets/sunstuff",
 				"path": "Assets/Quantum Moon Sun Station.prefab",
-				"position" : {"x": 0, "y": -10.5164,"z": 35.3019}
+				"position": {
+					"x": 0,
+					"y": -10.5164,
+					"z": 35.3019
+				}
 			},
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/Prefab_HEA_Campfire",
-				"position": {"x": -15.1791, "y": 20.8606, "z": -0.3655}
+				"position": {
+					"x": -15.1791,
+					"y": 20.8606,
+					"z": -0.3655
+				}
 			}
 		]
 	}

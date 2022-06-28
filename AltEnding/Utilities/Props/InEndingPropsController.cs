@@ -25,7 +25,7 @@ namespace AltEnding.Utilities.Props
 
         // TODO: delete this "QMGiantsDeepAspect_Body/Sector/State_GD(Clone)/Interactables_GDState/QuantumDeadNomaiSuit/"
         // TODO: add this component to the fluid volume, and replace RadialFluidVolume: ElipsoidFluidVolume
-        public static void SpawanProps()
+        public static void SpawnProps()
         {
             CreateSunAspectClouds();
             CreateSunAspectSpawnPoint();
@@ -96,6 +96,8 @@ namespace AltEnding.Utilities.Props
             clouds1.transform.parent = AstroObjectLocator.GetAstroObject("QM Sun Aspect").transform;
             clouds1.transform.localPosition = Vector3.zero;
             clouds1.transform.localScale = Vector3.one*10;
+
+            SpawnTowerTeleportCampfires();
         }
 
         private static void CreateGiantsDeepAspectIslands()
@@ -262,6 +264,16 @@ namespace AltEnding.Utilities.Props
             * -0.3915 1.3813 0.047
             * 333.0699 260.7565 0
             */
+        }
+
+        private static void SpawnTowerTeleportCampfires()
+        {
+            var QMGD = AstroObjectLocator.GetAstroObject("QM Giant's Deep Aspect");
+            var QMDB = AstroObjectLocator.GetAstroObject("QM Dark Bramble Aspect");
+
+            var GDtoDB = TeleportCampfire.Spawn(QMGD.gameObject, QMGD.GetRootSector(), new Vector3(19.18f, 49.98f, -48.56f));
+            var DBtoGD = TeleportCampfire.Spawn(QMDB.gameObject, QMDB.GetRootSector(), new Vector3(57.27f, -49.61f, 53.99f));
+            GDtoDB.LinkCampfire(DBtoGD);
         }
     }
 }

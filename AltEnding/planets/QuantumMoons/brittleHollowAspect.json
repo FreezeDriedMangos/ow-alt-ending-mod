@@ -2,7 +2,7 @@
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
 	"canShowOnTitle": false,
 	"name": "QM Brittle Hollow Aspect",
-	
+	"starSystem": "clay.AltEnding",
 	"Base" : 
 	{
 		"groundSize" : 0,
@@ -10,13 +10,13 @@
 		"surfaceGravity" : 10,
 		"hasMapMarker" : true
 	},
-	"Orbit" : 
-	{
-		"primaryBody": "Timber Hearth",
+	"Orbit": {
+		"primaryBody": "QM Eye Aspect",
 		"semiMajorAxis": 1060,
 		"inclination": 5,
 		"longitudeOfAscendingNode": 90,
-		"trueAnomaly": 330
+		"trueAnomaly": 330,
+		"isStatic": true
 	},
 
 	"Atmosphere": {

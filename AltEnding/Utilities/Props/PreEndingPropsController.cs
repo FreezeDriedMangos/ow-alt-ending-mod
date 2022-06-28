@@ -83,11 +83,6 @@ namespace AltEnding.Utilities.Props
             // Vision Target
             //
             SpawnSolanumProps();
-
-            //
-            // Teleport campfires
-            //
-            SpawnTowerTeleportCampfires();
         }
 
         private static void SpawnStaffSignals()
@@ -165,16 +160,6 @@ namespace AltEnding.Utilities.Props
             myConversationManager.solanumVisionResponse = responseText;
 
             visionTarget.GetComponent<VisionTorchTarget>().onSlidesComplete = myConversationManager.OnVisionEnd;
-        }
-        
-        private static void SpawnTowerTeleportCampfires()
-        {
-            var QMGD = AstroObjectLocator.GetAstroObject("QM Giant's Deep Aspect");
-            var QMDB = AstroObjectLocator.GetAstroObject("QM Dark Bramble Aspect");
-
-            var GDtoDB = TeleportCampfire.Spawn(QMGD.gameObject, QMGD.GetRootSector(), new Vector3(19.18f, 49.98f, -48.56f));
-            var DBtoGD = TeleportCampfire.Spawn(QMDB.gameObject, QMDB.GetRootSector(), new Vector3(57.27f, -49.61f, 53.99f));
-            GDtoDB.LinkCampfire(DBtoGD);
         }
     }
 }

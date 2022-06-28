@@ -2,25 +2,24 @@
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
 	"canShowOnTitle": false,
 	"name": "QM Giant's Deep Aspect",
-	
-	"Base" : 
-	{
-		"groundSize" : 0,
-		"surfaceSize" : 70,
-		"surfaceGravity" : 10,
-		"hasMapMarker" : true
+	"starSystem": "clay.AltEnding",
+	"Base": {
+		"groundSize": 0,
+		"surfaceSize": 70,
+		"surfaceGravity": 10,
+		"hasMapMarker": true
 	},
-	"Orbit" : 
-	{
-		"primaryBody": "Timber Hearth",
+	"Orbit": {
+		"primaryBody": "QM Eye Aspect",
 		"semiMajorAxis": 1060,
 		"inclination": 5,
 		"longitudeOfAscendingNode": 90,
-		"trueAnomaly": 60
+		"trueAnomaly": 60,
+		"isStatic": true
 	},
 
 	"Atmosphere": {
-		"size" : 250,
+		"size": 250,
 		"clouds": {
 			"cloudsPrefab": "quantumMoon",
 
@@ -37,11 +36,19 @@
 		"details": [
 			{
 				"path": "QuantumMoon_Body/AmbientLight_QM",
-				"position": {"x": 0, "y": 0, "z": 0}
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
 			},
 			{
 				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_GD",
-				"position": {"x": 0, "y": 0, "z": 0},
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
 				"removeChildren": [
 					"Interactables_GDState/QuantumDeadNomaiSuit",
 					"Volumes_GDState/HurricaneFluidVolume",
@@ -49,73 +56,97 @@
 				]
 			},
 			{
-			  "path": "TowerTwin_Body/Sector_TowerTwin/Sector_Tower_BH/Geometry_Tower_BH",
-			  "position": {
-				"x": 3.07836914,
-				"y": 3.78430176,
-				"z": 2.48535156
-			  },
-			  "rotation": {
-				"x": 7.01560163,
-				"y": 326.8616,
-				"z": 315.2631
-			  },
-			  "scale": 0.7
+				"path": "TowerTwin_Body/Sector_TowerTwin/Sector_Tower_BH/Geometry_Tower_BH",
+				"position": {
+					"x": 3.07836914,
+					"y": 3.78430176,
+					"z": 2.48535156
+				},
+				"rotation": {
+					"x": 7.01560163,
+					"y": 326.8616,
+					"z": 315.2631
+				},
+				"scale": 0.7
 			},
 			{
-			  "path": "TowerTwin_Body/Sector_TowerTwin/Sector_Tower_HGT/Geometry_Tower_HGT/ControlledByProxy_Arch/Structure_HT_TT_Tower_TT",
-			  "position": {
-				"x": 11.4248047,
-				"y": -9.424801,
-				"z": -4.82761765
-			  },
-			  "rotation": {
-				"x": 24.7450886,
-				"y": 5.95142841,
-				"z": 41.254734
-			  },
-			  "scale": 0.6999998
+				"path": "TowerTwin_Body/Sector_TowerTwin/Sector_Tower_HGT/Geometry_Tower_HGT/ControlledByProxy_Arch/Structure_HT_TT_Tower_TT",
+				"position": {
+					"x": 11.4248047,
+					"y": -9.424801,
+					"z": -4.82761765
+				},
+				"rotation": {
+					"x": 24.7450886,
+					"y": 5.95142841,
+					"z": 41.254734
+				},
+				"scale": 0.6999998
 			},
 			{
 				"assetBundle": "planets/brambletower",
-        		"path": "Assets/uncertainFutures/bramble tower Variant.prefab",
+				"path": "Assets/uncertainFutures/bramble tower Variant.prefab",
 				"position": {
-				  "x": 19.3868275,
-				  "y": 49.8133659,
-				  "z": -48.2789879
+					"x": 19.3868275,
+					"y": 49.8133659,
+					"z": -48.2789879
 				},
 				"rotation": {
-				  "x": 345.4733,
-				  "y": 49.7651253,
-				  "z": 316.592468
+					"x": 345.4733,
+					"y": 49.7651253,
+					"z": 316.592468
 				}
-			  }
+			}
 		]
 	},
 
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/GiantsDeepAspect.xml",
 		"entryPositions": [
-			{ "id": "REGROUPING", "position": {"x": 4853.5, "y": -733.6} },
-			{ "id": "GHOST_MATTER_DISCOVERY", "position": {"x": 5199.1, "y": -118.9} },
-			{ "id": "MAKING_PLANS", "position": {"x": 5234.9, "y": -890.7} },
-			{ "id": "THE_BUNKER", "position": {"x": 5648.2, "y": -853.1} }
-		],	
+			{
+				"id": "REGROUPING",
+				"position": {
+					"x": 4853.5,
+					"y": -733.6
+				}
+			},
+			{
+				"id": "GHOST_MATTER_DISCOVERY",
+				"position": {
+					"x": 5199.1,
+					"y": -118.9
+				}
+			},
+			{
+				"id": "MAKING_PLANS",
+				"position": {
+					"x": 5234.9,
+					"y": -890.7
+				}
+			},
+			{
+				"id": "THE_BUNKER",
+				"position": {
+					"x": 5648.2,
+					"y": -853.1
+				}
+			}
+		],
 		"curiosities": [
 			{
-			  "id": "THE_BUNKER",
-			  "color": {
-				"r": 232,
-				"g": 215,
-				"b": 130,
-				"a": 255
-			  },
-			  "highlightColor": {
-				"r": 201,
-				"g": 180,
-				"b": 71,
-				"a": 255
-			  }
+				"id": "THE_BUNKER",
+				"color": {
+					"r": 232,
+					"g": 215,
+					"b": 130,
+					"a": 255
+				},
+				"highlightColor": {
+					"r": 201,
+					"g": 180,
+					"b": 71,
+					"a": 255
+				}
 			}
 		],
 		"initialReveal": [

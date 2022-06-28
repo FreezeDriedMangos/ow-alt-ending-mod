@@ -2,25 +2,24 @@
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
 	"canShowOnTitle": false,
 	"name": "QM Hourglass Twins Aspect",
-	
-	"Base" : 
-	{
-		"groundSize" : 0,
-		"surfaceSize" : 70,
-		"surfaceGravity" : 10,
-		"hasMapMarker" : true
+	"starSystem": "clay.AltEnding",
+	"Base": {
+		"groundSize": 0,
+		"surfaceSize": 70,
+		"surfaceGravity": 10,
+		"hasMapMarker": true
 	},
-	"Orbit" : 
-	{
-		"primaryBody": "Timber Hearth",
+	"Orbit": {
+		"primaryBody": "QM Eye Aspect",
 		"semiMajorAxis": 1060,
 		"inclination": 5,
 		"longitudeOfAscendingNode": 90,
-		"trueAnomaly": 150
+		"trueAnomaly": 150,
+		"isStatic": true
 	},
 
 	"Atmosphere": {
-		"size" : 250,
+		"size": 250,
 		"clouds": {
 			"cloudsPrefab": "quantumMoon",
 
@@ -37,12 +36,20 @@
 		"details": [
 			{
 				"path": "QuantumMoon_Body/AmbientLight_QM",
-				"position": {"x": 0, "y": 0, "z": 0}
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
 			},
 			{
 				"assetBundle": "planets/hourglassaspect",
 				"path": "Assets/UncertainFutures/ht aspect v2 Variant.prefab",
-				"position": {"x": 0, "y": 0, "z": 0}
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
 			}
 		]
 	},
@@ -54,26 +61,50 @@
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/HourglassTwinsAspect.xml",
 		"entryPositions": [
-			{ "id": "STAFF_RECOVERY", "position": {"x": 3815.1, "y": -542.7} },
-			{ "id": "SWARM_SATELLITE_DISCOVERY", "position": {"x": 4649.3, "y": -225.1} },
-			{ "id": "SWARM_SATELLITE_CONSTRUCTION_AND_LAUNCH_FACILITY", "position": {"x": 4640.9, "y": -430.2} },
-			{ "id": "THE_SWARM", "position": {"x": 4374.0, "y": -362.5} }
+			{
+				"id": "STAFF_RECOVERY",
+				"position": {
+					"x": 3815.1,
+					"y": -542.7
+				}
+			},
+			{
+				"id": "SWARM_SATELLITE_DISCOVERY",
+				"position": {
+					"x": 4649.3,
+					"y": -225.1
+				}
+			},
+			{
+				"id": "SWARM_SATELLITE_CONSTRUCTION_AND_LAUNCH_FACILITY",
+				"position": {
+					"x": 4640.9,
+					"y": -430.2
+				}
+			},
+			{
+				"id": "THE_SWARM",
+				"position": {
+					"x": 4374.0,
+					"y": -362.5
+				}
+			}
 		],
 		"curiosities": [
 			{
-			  "id": "THE_SWARM",
-			  "color": {
-				"r": 232,
-				"g": 215,
-				"b": 130,
-				"a": 255
-			  },
-			  "highlightColor": {
-				"r": 201,
-				"g": 180,
-				"b": 71,
-				"a": 255
-			  }
+				"id": "THE_SWARM",
+				"color": {
+					"r": 232,
+					"g": 215,
+					"b": 130,
+					"a": 255
+				},
+				"highlightColor": {
+					"r": 201,
+					"g": 180,
+					"b": 71,
+					"a": 255
+				}
 			}
 		],
 		"initialReveal": [
@@ -83,6 +114,6 @@
 			"THE_SWARM_PRUPOSE",
 			"SWARM_SATELLITE_CONSTRUCTION_AND_LAUNCH_FACILITY_DISCOVERY",
 			"SWARM_SATELLITE_DISCOVERY_FACT"
-		]	
+		]
 	}
 }

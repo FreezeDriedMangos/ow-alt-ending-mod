@@ -2,25 +2,24 @@
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
 	"canShowOnTitle": false,
 	"name": "QM Dark Bramble Aspect",
-	
-	"Base" : 
-	{
-		"groundSize" : 0,
-		"surfaceSize" : 70,
-		"surfaceGravity" : 10,
-		"hasMapMarker" : true
+	"starSystem": "clay.AltEnding",
+	"Base": {
+		"groundSize": 0,
+		"surfaceSize": 70,
+		"surfaceGravity": 10,
+		"hasMapMarker": true
 	},
-	"Orbit" : 
-	{
-		"primaryBody": "Timber Hearth",
+	"Orbit": {
+		"primaryBody": "QM Eye Aspect",
 		"semiMajorAxis": 1060,
 		"inclination": 5,
 		"longitudeOfAscendingNode": 90,
-		"trueAnomaly": 15
+		"trueAnomaly": 15,
+		"isStatic": true
 	},
 
 	"Atmosphere": {
-		"size" : 250,
+		"size": 250,
 		"clouds": {
 			"cloudsPrefab": "quantumMoon",
 
@@ -32,34 +31,42 @@
 			"rampPath": "images/Clouds_QM_Top_ramp.png"
 		}
 	},
-	
+
 
 	"Props": {
 		"details": [
 			{
 				"path": "QuantumMoon_Body/AmbientLight_QM",
-				"position": {"x": 0, "y": 0, "z": 0}
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
 			},
 			{
 				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_DB",
-				"position": {"x": 0, "y": 0, "z": 0},
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
 				"removeChildren": [
 					"Interactables_DBState/QuantumDeadNomaiSuit"
 				]
 			},
 			{
-			  "path": "TowerTwin_Body/Sector_TowerTwin/Sector_Tower_GD/Geometry_Tower_GD/ControlledByProxy_Arch",
-			  "position": {
-				"x": 0.183757782,
-				"y": -0.218429565,
-				"z": 0.115936279
-			  },
-			  "rotation": {
-				"x": 338.53244,
-				"y": 122.163124,
-				"z": 124.9659
-			  },
-			  "scale": 1.00000012
+				"path": "TowerTwin_Body/Sector_TowerTwin/Sector_Tower_GD/Geometry_Tower_GD/ControlledByProxy_Arch",
+				"position": {
+					"x": 0.183757782,
+					"y": -0.218429565,
+					"z": 0.115936279
+				},
+				"rotation": {
+					"x": 338.53244,
+					"y": 122.163124,
+					"z": 124.9659
+				},
+				"scale": 1.00000012
 			}
 		]
 	},
@@ -68,9 +75,27 @@
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/BrambleAspect.xml",
 		"entryPositions": [
-			{ "id": "VISION_FOR_FELDSPAR", "position": {"x": 3556.7, "y": -135.1} },
-			{ "id": "SWARM_MISALIGNMENT_TELEPORTER_FAILURE", "position": {"x": 3932.9, "y": -336.4} },
-			{ "id": "SWARM_MISALIGNMENT", "position": {"x": 3882.5, "y": -243.6} }
+			{
+				"id": "VISION_FOR_FELDSPAR",
+				"position": {
+					"x": 3556.7,
+					"y": -135.1
+				}
+			},
+			{
+				"id": "SWARM_MISALIGNMENT_TELEPORTER_FAILURE",
+				"position": {
+					"x": 3932.9,
+					"y": -336.4
+				}
+			},
+			{
+				"id": "SWARM_MISALIGNMENT",
+				"position": {
+					"x": 3882.5,
+					"y": -243.6
+				}
+			}
 		],
 		"initialReveal": [
 			"SWARM_MISALIGNMENT_FACT",

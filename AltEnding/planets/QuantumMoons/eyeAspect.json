@@ -2,26 +2,17 @@
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
 	"canShowOnTitle": false,
 	"name": "QM Eye Aspect",
+	"starSystem": "clay.AltEnding",
 
-
-	"Base" : 
-	{
-		"groundSize" : 0,
-		"surfaceSize" : 70,
-		"surfaceGravity" : 10,
-		"hasMapMarker" : true
+	"Base": {
+		"groundSize": 0,
+		"surfaceSize": 70,
+		"surfaceGravity": 10,
+		"hasMapMarker": true,
+		"centerOfSolarSystem": true
 	},
-	"Orbit" : 
-	{
-		"primaryBody": "Timber Hearth",
-		"semiMajorAxis": 1060,
-		"inclination": 5,
-		"longitudeOfAscendingNode": 90,
-		"trueAnomaly": 105
-	},
-
 	"Atmosphere": {
-		"size" : 250,
+		"size": 250,
 		"clouds": {
 			"cloudsPrefab": "quantumMoon",
 
@@ -33,48 +24,88 @@
 			"rampPath": "images/Clouds_QM_Top_ramp.png"
 		}
 	},
-	
+
 	"Props": {
 		"details": [
 			{
 				"path": "QuantumMoon_Body/AmbientLight_QM",
-				"position": {"x": 0, "y": 0, "z": 0}
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
 			},
 			{
 				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_EYE",
-				"position": {"x": 0, "y": 0, "z": 0},
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
 				"removeChildren": [
 					"Interactables_EYEState/QuantumDeadNomaiSuit"
 				]
 			}
 		]
 	},
-
+	"Spawn": {
+		"playerSpawnPoint": {"x": 0, "y": 0, "z": 90}
+	},
 
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/EyeAspect.xml",
 		"entryPositions": [
-			{ "id": "REFUGEE_CAMP_QUANTUM_SIGHTING", "position": {"x": 4563.6, "y": 367.6} },
-			{ "id": "REFUGEE_CAMP_TIME_SKIP", "position": {"x": 4290.7, "y": 316.2} },
-			{ "id": "REFUGEE_CAMP", "position": {"x": 4425.8, "y": 360.4} },
-			{ "id": "EYE_ASPECT_WARP_TOWERS", "position": {"x": 5745.5, "y": 388.2} },
-			{ "id": "EYE_ASPECT_QUANTUM_TUNNEL", "position": {"x": 5394.0, "y": 401.8} }
+			{
+				"id": "REFUGEE_CAMP_QUANTUM_SIGHTING",
+				"position": {
+					"x": 4563.6,
+					"y": 367.6
+				}
+			},
+			{
+				"id": "REFUGEE_CAMP_TIME_SKIP",
+				"position": {
+					"x": 4290.7,
+					"y": 316.2
+				}
+			},
+			{
+				"id": "REFUGEE_CAMP",
+				"position": {
+					"x": 4425.8,
+					"y": 360.4
+				}
+			},
+			{
+				"id": "EYE_ASPECT_WARP_TOWERS",
+				"position": {
+					"x": 5745.5,
+					"y": 388.2
+				}
+			},
+			{
+				"id": "EYE_ASPECT_QUANTUM_TUNNEL",
+				"position": {
+					"x": 5394.0,
+					"y": 401.8
+				}
+			}
 		],
 		"curiosities": [
 			{
-			  "id": "REFUGEE_CAMP",
-			  "color": {
-				"r": 232,
-				"g": 215,
-				"b": 130,
-				"a": 255
-			  },
-			  "highlightColor": {
-				"r": 201,
-				"g": 180,
-				"b": 71,
-				"a": 255
-			  }
+				"id": "REFUGEE_CAMP",
+				"color": {
+					"r": 232,
+					"g": 215,
+					"b": 130,
+					"a": 255
+				},
+				"highlightColor": {
+					"r": 201,
+					"g": 180,
+					"b": 71,
+					"a": 255
+				}
 			}
 		],
 		"initialReveal": [

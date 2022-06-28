@@ -1,26 +1,26 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-	"name" : "QM Sun Aspect",
-	"Base" : 
-	{
-		"groundSize" : 0,
-		"surfaceSize" : 150,
-		"surfaceGravity" : 10,
-		"hasMapMarker" : true
+	"name": "QM Sun Aspect",
+	"starSystem": "clay.AltEnding",
+	"Base": {
+		"groundSize": 0,
+		"surfaceSize": 150,
+		"surfaceGravity": 10,
+		"hasMapMarker": true
 	},
 	"Star": {
 		"size": 150
 	},
-	"Orbit" : 
-	{
-		"primaryBody": "Timber Hearth",
+	"Orbit": {
+		"primaryBody": "QM Eye Aspect",
 		"semiMajorAxis": 1060,
 		"inclination": 5,
 		"longitudeOfAscendingNode": 90,
-		"trueAnomaly": 240
+		"trueAnomaly": 240,
+		"isStatic": true
 	},
 	"Atmosphere": {
-		"size" : 250,
+		"size": 250,
 		"clouds": {
 			"innerCloudRadius": 200,
 			"outerCloudRadius": 250,
@@ -35,7 +35,13 @@
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/SunAspect.xml",
 		"entryPositions": [
-			{ "id": "FELDSPARS_FLIGHT", "position": {"x": 3789.3, "y": -37.8} }
+			{
+				"id": "FELDSPARS_FLIGHT",
+				"position": {
+					"x": 3789.3,
+					"y": -37.8
+				}
+			}
 		],
 		"initialReveal": [
 			"FELDSPARS_FLIGHT_VISION"
