@@ -100,31 +100,31 @@ namespace AltEnding.Utilities.Props
 
         private static void CreateGiantsDeepAspectIslands()
         {
-            var giantsDeepAspectGO = GameObject.Find("QMGiantsDeepAspect_Body");
-            var island = GameObject.Instantiate(GameObject.Find("GabbroIsland_Body"));
-            island.transform.position = giantsDeepAspectGO.transform.position + 75f*(new Vector3(1, 0, 0));
-            island.GetComponent<AlignWithTargetBody>()._targetBody = giantsDeepAspectGO.GetComponent<OWRigidbody>();
+            //var giantsDeepAspectGO = GameObject.Find("QMGiantsDeepAspect_Body");
+            //var island = GameObject.Instantiate(GameObject.Find("GabbroIsland_Body"));
+            //island.transform.position = giantsDeepAspectGO.transform.position + 75f*(new Vector3(1, 0, 0));
+            //island.GetComponent<AlignWithTargetBody>()._targetBody = giantsDeepAspectGO.GetComponent<OWRigidbody>();
             
-            var islandController = island.GetComponent<IslandController>();
-            islandController._barrierRepelFluids = island.GetComponentsInChildren<IslandRepelFluidVolume>();
-            islandController._campfire = island.GetComponentInChildren<Campfire>();
-            islandController._fluidDetector = island.GetComponentInChildren<DynamicFluidDetector>();
-            islandController._inheritanceFluid = island.GetComponentInChildren<InheritibleFluidVolume>();
-            islandController._islandBody = island.GetComponent<OWRigidbody>();
-            islandController._planetTransform = giantsDeepAspectGO.transform;
-            islandController._safetyTractorBeams = island.GetComponentsInChildren<SafetyTractorBeamController>();
-            islandController._transform = island.transform;
-            islandController._zeroGVolume = island.GetComponentInChildren<ZeroGVolume>();
+            //var islandController = island.GetComponent<IslandController>();
+            //islandController._barrierRepelFluids = island.GetComponentsInChildren<IslandRepelFluidVolume>();
+            //islandController._campfire = island.GetComponentInChildren<Campfire>();
+            //islandController._fluidDetector = island.GetComponentInChildren<DynamicFluidDetector>();
+            //islandController._inheritanceFluid = island.GetComponentInChildren<InheritibleFluidVolume>();
+            //islandController._islandBody = island.GetComponent<OWRigidbody>();
+            //islandController._planetTransform = giantsDeepAspectGO.transform;
+            //islandController._safetyTractorBeams = island.GetComponentsInChildren<SafetyTractorBeamController>();
+            //islandController._transform = island.transform;
+            //islandController._zeroGVolume = island.GetComponentInChildren<ZeroGVolume>();
 
-            island.GetComponent<OWRigidbody>()._origParentBody = giantsDeepAspectGO.GetComponent<OWRigidbody>();
-            var forceDetector = GameObject.Find("GabbroIsland_Body(Clone)/Detector_GabbroIsland").GetComponent<ConstantForceDetector>();
-            forceDetector._activeInheritedDetector = GameObject.Find("QMGiantsDeepAspect_Body/FieldDetector").GetComponent<ConstantForceDetector>();
-            forceDetector._detectableFields = new ForceVolume[]{ GameObject.Find("QMGiantsDeepAspect_Body/GravityWell").GetComponent<GravityVolume>() };
+            //island.GetComponent<OWRigidbody>()._origParentBody = giantsDeepAspectGO.GetComponent<OWRigidbody>();
+            //var forceDetector = GameObject.Find("GabbroIsland_Body(Clone)/Detector_GabbroIsland").GetComponent<ConstantForceDetector>();
+            //forceDetector._activeInheritedDetector = GameObject.Find("QMGiantsDeepAspect_Body/FieldDetector").GetComponent<ConstantForceDetector>();
+            //forceDetector._detectableFields = new ForceVolume[]{ GameObject.Find("QMGiantsDeepAspect_Body/GravityWell").GetComponent<GravityVolume>() };
 
-            // destroy unneeded components
-            GameObject.Find("GabbroIsland_Body(Clone)/Sector_GabbroIsland/Interactables_GabbroIsland/Signal_Flute").SetActive(false);
-            GameObject.Find("GabbroIsland_Body(Clone)/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro").SetActive(false);
-            GameObject.Find("GabbroIsland_Body(Clone)/GD_GABBRO_ISLAND").SetActive(false);
+            //// destroy unneeded components
+            //GameObject.Find("GabbroIsland_Body(Clone)/Sector_GabbroIsland/Interactables_GabbroIsland/Signal_Flute").SetActive(false);
+            //GameObject.Find("GabbroIsland_Body(Clone)/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro").SetActive(false);
+            //GameObject.Find("GabbroIsland_Body(Clone)/GD_GABBRO_ISLAND").SetActive(false);
         }
 
         // MultiStateQuantumObject guide
@@ -161,7 +161,8 @@ namespace AltEnding.Utilities.Props
         {
             // add tides
             GameObject sand = GameObject.Find("QMHourglassTwinsAspect_Body/Sector/Sand");
-            sand.AddComponent<TidesController>().Initialize(GameObject.Find("QMHourglassTwinsAspect_Body").GetComponent<AstroObject>(), 2*145, 2*135);
+            // sand.AddComponent<TidesController>().Initialize(GameObject.Find("QMHourglassTwinsAspect_Body").GetComponent<AstroObject>(), 2*145, 2*130);
+            sand.AddComponent<GlobalTidesController>().Initialize(0.1f, 2*145, 2*130);
         }
 
         public static void CreateSunAspectClouds()

@@ -24,6 +24,7 @@ namespace AltEnding.Utilities.Props
             // DEBUG:
             // SkinReplacer.ReplaceSkin(GameObject.Find("Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo"), "Feldspar");
             SkinReplacer.ReplaceSkin(GameObject.Find("Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo"), "Solanum");
+            // Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo/Traveller_Mesh_v01:Props_HEA_Jetpack
 
             // Test teleport campfires
             var th = Locator.GetAstroObject(AstroObject.Name.TimberHearth);
