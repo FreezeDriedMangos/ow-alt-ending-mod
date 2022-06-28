@@ -49,7 +49,11 @@
 		]
 	},
 	"Spawn": {
-		"playerSpawnPoint": {"x": 0, "y": 0, "z": 90}
+		"playerSpawnPoint": {
+			"x": -5.209237,
+			"y": -68.15256,
+			"z": 10.27017
+		}
 	},
 
 	"ShipLog": {
