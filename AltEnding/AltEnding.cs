@@ -8,6 +8,7 @@ using AltEnding.CustomProps;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using AltEnding.Utilities.Props;
+using System;
 
 namespace AltEnding
 {
@@ -147,6 +148,16 @@ namespace AltEnding
                 // TODO: teleport the player to the atp, set spawn point to quantum moon south pole, enable quantum moon eye aspect
                 // TODO: delete atp lights
             }
+        }
+
+        public static void WriteLine(string s)
+        {
+            Instance.ModHelper.Console.WriteLine(s);
+        }
+
+        public static void FireOnNextUpdate(Action action)
+        {
+            Instance.ModHelper.Events.Unity.FireOnNextUpdate(action);
         }
     }
 }
