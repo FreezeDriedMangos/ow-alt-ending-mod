@@ -124,7 +124,7 @@ namespace AltEnding.Utilities
                     if (newParent == null)
                     {
                         // This should never happen in a release, this is just for testing with new models
-                        AltEnding.Instance.ModHelper.Console.WriteLine($"Couldn't find bone [{matchingBone}] matching [{bone}]");
+                        // AltEnding.WriteLine($"Couldn't find bone [{matchingBone}] matching [{bone}]");
                     }
                     else
                     {
