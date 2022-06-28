@@ -28,7 +28,6 @@ namespace AltEnding
         private bool initialized = false;
         private BlinkController blinkController;
 
-
         public static INewHorizons newHorizonsAPI;
 
 
@@ -50,21 +49,7 @@ namespace AltEnding
 
         private void Update()
         {
-            //if (Keyboard.current[Key.O].wasReleasedThisFrame)
-            //{
-            //    TimeLoop.SetSecondsRemaining(30);
-            //}
-            //if (Keyboard.current[Key.L].wasReleasedThisFrame)
-            //{
-            //    TimeLoop.SetSecondsRemaining(120);
-            //}
-
-            if (Keyboard.current[Key.O].wasReleasedThisFrame)
-            {
-                //_spawner.DebugWarp(_spawner.GetSpawnPoint(SpawnLocation.Comet));
-                var spawner = UnityEngine.GameObject.Find("Player_Body").GetComponent<PlayerSpawner>();
-                spawner.DebugWarp(InEndingPropsController.stationSpawnPoint);        
-            }
+            DebugCommands.Update();
         }
 
         private void Start()
@@ -81,67 +66,70 @@ namespace AltEnding
 
             newHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
             newHorizonsAPI.LoadConfigs(this);
-
+            NewHorizons.Main.Instance.SetDefaultSystem("clay.AltEnding");
 
             // Starting here, you'll have access to OWML's mod helper.
-            ModHelper.Console.WriteLine($"My mod {nameof(AltEnding)} is loaded!", MessageType.Success);
+            WriteLine($"My mod {nameof(AltEnding)} is loaded!");
 
+            // Hook onto NH API events
             newHorizonsAPI.GetChangeStarSystemEvent().AddListener(OnStarSystemChange); 
             newHorizonsAPI.GetStarSystemLoadedEvent().AddListener(OnStarSystemLoaded);
 
             // Example of accessing game code.
-            LoadManager.OnCompleteSceneLoad += (scene, loadScene) =>
-            {
-                // TODO: add a case for OWScene.EyeOfTheUniverse to make the loading zone that teleports you to  clay.AltEnding.PostEndingSolarSystem->timeloopring
+            LoadManager.OnCompleteSceneLoad += OnCompleteSceneLoad;
+        }
 
-                if (loadScene != OWScene.SolarSystem) return;
-                var playerBody = FindObjectOfType<PlayerBody>();
-                ModHelper.Console.WriteLine($"Found player body, and it's called {playerBody.name}!",
-                    MessageType.Success);
+        public void OnCompleteSceneLoad(OWScene scene, OWScene loadScene)
+        {
+            // TODO: add a case for OWScene.EyeOfTheUniverse to make the loading zone that teleports you to  clay.AltEnding.PostEndingSolarSystem->timeloopring
 
-                if (initialized) return;
-                initialized = true;
-                this.blinkController = new BlinkController(FindObjectOfType<PlayerCameraEffectController>());
+            if (loadScene != OWScene.SolarSystem) return;
+            var playerBody = FindObjectOfType<PlayerBody>();
+            WriteLine($"Found player body, and it's called {playerBody.name}!");
+
+            if (initialized) return;
+            initialized = true;
+            this.blinkController = new BlinkController(FindObjectOfType<PlayerCameraEffectController>());
 
 
-                //// TESTING AppearingQuantumObject
-                //var campsite = UnityEngine.GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Props_StartingCamp/OtherComponentsGroup");
-                //List<AppearingQuantumObject> aqos = new List<AppearingQuantumObject>();
-            
-                //foreach(UnityEngine.Transform prop in campsite.transform)
-                //{
-                //    aqos.Add(prop.gameObject.AddComponent<AppearingQuantumObject>());
-                //}
+            //// TESTING AppearingQuantumObject
+            //var campsite = UnityEngine.GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Props_StartingCamp/OtherComponentsGroup");
+            //List<AppearingQuantumObject> aqos = new List<AppearingQuantumObject>();
 
-                //for (int i = 0; i < aqos.Count; i++)
-                //{
-                //    for (int j = i+1; j < aqos.Count; j++)
-                //    {
-                //        aqos[i].AddEntangledObject(aqos[j]);
-                //    }
-                //    aqos[i].IsPresenting = false;
-                //}
-                //aqos[0].IsPresenting = true;
-            };
+            //foreach(UnityEngine.Transform prop in campsite.transform)
+            //{
+            //    aqos.Add(prop.gameObject.AddComponent<AppearingQuantumObject>());
+            //}
+
+            //for (int i = 0; i < aqos.Count; i++)
+            //{
+            //    for (int j = i+1; j < aqos.Count; j++)
+            //    {
+            //        aqos[i].AddEntangledObject(aqos[j]);
+            //    }
+            //    aqos[i].IsPresenting = false;
+            //}
+            //aqos[0].IsPresenting = true;
         }
 
         // TODO: make a PropsManager to handle all of the below
 
         public void OnStarSystemChange(string systemName)
         {
+            WriteLine($"Changing system to: {systemName}");
             //TODO: on this event, destroy any manual props I created
         }
 
         public void OnStarSystemLoaded(string systemName)
         {
-            //TODO: on this event, check the system name and spawn any manual props (eg, the memory staves)
-            ModHelper.Console.WriteLine("LOADED SYSTEM " + systemName);
+            // TODO: on this event, check the system name and spawn any manual props (eg, the memory staves)
+            WriteLine($"Loaded system: {systemName}");
 
             PropsController.SpawnProps(systemName);
 
             if (systemName == "SolarSystem")
             {
-                ModHelper.Console.WriteLine("Loading main props!");
+                WriteLine("Loading main props!");
             }
             else if (systemName == "clay.AltEnding.PostEndingSolarSystem")
             {
