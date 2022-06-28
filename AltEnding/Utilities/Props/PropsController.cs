@@ -39,7 +39,7 @@ namespace AltEnding.Utilities.Props
             {
                 PreEndingPropsController.SpawnProps();
             }
-            else if (system == "Clay.AltEnding")
+            else if (system == "clay.AltEnding")
             {
                 InEndingPropsController.SpawnProps();
             }
