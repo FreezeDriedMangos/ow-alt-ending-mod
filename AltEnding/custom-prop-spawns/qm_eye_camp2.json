@@ -1,430 +1,430 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-  "Name": "QuantumMoon",
-  "CanShowOnTitle": true,
+  "name": "QuantumMoon",
+  "canShowOnTitle": true,
   "Base": {},
   "Orbit": {},
   "Props": {
-    "Details": [
+    "details": [
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_SouthHemisphere/Sector_SouthUnderground/Sector_City/Sector_ChildDistrict/Props_FossilDistrict/OtherComponentsGroup/Furniture_FossilDistrict/Prefab_NOM_Bed/Props_NOM_Bed",
         "position": {
-          "X": 6.006429,
-          "Y": -68.62022,
-          "Z": 7.18516541
+          "x": 6.006429,
+          "y": -68.62022,
+          "z": 7.18516541
         },
         "rotation": {
-          "X": 359.437683,
-          "Y": 292.978149,
-          "Z": 181.34584
+          "x": 359.437683,
+          "y": 292.978149,
+          "z": 181.34584
         }
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_SouthHemisphere/Sector_SouthUnderground/Sector_City/Sector_ChildDistrict/Props_FossilDistrict/OtherComponentsGroup/Furniture_FossilDistrict/Prefab_NOM_Bed/Props_NOM_Bed",
         "position": {
-          "X": 5.05831528,
-          "Y": -68.7666,
-          "Z": 3.73120117
+          "x": 5.05831528,
+          "y": -68.7666,
+          "z": 3.73120117
         },
         "rotation": {
-          "X": 2.74885941,
-          "Y": 235.130371,
-          "Z": 181.073257
+          "x": 2.74885941,
+          "y": 235.130371,
+          "z": 181.073257
         },
         "scale": 0.99999994
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_SouthHemisphere/Sector_SouthUnderground/Sector_City/Sector_ChildDistrict/Props_FossilDistrict/OtherComponentsGroup/Furniture_FossilDistrict/Prefab_NOM_Bed/Props_NOM_Bed",
         "position": {
-          "X": 8.845568,
-          "Y": -68.4293747,
-          "Z": 5.48497963
+          "x": 8.845568,
+          "y": -68.4293747,
+          "z": 5.48497963
         },
         "rotation": {
-          "X": 358.8058,
-          "Y": 53.101944,
-          "Z": 183.313568
+          "x": 358.8058,
+          "y": 53.101944,
+          "z": 183.313568
         },
         "scale": 0.9999999
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_SouthHemisphere/Sector_SouthUnderground/Sector_City/Sector_ChildDistrict/Props_FossilDistrict/OtherComponentsGroup/Furniture_FossilDistrict/Prefab_NOM_Bed_Child",
         "position": {
-          "X": 8.1866,
-          "Y": -68.55582,
-          "Z": 8.221376
+          "x": 8.1866,
+          "y": -68.55582,
+          "z": 8.221376
         },
         "rotation": {
-          "X": 1.56639564,
-          "Y": 6.9258976,
-          "Z": 183.154877
+          "x": 1.56639564,
+          "y": 6.9258976,
+          "z": 183.154877
         },
         "scale": 1.00000024
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_SouthHemisphere/Sector_SouthUnderground/Sector_City/Sector_ChildDistrict/Props_FossilDistrict/OtherComponentsGroup/Furniture_FossilDistrict/Prefab_NOM_Bed_Child",
         "position": {
-          "X": 6.877513,
-          "Y": -68.58813,
-          "Z": 8.440584
+          "x": 6.877513,
+          "y": -68.58813,
+          "z": 8.440584
         },
         "rotation": {
-          "X": 358.5789,
-          "Y": 347.2887,
-          "Z": 180.328491
+          "x": 358.5789,
+          "y": 347.2887,
+          "z": 180.328491
         }
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_SouthHemisphere/Sector_SouthUnderground/Sector_City/Sector_ChildDistrict/Props_FossilDistrict/OtherComponentsGroup/Furniture_FossilDistrict/Prefab_NOM_Bed_Child",
         "position": {
-          "X": 9.692271,
-          "Y": -68.477684,
-          "Z": 8.371754
+          "x": 9.692271,
+          "y": -68.477684,
+          "z": 8.371754
         },
         "rotation": {
-          "X": 358.739563,
-          "Y": 45.5129433,
-          "Z": 183.718964
+          "x": 358.739563,
+          "y": 45.5129433,
+          "z": 183.718964
         }
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_OldSettlement/Fragment OldSettlement 1/Core_OldSettlement 1/Interactables_Core_OldSettlement1/NomaiTree (1)",
         "position": {
-          "X": 4.211999,
-          "Y": -68.7295456,
-          "Z": 5.16353035
+          "x": 4.211999,
+          "y": -68.7295456,
+          "z": 5.16353035
         },
         "rotation": {
-          "X": 359.4775,
-          "Y": 313.982971,
-          "Z": 182.9042
+          "x": 359.4775,
+          "y": 313.982971,
+          "z": 182.9042
         },
         "scale": 1.00000036
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_OldSettlement/Fragment OldSettlement 3/Core_OldSettlement 3/Interactables_Core_OldSettlement3/VisibleFrom_BH/NomaiTree (1)",
         "position": {
-          "X": 5.051242,
-          "Y": -68.53494,
-          "Z": 10.71279
+          "x": 5.051242,
+          "y": -68.53494,
+          "z": 10.71279
         },
         "rotation": {
-          "X": 0.9294785,
-          "Y": 265.125671,
-          "Z": 181.39679
+          "x": 0.9294785,
+          "y": 265.125671,
+          "z": 181.39679
         },
         "scale": 1.00000024
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_SchoolBuilding/Prefab_NOM_Toys",
         "position": {
-          "X": 9.27647,
-          "Y": -68.7714157,
-          "Z": 10.9727783
+          "x": 9.27647,
+          "y": -68.7714157,
+          "z": 10.9727783
         },
         "rotation": {
-          "X": 6.05231047,
-          "Y": 336.4417,
-          "Z": 184.014465
+          "x": 6.05231047,
+          "y": 336.4417,
+          "z": 184.014465
         },
         "scale": 1.00000024
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThin",
         "position": {
-          "X": 9.911042,
-          "Y": -68.43929,
-          "Z": 7.56569672
+          "x": 9.911042,
+          "y": -68.43929,
+          "z": 7.56569672
         },
         "rotation": {
-          "X": 358.470947,
-          "Y": 49.7023621,
-          "Z": 183.616943
+          "x": 358.470947,
+          "y": 49.7023621,
+          "z": 183.616943
         },
         "scale": 1.00000012
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThin",
         "position": {
-          "X": 9.086201,
-          "Y": -68.4110641,
-          "Z": 4.05373764
+          "x": 9.086201,
+          "y": -68.4110641,
+          "z": 4.05373764
         },
         "rotation": {
-          "X": 355.724548,
-          "Y": 83.9858246,
-          "Z": 179.480713
+          "x": 355.724548,
+          "y": 83.9858246,
+          "z": 179.480713
         }
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThin",
         "position": {
-          "X": 4.85236359,
-          "Y": -68.85712,
-          "Z": 1.84896278
+          "x": 4.85236359,
+          "y": -68.85712,
+          "z": 1.84896278
         },
         "rotation": {
-          "X": 358.558777,
-          "Y": 105.170341,
-          "Z": 176.663
+          "x": 358.558777,
+          "y": 105.170341,
+          "z": 176.663
         },
         "scale": 0.999999762
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThin",
         "position": {
-          "X": 6.76143551,
-          "Y": -68.709816,
-          "Z": 1.47542763
+          "x": 6.76143551,
+          "y": -68.709816,
+          "z": 1.47542763
         },
         "rotation": {
-          "X": 356.467529,
-          "Y": 117.017464,
-          "Z": 174.7919
+          "x": 356.467529,
+          "y": 117.017464,
+          "z": 174.7919
         },
         "scale": 0.99999994
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThin",
         "position": {
-          "X": 5.652444,
-          "Y": -68.59888,
-          "Z": 8.025047
+          "x": 5.652444,
+          "y": -68.59888,
+          "z": 8.025047
         },
         "rotation": {
-          "X": 1.36699986,
-          "Y": 159.890991,
-          "Z": 179.491287
+          "x": 1.36699986,
+          "y": 159.890991,
+          "z": 179.491287
         }
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_Container",
         "position": {
-          "X": 5.479701,
-          "Y": -68.71682,
-          "Z": 4.311598
+          "x": 5.479701,
+          "y": -68.71682,
+          "z": 4.311598
         },
         "rotation": {
-          "X": 0.152183831,
-          "Y": 159.935242,
-          "Z": 174.022629
+          "x": 0.152183831,
+          "y": 159.935242,
+          "z": 174.022629
         }
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_Container",
         "position": {
-          "X": 8.105656,
-          "Y": -68.50354,
-          "Z": 6.55170631
+          "x": 8.105656,
+          "y": -68.50354,
+          "z": 6.55170631
         },
         "rotation": {
-          "X": 358.1316,
-          "Y": 65.31103,
-          "Z": 182.986053
+          "x": 358.1316,
+          "y": 65.31103,
+          "z": 182.986053
         }
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_Container",
         "position": {
-          "X": 10.1816273,
-          "Y": -68.50816,
-          "Z": 1.02641773
+          "x": 10.1816273,
+          "y": -68.50816,
+          "z": 1.02641773
         },
         "rotation": {
-          "X": 349.0682,
-          "Y": 296.367157,
-          "Z": 180.391327
+          "x": 349.0682,
+          "y": 296.367157,
+          "z": 180.391327
         },
         "scale": 0.9999999
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_Treepot",
         "position": {
-          "X": 5.875678,
-          "Y": -68.63145,
-          "Z": 5.52984428
+          "x": 5.875678,
+          "y": -68.63145,
+          "z": 5.52984428
         },
         "rotation": {
-          "X": 359.396271,
-          "Y": 152.708008,
-          "Z": 174.051163
+          "x": 359.396271,
+          "y": 152.708008,
+          "z": 174.051163
         }
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThick",
         "position": {
-          "X": 4.986533,
-          "Y": -68.79214,
-          "Z": 3.184166
+          "x": 4.986533,
+          "y": -68.79214,
+          "z": 3.184166
         },
         "rotation": {
-          "X": 0.852345943,
-          "Y": 140.56813,
-          "Z": 177.174881
+          "x": 0.852345943,
+          "y": 140.56813,
+          "z": 177.174881
         },
         "scale": 1.00000024
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThick",
         "position": {
-          "X": 6.91934872,
-          "Y": -68.55095,
-          "Z": 5.187418
+          "x": 6.91934872,
+          "y": -68.55095,
+          "z": 5.187418
         },
         "rotation": {
-          "X": 0.283929467,
-          "Y": 170.82695,
-          "Z": 175.702545
+          "x": 0.283929467,
+          "y": 170.82695,
+          "z": 175.702545
         },
         "scale": 1.00000012
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThick",
         "position": {
-          "X": 7.33414364,
-          "Y": -68.586,
-          "Z": 7.81681061
+          "x": 7.33414364,
+          "y": -68.586,
+          "z": 7.81681061
         },
         "rotation": {
-          "X": 358.073975,
-          "Y": 180.185684,
-          "Z": 177.050766
+          "x": 358.073975,
+          "y": 180.185684,
+          "z": 177.050766
         }
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThick",
         "position": {
-          "X": 10.9329929,
-          "Y": -68.58405,
-          "Z": 1.589364
+          "x": 10.9329929,
+          "y": -68.58405,
+          "z": 1.589364
         },
         "rotation": {
-          "X": 349.0671,
-          "Y": 300.321838,
-          "Z": 179.641022
+          "x": 349.0671,
+          "y": 300.321838,
+          "z": 179.641022
         }
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_TimeLoopExperiment/Props_TimeLoopExperiment/Props/OtherComponentsGroup/Prefab_NOM_Box",
         "position": {
-          "X": 7.90632343,
-          "Y": -68.47563,
-          "Z": 5.35767555
+          "x": 7.90632343,
+          "y": -68.47563,
+          "z": 5.35767555
         },
         "rotation": {
-          "X": 358.550262,
-          "Y": 147.417648,
-          "Z": 175.9441
+          "x": 358.550262,
+          "y": 147.417648,
+          "z": 175.9441
         },
         "scale": 1.00000012
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_TimeLoopExperiment/Props_TimeLoopExperiment/Props/OtherComponentsGroup/Prefab_NOM_Box",
         "position": {
-          "X": 7.23863745,
-          "Y": -68.53655,
-          "Z": 6.210392
+          "x": 7.23863745,
+          "y": -68.53655,
+          "z": 6.210392
         },
         "rotation": {
-          "X": 1.19680381,
-          "Y": 233.1467,
-          "Z": 176.687363
+          "x": 1.19680381,
+          "y": 233.1467,
+          "z": 176.687363
         },
         "scale": 0.9999999
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_TimeLoopExperiment/Props_TimeLoopExperiment/Props/OtherComponentsGroup/Prefab_NOM_Box",
         "position": {
-          "X": 6.09838963,
-          "Y": -68.611824,
-          "Z": 6.7006855
+          "x": 6.09838963,
+          "y": -68.611824,
+          "z": 6.7006855
         },
         "rotation": {
-          "X": 356.5751,
-          "Y": 109.803764,
-          "Z": 180.821732
+          "x": 356.5751,
+          "y": 109.803764,
+          "z": 180.821732
         }
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_TimeLoopExperiment/Props_TimeLoopExperiment/Props/OtherComponentsGroup/Prefab_NOM_Box",
         "position": {
-          "X": 3.837648,
-          "Y": -68.8082657,
-          "Z": 3.575428
+          "x": 3.837648,
+          "y": -68.8082657,
+          "z": 3.575428
         },
         "rotation": {
-          "X": 2.16255188,
-          "Y": 170.8952,
-          "Z": 177.9919
+          "x": 2.16255188,
+          "y": 170.8952,
+          "z": 177.9919
         }
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_TimeLoopExperiment/Props_TimeLoopExperiment/Props/OtherComponentsGroup/Prefab_NOM_Box",
         "position": {
-          "X": 6.64835453,
-          "Y": -68.55965,
-          "Z": 5.99375534
+          "x": 6.64835453,
+          "y": -68.55965,
+          "z": 5.99375534
         },
         "rotation": {
-          "X": 2.60280943,
-          "Y": 260.916565,
-          "Z": 177.6265
+          "x": 2.60280943,
+          "y": 260.916565,
+          "z": 177.6265
         },
         "scale": 1.00000012
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_TimeLoopExperiment/Props_TimeLoopExperiment/Props/OtherComponentsGroup/Prefab_NOM_Box",
         "position": {
-          "X": 6.910145,
-          "Y": -68.58406,
-          "Z": 7.11463165
+          "x": 6.910145,
+          "y": -68.58406,
+          "z": 7.11463165
         },
         "rotation": {
-          "X": 356.62674,
-          "Y": 140.0333,
-          "Z": 178.986816
+          "x": 356.62674,
+          "y": 140.0333,
+          "z": 178.986816
         },
         "scale": 1.00000012
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_TimeLoopExperiment/Props_TimeLoopExperiment/Props/OtherComponentsGroup/Prefab_NOM_Box",
         "position": {
-          "X": 4.909215,
-          "Y": -68.64764,
-          "Z": 6.54488
+          "x": 4.909215,
+          "y": -68.64764,
+          "z": 6.54488
         },
         "rotation": {
-          "X": 0.223798335,
-          "Y": 119.832527,
-          "Z": 176.791168
+          "x": 0.223798335,
+          "y": 119.832527,
+          "z": 176.791168
         },
         "scale": 1.00000024
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_TimeLoopExperiment/Props_TimeLoopExperiment/Props/OtherComponentsGroup/Prefab_NOM_Box",
         "position": {
-          "X": 9.60788,
-          "Y": -68.4161148,
-          "Z": 6.25385857
+          "x": 9.60788,
+          "y": -68.4161148,
+          "z": 6.25385857
         },
         "rotation": {
-          "X": 357.103119,
-          "Y": 158.00087,
-          "Z": 177.996048
+          "x": 357.103119,
+          "y": 158.00087,
+          "z": 177.996048
         },
         "scale": 0.9999998
       },
       {
         "path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_TimeLoopExperiment/Props_TimeLoopExperiment/Props/OtherComponentsGroup/Prefab_NOM_Box",
         "position": {
-          "X": 11.1222944,
-          "Y": -68.67721,
-          "Z": 0.926797867
+          "x": 11.1222944,
+          "y": -68.67721,
+          "z": 0.926797867
         },
         "rotation": {
-          "X": 3.66445255,
-          "Y": 47.7817764,
-          "Z": 169.68631
+          "x": 3.66445255,
+          "y": 47.7817764,
+          "z": 169.68631
         },
         "scale": 0.99999994
       }

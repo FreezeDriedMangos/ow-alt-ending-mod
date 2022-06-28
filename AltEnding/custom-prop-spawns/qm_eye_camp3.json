@@ -1,77 +1,77 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-  "Name": "QuantumMoon",
-  "CanShowOnTitle": true,
+  "name": "QuantumMoon",
+  "canShowOnTitle": true,
   "Base": {},
   "Orbit": {},
   "Props": {
-    "Details": [
+    "details": [
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_TableSet/Props_NOM_TableSet/Props_NOM_Seat_B",
         "position": {
-          "X": -27.0535049,
-          "Y": -64.7648239,
-          "Z": -4.118477
+          "x": -27.0535049,
+          "y": -64.7648239,
+          "z": -4.118477
         },
         "rotation": {
-          "X": 8.900489,
-          "Y": 42.3332634,
-          "Z": 175.560486
+          "x": 8.900489,
+          "y": 42.3332634,
+          "z": 175.560486
         }
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_TableSet/Props_NOM_TableSet/Props_NOM_Seat_B",
         "position": {
-          "X": -24.92263,
-          "Y": -65.60602,
-          "Z": -3.59497452
+          "x": -24.92263,
+          "y": -65.60602,
+          "z": -3.59497452
         },
         "rotation": {
-          "X": 345.3241,
-          "Y": 320.698578,
-          "Z": 160.5356
+          "x": 345.3241,
+          "y": 320.698578,
+          "z": 160.5356
         },
         "scale": 0.99999994
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_TableSet/Props_NOM_TableSet/Props_NOM_Seat_B",
         "position": {
-          "X": -25.4334927,
-          "Y": -65.4627151,
-          "Z": -1.4270401
+          "x": -25.4334927,
+          "y": -65.4627151,
+          "z": -1.4270401
         },
         "rotation": {
-          "X": 19.7432232,
-          "Y": 58.0465355,
-          "Z": 172.783066
+          "x": 19.7432232,
+          "y": 58.0465355,
+          "z": 172.783066
         },
         "scale": 1.00000012
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_11/Prefab_NOM_TableSet/Props_NOM_TableSet/Props_NOM_Seat_B",
         "position": {
-          "X": -27.5090218,
-          "Y": -64.68993,
-          "Z": -1.0256691
+          "x": -27.5090218,
+          "y": -64.68993,
+          "z": -1.0256691
         },
         "rotation": {
-          "X": 2.50829887,
-          "Y": 354.500366,
-          "Z": 156.725586
+          "x": 2.50829887,
+          "y": 354.500366,
+          "z": 156.725586
         },
         "scale": 0.999999762
       },
       {
         "path": "BrittleHollow_Body/Sector_BH/Sector_OldSettlement/Fragment OldSettlement 3/Core_OldSettlement 3/Interactables_Core_OldSettlement3/VisibleFrom_BH/NomaiTree (1)",
         "position": {
-          "X": -25.21904,
-          "Y": -65.36935,
-          "Z": -6.64736176
+          "x": -25.21904,
+          "y": -65.36935,
+          "z": -6.64736176
         },
         "rotation": {
-          "X": 356.037842,
-          "Y": 9.918815,
-          "Z": 155.891022
+          "x": 356.037842,
+          "y": 9.918815,
+          "z": 155.891022
         },
         "scale": 1.00000036
       }
