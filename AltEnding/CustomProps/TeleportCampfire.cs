@@ -30,7 +30,7 @@ namespace AltEnding.CustomProps
 
             var newWorldPos = _pairedCampfire.transform.TransformPoint(pos);
             var forwards = (_pairedCampfire.transform.position - newWorldPos).normalized;
-            var upwards = (_pairedCampfire.transform.position - newWorldPos).normalized;
+            var upwards = (newWorldPos - planet.transform.position).normalized;
             var newWorldRot = Quaternion.LookRotation(forwards, upwards);
 
             // Move the player up a tiny bit to avoid falling through the ground as often
@@ -53,6 +53,7 @@ namespace AltEnding.CustomProps
             {
                 var prefabPath = "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/Prefab_HEA_Campfire";
                 _prefab = SearchUtilities.Find(prefabPath).InstantiateInactive();
+                _prefab.name = "Prefab_HEA_TeleportCampfire";
                 _prefab.transform.rotation = Quaternion.identity;
 
                 // Original campfire we're going to copy stuff from
@@ -92,7 +93,7 @@ namespace AltEnding.CustomProps
                 teleporter._burnedSlideReelSocket = campfire._burnedSlideReelSocket;
 
                 // Now get rid of the original controller
-                GameObject.Destroy(campfire.gameObject);
+                GameObject.DestroyImmediate(campfire.gameObject);
 
                 // Making it a different colour for testing
                 teleporter._flames.material.color = new Color(1f, 0f, 1f, 1f);
