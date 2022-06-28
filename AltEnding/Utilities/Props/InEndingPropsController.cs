@@ -19,6 +19,14 @@ namespace AltEnding.Utilities.Props
     {
         public static SpawnPoint stationSpawnPoint;
 
+        // Quantum moon aspects
+        public static AstroObject QMGiantsDeep { get; private set; }
+        public static AstroObject QMDarkBramble { get; private set; }
+        public static AstroObject QMEye { get; private set; }
+        public static AstroObject QMBrittleHollow { get; private set; }
+        public static AstroObject QMHourglassTwins { get; private set; }
+        public static AstroObject QMSun { get; private set; }
+
         // sun aspect clouds
         // QuantumMoon_Body/Clouds_QM
 
@@ -27,6 +35,15 @@ namespace AltEnding.Utilities.Props
         // TODO: add this component to the fluid volume, and replace RadialFluidVolume: ElipsoidFluidVolume
         public static void SpawnProps()
         {
+            AltEnding.WriteLine("Spawning in-ending props");
+
+            QMGiantsDeep = AstroObjectLocator.GetAstroObject("QM Giant's Deep Aspect");
+            QMDarkBramble = AstroObjectLocator.GetAstroObject("QM Dark Bramble Aspect");
+            QMEye = AstroObjectLocator.GetAstroObject("QM Eye Aspect");
+            QMBrittleHollow = AstroObjectLocator.GetAstroObject("QM Brittle Hollow Aspect");
+            QMHourglassTwins = AstroObjectLocator.GetAstroObject("QM Hourglass Twins Aspect");
+            QMSun = AstroObjectLocator.GetAstroObject("QM Sun Aspect");
+
             CreateSunAspectClouds();
             CreateSunAspectSpawnPoint();
 
@@ -98,6 +115,7 @@ namespace AltEnding.Utilities.Props
             clouds1.transform.localScale = Vector3.one*10;
 
             SpawnTowerTeleportCampfires();
+            SpawnExitPrevention();
         }
 
         private static void CreateGiantsDeepAspectIslands()
@@ -268,12 +286,18 @@ namespace AltEnding.Utilities.Props
 
         private static void SpawnTowerTeleportCampfires()
         {
-            var QMGD = AstroObjectLocator.GetAstroObject("QM Giant's Deep Aspect");
-            var QMDB = AstroObjectLocator.GetAstroObject("QM Dark Bramble Aspect");
-
-            var GDtoDB = TeleportCampfire.Spawn(QMGD.gameObject, QMGD.GetRootSector(), new Vector3(19.18f, 49.98f, -48.56f));
-            var DBtoGD = TeleportCampfire.Spawn(QMDB.gameObject, QMDB.GetRootSector(), new Vector3(57.27f, -49.61f, 53.99f));
+            var GDtoDB = TeleportCampfire.Spawn(QMGiantsDeep.gameObject, QMGiantsDeep.GetRootSector(), new Vector3(19.18f, 49.98f, -48.56f));
+            var DBtoGD = TeleportCampfire.Spawn(QMDarkBramble.gameObject, QMDarkBramble.GetRootSector(), new Vector3(57.27f, -49.61f, 53.99f));
             GDtoDB.LinkCampfire(DBtoGD);
+        }
+
+        private static void SpawnExitPrevention()
+        {
+            foreach (var planet in new AstroObject[] { QMBrittleHollow, QMDarkBramble, QMEye, QMGiantsDeep, QMHourglassTwins, QMSun })
+            {
+                var exitPrevention = planet.gameObject.AddComponent<QMAspectExitPrevention>();
+                exitPrevention.radius = 220f;
+            }
         }
     }
 }

@@ -70,7 +70,7 @@ namespace AltEnding.Utilities
             }
         }
 
-        private static void WarpToPlanet(AstroObject planet, float offset = 200f)
+        private static void WarpToPlanet(AstroObject planet, float offset = 100f)
         {
             var player = Locator.GetPlayerBody();
             var newWorldPos = planet.transform.position + Vector3.up * offset;
