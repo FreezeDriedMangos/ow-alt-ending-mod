@@ -47,4 +47,7 @@
   <ItemGroup>
     <Content Include="AltEnding.csproj.user" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="systems\" />
+  </ItemGroup>
 </Project>
