@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AltEnding.Utilities
 {
-    class BlinkController
+    public class BlinkController
     {
         private UnityEngine.Texture2D originalEyeMaskTexture;
         private UnityEngine.Texture2D threeEyeMaskTexture;

@@ -38,6 +38,7 @@ namespace AltEnding.CustomProps
 
             if ((transform.position - player.transform.position).sqrMagnitude > radius * radius)
             {
+                AltEnding.BlinkController.Blink();
                 _spawner.DebugWarp(_spawnPoint);
             }
         }

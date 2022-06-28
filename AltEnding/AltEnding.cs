@@ -23,13 +23,11 @@ namespace AltEnding
 
     public class AltEnding : ModBehaviour
     {
-        public static AltEnding Instance;
+        public static AltEnding Instance { get; private set; }
+        public static BlinkController BlinkController { get; private set; }
+        public static INewHorizons NewHorizonsAPI { get; private set; }
 
-        private bool initialized = false;
-        private BlinkController blinkController;
-
-        public static INewHorizons newHorizonsAPI;
-
+        private bool staticInitialized = false;
 
         private void Awake()
         {
@@ -64,16 +62,16 @@ namespace AltEnding
             // Initialize New Horizons
             // =======
 
-            newHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
-            newHorizonsAPI.LoadConfigs(this);
+            NewHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
+            NewHorizonsAPI.LoadConfigs(this);
             NewHorizons.Main.Instance.SetDefaultSystem("clay.AltEnding");
 
             // Starting here, you'll have access to OWML's mod helper.
             WriteLine($"My mod {nameof(AltEnding)} is loaded!");
 
             // Hook onto NH API events
-            newHorizonsAPI.GetChangeStarSystemEvent().AddListener(OnStarSystemChange); 
-            newHorizonsAPI.GetStarSystemLoadedEvent().AddListener(OnStarSystemLoaded);
+            NewHorizonsAPI.GetChangeStarSystemEvent().AddListener(OnStarSystemChange); 
+            NewHorizonsAPI.GetStarSystemLoadedEvent().AddListener(OnStarSystemLoaded);
 
             // Example of accessing game code.
             LoadManager.OnCompleteSceneLoad += OnCompleteSceneLoad;
@@ -87,9 +85,10 @@ namespace AltEnding
             var playerBody = FindObjectOfType<PlayerBody>();
             WriteLine($"Found player body, and it's called {playerBody.name}!");
 
-            if (initialized) return;
-            initialized = true;
-            this.blinkController = new BlinkController(FindObjectOfType<PlayerCameraEffectController>());
+            BlinkController = new BlinkController(FindObjectOfType<PlayerCameraEffectController>());
+
+            if (staticInitialized) return;
+            staticInitialized = true;
 
 
             //// TESTING AppearingQuantumObject

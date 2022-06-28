@@ -12,7 +12,7 @@ namespace AltEnding.Utilities
     {
         public static GameObject SpawnGameObject(GameObject planet, Sector sector, string propToCopyPath, Vector3 position, Vector3 eulerAngles, float scale=1, bool alignWithNormal=false)
         {
-            return AltEnding.newHorizonsAPI.SpawnObject(planet, sector, propToCopyPath, position, eulerAngles, scale, alignWithNormal);
+            return AltEnding.NewHorizonsAPI.SpawnObject(planet, sector, propToCopyPath, position, eulerAngles, scale, alignWithNormal);
         }
 
         public static Texture2D GetTexture(string filename)

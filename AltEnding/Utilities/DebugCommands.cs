@@ -19,7 +19,7 @@ namespace AltEnding.Utilities
             if (!Keyboard.current[Key.Backquote].isPressed) return;
 
             var spawner = GameObject.Find("Player_Body")?.GetComponent<PlayerSpawner>();
-            var inEnding = AltEnding.newHorizonsAPI.GetCurrentStarSystem() == "clay.AltEnding";
+            var inEnding = AltEnding.NewHorizonsAPI.GetCurrentStarSystem() == "clay.AltEnding";
 
             // Go to the end of the time loop
             if (Keyboard.current[Key.Numpad0].wasReleasedThisFrame)
@@ -64,7 +64,7 @@ namespace AltEnding.Utilities
                 {
                     if (!inEnding)
                     {
-                        AltEnding.newHorizonsAPI.ChangeCurrentStarSystem("clay.AltEnding");
+                        AltEnding.NewHorizonsAPI.ChangeCurrentStarSystem("clay.AltEnding");
                     }
                 }
             }
