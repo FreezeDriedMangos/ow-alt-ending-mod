@@ -13,17 +13,20 @@ namespace AltEnding.CustomProps
         [SerializeField]
         public float radius;
 
-        private OWRigidbody player;
+        private OWRigidbody _player;
         private SpawnPoint _spawnPoint;
         private PlayerSpawner _spawner;
+        private SurveyorProbe _probe;
 
         private bool _isSectorOccupied;
 
         public void Start()
         {
-            player = Locator.GetPlayerBody();
+            _player = Locator.GetPlayerBody();
             _spawnPoint = InEndingPropsController.QMEye.gameObject.GetComponentInChildren<SpawnPoint>();
             _spawner = Locator.GetPlayerBody().GetComponent<PlayerSpawner>();
+            _probe = Locator.GetProbe();
+
             SetSector(gameObject.GetAttachedOWRigidbody().GetComponent<AstroObject>().GetRootSector());
         }
 
@@ -36,10 +39,15 @@ namespace AltEnding.CustomProps
         {
             if (!_isSectorOccupied) return;
 
-            if ((transform.position - player.transform.position).sqrMagnitude > radius * radius)
+            if ((transform.position - _player.transform.position).sqrMagnitude > radius * radius)
             {
                 AltEnding.BlinkController.Blink();
                 _spawner.DebugWarp(_spawnPoint);
+
+                if (_probe != null && _probe.IsLaunched())
+                {
+                    _probe.ExternalRetrieve(true);
+                }
             }
         }
     }

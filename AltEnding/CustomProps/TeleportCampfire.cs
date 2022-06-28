@@ -7,10 +7,19 @@ namespace AltEnding.CustomProps
     public class TeleportCampfire : Campfire
     {
         private TeleportCampfire _pairedCampfire;
+        private SurveyorProbe _probe;
+        private OWRigidbody _playerBody;
 
         public override void Awake()
         {
             base.Awake();
+        }
+
+        public override void Start()
+        {
+            base.Start();
+            _probe = Locator.GetProbe();
+            _playerBody = Locator.GetPlayerBody();
         }
 
         public override void OnStopSleeping()
@@ -22,17 +31,15 @@ namespace AltEnding.CustomProps
         {
             if (_pairedCampfire == null) return;
 
-            var player = Locator.GetPlayerBody();
-
             // Sometimes it won't detatch the player
-            if (player.transform.parent == _attachPoint.transform)
+            if (_playerBody.transform.parent == _attachPoint.transform)
             {
                 _attachPoint.enabled = true;
                 _attachPoint.DetachPlayer();
                 _attachPoint.enabled = false;
             }
 
-            var pos = transform.InverseTransformPoint(player.GetPosition());
+            var pos = transform.InverseTransformPoint(_playerBody.GetPosition());
 
             var planet = _pairedCampfire.GetAttachedOWRigidbody();
 
@@ -44,8 +51,13 @@ namespace AltEnding.CustomProps
             // Move the player up a tiny bit to avoid falling through the ground as often
             newWorldPos += upwards * 0.1f;
 
-            player.WarpToPositionRotation(newWorldPos, newWorldRot);
-            player.SetVelocity(planet.GetPointVelocity(newWorldPos));
+            _playerBody.WarpToPositionRotation(newWorldPos, newWorldRot);
+            _playerBody.SetVelocity(planet.GetPointVelocity(newWorldPos));
+
+            if (_probe != null && _probe.IsLaunched())
+            {
+                _probe.ExternalRetrieve(true);
+            }
         }
 
         public void LinkCampfire(TeleportCampfire pairedCampfire)
