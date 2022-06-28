@@ -46,6 +46,20 @@
 				"removeChildren": [
 					"Interactables_DBState/QuantumDeadNomaiSuit"
 				]
+			},
+			{
+			  "path": "TowerTwin_Body/Sector_TowerTwin/Sector_Tower_GD/Geometry_Tower_GD/ControlledByProxy_Arch",
+			  "position": {
+				"x": 0.183757782,
+				"y": -0.218429565,
+				"z": 0.115936279
+			  },
+			  "rotation": {
+				"x": 338.53244,
+				"y": 122.163124,
+				"z": 124.9659
+			  },
+			  "scale": 1.00000012
 			}
 		]
 	},
