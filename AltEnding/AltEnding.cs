@@ -64,7 +64,8 @@ namespace AltEnding
 
             NewHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
             NewHorizonsAPI.LoadConfigs(this);
-            NewHorizons.Main.Instance.SetDefaultSystem("clay.AltEnding");
+            
+            //NewHorizons.Main.Instance.SetDefaultSystem("clay.AltEnding");
 
             // Starting here, you'll have access to OWML's mod helper.
             WriteLine($"My mod {nameof(AltEnding)} is loaded!");
@@ -73,7 +74,6 @@ namespace AltEnding
             NewHorizonsAPI.GetChangeStarSystemEvent().AddListener(OnStarSystemChange); 
             NewHorizonsAPI.GetStarSystemLoadedEvent().AddListener(OnStarSystemLoaded);
 
-            // Example of accessing game code.
             LoadManager.OnCompleteSceneLoad += OnCompleteSceneLoad;
         }
 
@@ -129,6 +129,10 @@ namespace AltEnding
             if (systemName == "SolarSystem")
             {
                 WriteLine("Loading main props!");
+            }
+            else if (systemName == "clay.AltEnding")
+            {
+                // Loaded the in-ending system
             }
             else if (systemName == "clay.AltEnding.PostEndingSolarSystem")
             {
