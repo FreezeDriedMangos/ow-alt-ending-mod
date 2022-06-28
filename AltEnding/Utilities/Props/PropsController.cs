@@ -25,6 +25,8 @@ namespace AltEnding.Utilities.Props
             // SkinReplacer.ReplaceSkin(GameObject.Find("Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo"), "Feldspar");
             SkinReplacer.ReplaceSkin(GameObject.Find("Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo"), "Solanum");
 
+            // Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo/Traveller_Mesh_v01:Props_HEA_Jetpack
+
             // END DEBUG
 
 

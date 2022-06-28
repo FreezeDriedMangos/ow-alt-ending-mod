@@ -11,8 +11,10 @@ using static NewHorizons.External.Modules.PropModule;
 namespace AltEnding.Utilities.Props
 {
     // WARP TOWERS: TowerTwin_Body/Sector_TowerTwin/Sector_Tower_GD/Geometry_Tower_GD/ControlledByProxy_Arch/Structure_HT_TT_Tower_GD
+    // TowerTwin_Body/Sector_TowerTwin/Sector_Tower_GD/Geometry_Tower_GD
     // TowerTwin_Body/Sector_TowerTwin/Sector_Tower_BH/Geometry_Tower_BH
-
+    // TowerTwin_Body/Sector_TowerTwin/Sector_Tower_HGT/Geometry_Tower_HGT/ControlledByProxy_Arch/Structure_HT_TT_Tower_TT
+    // TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/ControlledByProxy_Structures/Terrain_DB_BrambleSphere_Seed_V2
 
     //
     // CAMPFIRE FIXING:
