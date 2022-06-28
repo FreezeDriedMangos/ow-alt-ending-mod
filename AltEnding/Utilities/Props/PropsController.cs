@@ -25,8 +25,20 @@ namespace AltEnding.Utilities.Props
             // SkinReplacer.ReplaceSkin(GameObject.Find("Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo"), "Feldspar");
             SkinReplacer.ReplaceSkin(GameObject.Find("Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo"), "Solanum");
 
-            // END DEBUG
+            // Test teleport campfires
+            var th = Locator.GetAstroObject(AstroObject.Name.TimberHearth);
+            var thFire = TeleportCampfire.Spawn(th.gameObject, th.GetRootSector(), new Vector3(14.3f, -44.92f, 184.96f));
 
+            var bh = Locator.GetAstroObject(AstroObject.Name.BrittleHollow);
+            var bhFire = TeleportCampfire.Spawn(bh.gameObject, bh.GetRootSector(), new Vector3(-0.76f, -1.79f, 156.66f));
+
+            thFire.LinkCampfire(bhFire);
+
+            var thFire2 = TeleportCampfire.Spawn(th.gameObject, th.GetRootSector(), new Vector3(14.3f, -50.2f, 183.6f));
+            var thFire3 = TeleportCampfire.Spawn(th.gameObject, th.GetRootSector(), new Vector3(-6, -109.1f, 229.5f));
+
+            thFire2.LinkCampfire(thFire3);
+            // END DEBUG
 
             if (system == "SolarSystem")
             {
