@@ -21,8 +21,18 @@ namespace AltEnding.Utilities
             var spawner = GameObject.Find("Player_Body")?.GetComponent<PlayerSpawner>();
             var inEnding = AltEnding.NewHorizonsAPI.GetCurrentStarSystem() == "clay.AltEnding";
 
+            bool numpad = false; //AltEnding.Instance.ModHelper.Config.GetSettingsValue<bool>("numpad");
+            var Numpad0 = numpad ? Key.Numpad0 : Key.Digit1;
+            var Numpad1 = numpad ? Key.Numpad1 : Key.Digit2;
+            var Numpad2 = numpad ? Key.Numpad2 : Key.Digit3;
+            var Numpad3 = numpad ? Key.Numpad3 : Key.Digit4;
+            var Numpad4 = numpad ? Key.Numpad4 : Key.Digit5;
+            var Numpad5 = numpad ? Key.Numpad5 : Key.Digit5;
+            var Numpad6 = numpad ? Key.Numpad5 : Key.Digit6;
+
+
             // Go to the end of the time loop
-            if (Keyboard.current[Key.Numpad0].wasReleasedThisFrame)
+            if (Keyboard.current[Numpad0].wasReleasedThisFrame)
             {
                 TimeLoop.SetSecondsRemaining(30);
             }
@@ -32,27 +42,27 @@ namespace AltEnding.Utilities
             {
                 if (spawner != null)
                 {
-                    if (Keyboard.current[Key.Numpad1].wasReleasedThisFrame)
+                    if (Keyboard.current[Numpad1].wasReleasedThisFrame)
                     {
                         WarpToPlanet(AstroObjectLocator.GetAstroObject("QM Eye Aspect"));
                     }
-                    if (Keyboard.current[Key.Numpad2].wasReleasedThisFrame)
+                    if (Keyboard.current[Numpad2].wasReleasedThisFrame)
                     {
                         spawner.DebugWarp(InEndingPropsController.stationSpawnPoint);
                     }
-                    if (Keyboard.current[Key.Numpad3].wasReleasedThisFrame)
+                    if (Keyboard.current[Numpad3].wasReleasedThisFrame)
                     {
                         WarpToPlanet(AstroObjectLocator.GetAstroObject("QM Brittle Hollow Aspect"));
                     }
-                    if (Keyboard.current[Key.Numpad4].wasReleasedThisFrame)
+                    if (Keyboard.current[Numpad4].wasReleasedThisFrame)
                     {
                         WarpToPlanet(AstroObjectLocator.GetAstroObject("QM Dark Bramble Aspect"));
                     }
-                    if (Keyboard.current[Key.Numpad5].wasReleasedThisFrame)
+                    if (Keyboard.current[Numpad5].wasReleasedThisFrame)
                     {
                         WarpToPlanet(AstroObjectLocator.GetAstroObject("QM Giant's Deep Aspect"));
                     }
-                    if (Keyboard.current[Key.Numpad6].wasReleasedThisFrame)
+                    if (Keyboard.current[Numpad6].wasReleasedThisFrame)
                     {
                         WarpToPlanet(AstroObjectLocator.GetAstroObject("QM Hourglass Twins Aspect"));
                     }
@@ -60,7 +70,7 @@ namespace AltEnding.Utilities
             }
             else
             {
-                if (Keyboard.current[Key.Numpad1].wasReleasedThisFrame)
+                if (Keyboard.current[Numpad1].wasReleasedThisFrame)
                 {
                     if (!inEnding)
                     {
