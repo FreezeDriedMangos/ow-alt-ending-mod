@@ -53,7 +53,7 @@ namespace AltEnding.Patches
 		                __instance._cageLoopingAudio.FadeIn(1f);
 		                __instance._cageClosed = false;
 
-                        PropsController.vesselWarningLightController.SetLightOn(true);
+                        PropsController.VesselWarningLightController.SetLightOn(true);
 	                }
                 }
             }

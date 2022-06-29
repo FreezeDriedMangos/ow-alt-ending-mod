@@ -36,9 +36,6 @@ namespace AltEnding.Utilities.Props
     // TimberHearth_Body/Sector_TH/Prefab_HEA_Campfire(Clone)/AttachPoint.InteractReciever._playerCam 
     // it should be set to Player_Body/PlayerCamera.OWCamera
 
-
-
-
     public static class PreEndingPropsController
     {
         public static VesselWarningLightController vesselWarningLightController;
@@ -53,11 +50,23 @@ namespace AltEnding.Utilities.Props
             Light l = staff1.AddComponent<Light>();
         }
 
+        public static void DEBUG_SpawnTeleportCampfires()
+        {
+            // Test teleport campfires
+            var th = Locator.GetAstroObject(AstroObject.Name.TimberHearth);
+
+            var thFire = TeleportCampfire.Spawn(th.gameObject, th.GetRootSector(), new Vector3(14.3f, -50.2f, 183.6f));
+            var thFire2 = TeleportCampfire.Spawn(th.gameObject, th.GetRootSector(), new Vector3(-6, -109.1f, 229.5f));
+
+            thFire.LinkCampfire(thFire2);
+        }
+
         public static void SpawnProps()
         {
             AltEnding.Instance.ModHelper.Console.WriteLine("LOAIDING MAIN PROPS");
 
             DEBUG_SpawnVisionTorchAtCamp();
+            DEBUG_SpawnTeleportCampfires();
 
             //
             // Staff signal

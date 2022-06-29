@@ -17,7 +17,7 @@ namespace AltEnding.Utilities.Props
 {
     public class PropsController
     {
-        public static VesselWarningLightController vesselWarningLightController;
+        public static VesselWarningLightController VesselWarningLightController { get; private set; }
 
         public static void SpawnProps(string system)
         {
@@ -26,13 +26,6 @@ namespace AltEnding.Utilities.Props
             SkinReplacer.ReplaceSkin(GameObject.Find("Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo"), "Solanum");
             // Player_Body/Traveller_HEA_Player_v2/Traveller_Mesh_v01:Traveller_Geo/Traveller_Mesh_v01:Props_HEA_Jetpack
 
-            // Test teleport campfires
-            var th = Locator.GetAstroObject(AstroObject.Name.TimberHearth);
-
-            var thFire = TeleportCampfire.Spawn(th.gameObject, th.GetRootSector(), new Vector3(14.3f, -50.2f, 183.6f));
-            var thFire2 = TeleportCampfire.Spawn(th.gameObject, th.GetRootSector(), new Vector3(-6, -109.1f, 229.5f));
-
-            thFire.LinkCampfire(thFire2);
             // END DEBUG
 
             if (system == "SolarSystem")
@@ -54,15 +47,18 @@ namespace AltEnding.Utilities.Props
             //
 
             var vesselSectorGameObject = GameObject.Find("DB_VesselDimension_Body");
+            
             var lightObject = new GameObject("Warning Light");
             lightObject.transform.parent = vesselSectorGameObject.transform;
             lightObject.transform.localPosition = new Vector3(191.4552f, 45.0478f, -15.27039f);
             lightObject.name = "Warning Light";
+
             var light = lightObject.AddComponent<Light>();
             light.color = Color.red;
             light.range = 100;
             light.intensity = 0;
-            vesselWarningLightController = lightObject.AddComponent<VesselWarningLightController>();
+
+            VesselWarningLightController = lightObject.AddComponent<VesselWarningLightController>();
             //vesselWarningLightController.SetLightOn(true);
         }
 
