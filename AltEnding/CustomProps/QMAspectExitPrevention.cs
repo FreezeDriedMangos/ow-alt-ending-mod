@@ -49,6 +49,11 @@ namespace AltEnding.CustomProps
                     _probe.ExternalRetrieve(true);
                 }
             }
+
+            if (_probe != null && _probe.IsLaunched() && (transform.position - _probe.transform.position).sqrMagnitude > radius * radius)
+            {
+                _probe.ExternalRetrieve();
+            }
         }
     }
 }
