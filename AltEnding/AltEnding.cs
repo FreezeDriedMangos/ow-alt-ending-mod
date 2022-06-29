@@ -14,8 +14,6 @@ namespace AltEnding
 {
     // looking at the game's source: 1) open ilspy 2) open OuterWilds_Data/Managed/Assembly-CSharp.dll 3) open the "{} -" dropdown
 
-
-
     // TODO: if prisoner has been met, spawn a signal source here: Log : Raycast hit "position": {"x": -174.0865, "y": -134.4167, "z": -189.1588}, "normal": {"x": -0.2941437, "y": 0.9556881, "z": -0.01182878} on [RingWorld_Body] at [RingWorld_Body]
     // this is the location of the hidden memory staff
     // make sure to disable this signal source once the staff has been picked up
@@ -79,36 +77,37 @@ namespace AltEnding
 
         public void OnCompleteSceneLoad(OWScene scene, OWScene loadScene)
         {
-            // TODO: add a case for OWScene.EyeOfTheUniverse to make the loading zone that teleports you to  clay.AltEnding.PostEndingSolarSystem->timeloopring
+            if (loadScene == OWScene.EyeOfTheUniverse)
+            {
+                // TODO: add a case for OWScene.EyeOfTheUniverse to make the loading zone that teleports you to  clay.AltEnding.PostEndingSolarSystem->timeloopring
+            }
 
-            if (loadScene != OWScene.SolarSystem) return;
-            var playerBody = FindObjectOfType<PlayerBody>();
-            WriteLine($"Found player body, and it's called {playerBody.name}!");
+            if (loadScene == OWScene.SolarSystem)
+            {
+                BlinkController = new BlinkController(FindObjectOfType<PlayerCameraEffectController>());
 
-            BlinkController = new BlinkController(FindObjectOfType<PlayerCameraEffectController>());
+                if (staticInitialized) return;
+                staticInitialized = true;
 
-            if (staticInitialized) return;
-            staticInitialized = true;
+                //// TESTING AppearingQuantumObject
+                //var campsite = UnityEngine.GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Props_StartingCamp/OtherComponentsGroup");
+                //List<AppearingQuantumObject> aqos = new List<AppearingQuantumObject>();
 
+                //foreach(UnityEngine.Transform prop in campsite.transform)
+                //{
+                //    aqos.Add(prop.gameObject.AddComponent<AppearingQuantumObject>());
+                //}
 
-            //// TESTING AppearingQuantumObject
-            //var campsite = UnityEngine.GameObject.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Props_StartingCamp/OtherComponentsGroup");
-            //List<AppearingQuantumObject> aqos = new List<AppearingQuantumObject>();
-
-            //foreach(UnityEngine.Transform prop in campsite.transform)
-            //{
-            //    aqos.Add(prop.gameObject.AddComponent<AppearingQuantumObject>());
-            //}
-
-            //for (int i = 0; i < aqos.Count; i++)
-            //{
-            //    for (int j = i+1; j < aqos.Count; j++)
-            //    {
-            //        aqos[i].AddEntangledObject(aqos[j]);
-            //    }
-            //    aqos[i].IsPresenting = false;
-            //}
-            //aqos[0].IsPresenting = true;
+                //for (int i = 0; i < aqos.Count; i++)
+                //{
+                //    for (int j = i+1; j < aqos.Count; j++)
+                //    {
+                //        aqos[i].AddEntangledObject(aqos[j]);
+                //    }
+                //    aqos[i].IsPresenting = false;
+                //}
+                //aqos[0].IsPresenting = true;
+            }
         }
 
         // TODO: make a PropsManager to handle all of the below
