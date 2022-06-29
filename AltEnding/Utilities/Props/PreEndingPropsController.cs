@@ -65,7 +65,7 @@ namespace AltEnding.Utilities.Props
         {
             AltEnding.Instance.ModHelper.Console.WriteLine("LOAIDING MAIN PROPS");
 
-            DEBUG_SpawnVisionTorchAtCamp();
+            //DEBUG_SpawnVisionTorchAtCamp();
             DEBUG_SpawnTeleportCampfires();
 
             //
