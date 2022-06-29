@@ -83,10 +83,10 @@ namespace AltEnding.Utilities.Props
             // Vision Staff
             //
             
-            var path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem";
-            var position = new Vector3(-174.992325f,-134.213821f,-189.465027f);
-            var rotation = new Vector3(2.85523677f,327.847168f,293.827332f);
-            GameObject staff = DetailBuilder.MakeDetail(Locator._ringWorld.gameObject, Locator._ringWorld.GetRootSector(), path, position, rotation, 1, false); 
+            //var path = "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem";
+            //var position = new Vector3(-174.992325f,-134.213821f,-189.465027f);
+            //var rotation = new Vector3(2.85523677f,327.847168f,293.827332f);
+            //GameObject staff = DetailBuilder.MakeDetail(Locator._ringWorld.gameObject, Locator._ringWorld.GetRootSector(), path, position, rotation, 1, false); 
             
             //
             // Vision Target
