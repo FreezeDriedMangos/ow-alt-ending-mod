@@ -1,7 +1,20 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-  "name": "Quantum Moon",
+  	"name": "Quantum Moon",
   
+	"Props": {
+		"nomaiText": [
+			{
+				"position": {"x": -3.283321, "y": -70.27275, "z": 1.326214},
+				"normal": {"x": -0.7190402, "y": 0.09478475, "z": 0.6884747},
+
+				"xmlFile": "planets/Text/SolanumVisionResponse.xml",
+				"seed":42,
+				"arcInfo":[]
+			}
+		]
+	},
+
 	"ShipLog": {
 		"xmlFile": "planets/ShipLogs/RegularQuantumMoon.xml",
 		"entryPositions": [

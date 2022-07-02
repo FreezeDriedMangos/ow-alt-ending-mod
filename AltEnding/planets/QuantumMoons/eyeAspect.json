@@ -43,7 +43,8 @@
 					"z": 0
 				},
 				"removeChildren": [
-					"Interactables_EYEState/QuantumDeadNomaiSuit"
+					"Interactables_EYEState/QuantumDeadNomaiSuit",
+					"Interactables_EYEState/ConversationPivot"
 				]
 			}
 		]

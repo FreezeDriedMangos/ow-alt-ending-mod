@@ -1,0 +1,63 @@
+<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
+	<TextBlock>
+		<ID>1</ID>
+		<LocationA />
+		<Text>I see... we have been gone for a very long time.</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>2</ID>
+		<ParentID>1</ParentID>
+		<LocationA />
+		<Text>I need some time to process this, however I may be of assistance to you.</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>3</ID>
+		<ParentID>2</ParentID>
+		<LocationA />
+		<Text>I do not know how you are able to survive the supernova.</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>4</ID>
+		<ParentID>3</ParentID>
+		<LocationA />
+		<Text>The mask you see makes me believe it has something to do with our people, however I cannot be certain.</Text>
+	</TextBlock>
+	</TextBlock>
+	<TextBlock>
+		<ID>5</ID>
+		<ParentID>3</ParentID>
+		<LocationA />
+		<Text>It appears you and I are in similar situations. We are both at the end of our journey, are we not?</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>6</ID>
+		<ParentID>2</ParentID>
+		<LocationA />
+		<Text>It appears you have found our clan's Vessel. This is the standard Nomaian emergency code.</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>7</ID>
+		<ParentID>6</ParentID>
+		<LocationA />
+		<Text>I do not know if the Vessel will recognize it, or even if it does, if it will help you.</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>8</ID>
+		<ParentID>6</ParentID>
+		<LocationA />
+		<Text>This is all I have to give.</Text>
+	</TextBlock>
+</NomaiObject>
+
+<!-- 
+
+1 I see... we have been gone for a very long time.
+2	I need some time to process this, however I may be of assistance to you.
+3		I do not know how you are able to survive the supernova.
+4			The mask you see makes me believe it has something to do with our people, however I cannot be certain.
+5			It appears you and I are in similar situations. We are both at the end of our journey, are we not?
+6		It appears you have found our clan's Vessel. This is the standard Nomaian emergency code. 
+7			I do not know if the Vessel will recognize it, or even if it does, if it will help you.
+8			This is all I have to give. 
+
+-->

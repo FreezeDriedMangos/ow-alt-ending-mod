@@ -142,34 +142,5 @@ namespace AltEnding.Utilities.Props
                 PlanetCreationHandler.GenerateBody(satellite); // I added this, original was above line
             }
         }
-
-        public void SpawnEndingProps()
-        {
-            // TODO: spawn this item I think? and place it on timber hearth
-            // DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector
-            // TODO: modify this item to play the ending cutscene
-
-        
-            // GameObject memoryStaff = GameObject.Instantiate("RingWorld_Body/Sector_RingWorld/Sector_SecretEntrance/Interactibles_SecretEntrance/Experiment_3/VisionTorchApparatus")
-
-
-            
-        }
-
-        public void SpawnQM_PreEndingProps()
-        {
-
-        }
-
-        // quantum objects:
-        // TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/VisibleFrom_Village/QuantumShard_Exhibit/QuantumShard_Root/
-        // QuantumSocket
-        // SocketedQuantumObject
-            // SetQuantumSockets()
-            // NOTE: SocketedQuantumObjects CAN SHARE QuantumSockets, and they handle it robustly
-            // ChangeQuantumState(true) // pass true for initialization
-        // Custom quantum object behavior:
-            // extend QuantumObject, implement `protected abstract bool ChangeQuantumState(bool skipInstantVisibilityCheck);`
-
     }
 }
