@@ -22,7 +22,6 @@
 		<LocationA />
 		<Text>The mask you see makes me believe it has something to do with our people, however I cannot be certain.</Text>
 	</TextBlock>
-	</TextBlock>
 	<TextBlock>
 		<ID>5</ID>
 		<ParentID>3</ParentID>

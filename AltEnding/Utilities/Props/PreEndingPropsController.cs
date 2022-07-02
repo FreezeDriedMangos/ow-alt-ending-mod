@@ -161,6 +161,9 @@ namespace AltEnding.Utilities.Props
                 Resources.FindObjectsOfTypeAll<NomaiWallText>()
                 .Where(text => text.gameObject.name == "Arc_QM_SolanumConvo_Explain+Eye")
                 .First();
+            // find the actual right text
+            // set its parent to the qm eye state
+            // set it inactive
 
             var nomaiConversationManager = Resources.FindObjectsOfTypeAll<NomaiConversationManager>().First(); //GameObject.FindObjectOfType<NomaiConversationManager>();
             var myConversationManager = nomaiConversationManager.gameObject.AddComponent<UncertainFutures_SolanumVisionResponse>();
