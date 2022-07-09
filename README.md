@@ -2,7 +2,9 @@
 
 Models and designs in this mod that are not seen in the base game **are not canon or approved by Mobius Digital.**
 
-# Outer Wilds Additional Ending
+*For UF devs: https://docs.google.com/document/d/1-Kj95Q71Guw4G72VlXO8pYq9F9sI4K32wehn9r0guoU/edit?usp=sharing*
+
+# Outer Wilds - Uncertain Futures
 
 This mod adds additional content and an additional main-story ending.
 
