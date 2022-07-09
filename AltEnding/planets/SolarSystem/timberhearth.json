@@ -187,6 +187,65 @@
           "y": 84.3894653,
           "z": 108.213051
         }
+      },
+      
+      {
+        "path": "TowerTwin_Body/Sector_TowerTwin/Sector_Tower_BH/Geometry_Tower_BH",
+        "position": {
+          "x": 110.268852,
+          "y": -14.7590961,
+          "z": 148.572266
+        },
+        "rotation": {
+          "x": 34.0352364,
+          "y": 305.10907,
+          "z": 266.884857
+        },
+        "scale": 0.7
+      },
+      {
+        "path": "TowerTwin_Body/Sector_TowerTwin/Sector_Tower_HGT/Geometry_Tower_HGT/ControlledByProxy_Arch/Structure_HT_TT_Tower_TT",
+        "position": {
+          "x": 75.5875,
+          "y": -4.96489525,
+          "z": 147.37558
+        },
+        "rotation": {
+          "x": 66.17859,
+          "y": 123.202637,
+          "z": 96.450676
+        },
+        "scale": 0.7
+      },
+      {
+        "assetBundle": "planets/brambletower",
+        "path": "Assets/uncertainFutures/bramble tower Variant.prefab",
+        "position": {
+          "x": 129.709579,
+          "y": 11.3810158,
+          "z": 212.767151
+        },
+        "rotation": {
+          "x": 77.95317,
+          "y": 314.124451,
+          "z": 283.07373
+        },
+        "scale": 1
+      },
+      
+      {
+        "path": "TowerTwin_Body/Sector_TowerTwin/Sector_Tower_GD/Geometry_Tower_GD/ControlledByProxy_Arch",
+        "position": {
+          "x": 91.36492,
+          "y": -33.2054253,
+          "z": 162.992691
+        },
+        "rotation": {
+          "x": 315.958618,
+          "y": 113.658363,
+          "z": 100.965858
+        },
+        "scale": 0.7
       }
     ]
   }

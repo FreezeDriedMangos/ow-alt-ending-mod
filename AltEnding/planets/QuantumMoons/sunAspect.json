@@ -13,7 +13,7 @@
 	},
 	"Orbit": {
 		"primaryBody": "QM Eye Aspect",
-		"semiMajorAxis": 1060,
+		"semiMajorAxis": 1560,
 		"inclination": 5,
 		"longitudeOfAscendingNode": 90,
 		"trueAnomaly": 240,

@@ -10,7 +10,17 @@
 
 				"xmlFile": "planets/Text/SolanumVisionResponse.xml",
 				"seed":42,
-				"arcInfo":[]
+				"arcInfo":[
+					{},
+					{},
+					{},
+					{},
+
+					{},
+					{},
+					{},
+					{}
+				]
 			}
 		]
 	},

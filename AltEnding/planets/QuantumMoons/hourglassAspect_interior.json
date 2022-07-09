@@ -1,0 +1,61 @@
+
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"canShowOnTitle": false,
+	"name": "QM Hourglass Twins Aspect Interior",
+	"starSystem": "clay.AltEnding",
+	"Base": {
+		"groundSize": 0,
+		"surfaceSize": 70,
+		"surfaceGravity": -10,
+		"hasMapMarker": true
+	},
+	"Orbit": {
+		"primaryBody": "QM Eye Aspect",
+		"semiMajorAxis": 1560,
+		"inclination": 90,
+		"longitudeOfAscendingNode": 90,
+		"trueAnomaly": 0,
+		"isStatic": true
+	},
+
+	"Atmosphere": {
+		"size": 250,
+	},
+
+
+	"Props": {
+		"details": [
+			{
+				"path": "QuantumMoon_Body/AmbientLight_QM",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			},
+			{
+				"path": "TowerTwin_Body/Sector_TowerTwin/Sector_TimeLoopInterior/Geometry_TimeLoopInterior/innerShell",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			},
+			{
+				"path": "RingWorld_Body/Sector_RingInterior/Volumes_RingInterior/RingRiverFluidVolume",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rotation": {
+					"x": 338.53244,
+					"y": 122.163124,
+					"z": 124.9659
+				},
+				"scale": 0.1
+			}
+		]
+	}
+}

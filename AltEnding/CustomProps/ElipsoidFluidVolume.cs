@@ -25,11 +25,15 @@ namespace AltEnding.CustomProps
 			}
 		}
 
+		// I found the cause of the error: Giant's Deep aspect's _attachedForceDetector and _attatchedFluidDetector are both null
+		// note: Dark Bramble's, for example, is here "DarkBramble_Body/FieldDetector_DB". it's a ConstantForceDetector
 		public override Vector3 GetBuoyancy(FluidDetector detector, float fractionSubmerged)
 		{
-			if (detector.GetAttachedOWRigidbody().GetAttachedForceDetector() != null)
+			if (detector?.GetAttachedOWRigidbody()?.GetAttachedForceDetector() != null)
 			{
-				Vector3 relativeAcceleration = detector.GetAttachedOWRigidbody().GetAttachedForceDetector().GetForceAcceleration() - _attachedBody.GetAttachedForceDetector().GetForceAcceleration();
+				var detectorAccelleration = detector.GetAttachedOWRigidbody().GetAttachedForceDetector().GetForceAcceleration();
+				var attatchedBodyAccelleration = _attachedBody.GetAttachedForceDetector().GetForceAcceleration();
+				Vector3 relativeAcceleration = detectorAccelleration - attatchedBodyAccelleration;
 				return Vector3.Project(onNormal: detector.transform.position - base.transform.position, vector: -relativeAcceleration) * fractionSubmerged * _buoyancyDensity / detector.GetBuoyancyData().density;
 			}
 			return Vector3.zero;
