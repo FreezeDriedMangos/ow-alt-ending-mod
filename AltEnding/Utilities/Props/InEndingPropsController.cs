@@ -182,7 +182,7 @@ namespace AltEnding.Utilities.Props
             // add tides
             GameObject sand = GameObject.Find("QMHourglassTwinsAspect_Body/Sector/Sand");
             // sand.AddComponent<TidesController>().Initialize(GameObject.Find("QMHourglassTwinsAspect_Body").GetComponent<AstroObject>(), 2*145, 2*130);
-            sand.AddComponent<GlobalTidesController>().Initialize(0.01f, 2*145, 2*130);
+            sand.AddComponent<GlobalTidesController>().Initialize(0.001f, 2*145, 2*130);
         }
 
         public static void CreateSunAspectClouds()

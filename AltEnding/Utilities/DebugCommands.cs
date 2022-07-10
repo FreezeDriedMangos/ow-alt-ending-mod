@@ -22,13 +22,14 @@ namespace AltEnding.Utilities
             var inEnding = AltEnding.NewHorizonsAPI.GetCurrentStarSystem() == "clay.AltEnding";
 
             bool numpad = false; //AltEnding.Instance.ModHelper.Config.GetSettingsValue<bool>("numpad");
-            var Numpad0 = numpad ? Key.Numpad0 : Key.Digit1;
-            var Numpad1 = numpad ? Key.Numpad1 : Key.Digit2;
-            var Numpad2 = numpad ? Key.Numpad2 : Key.Digit3;
-            var Numpad3 = numpad ? Key.Numpad3 : Key.Digit4;
-            var Numpad4 = numpad ? Key.Numpad4 : Key.Digit5;
+            var Numpad0 = numpad ? Key.Numpad0 : Key.Digit0;
+            var Numpad1 = numpad ? Key.Numpad1 : Key.Digit1;
+            var Numpad2 = numpad ? Key.Numpad2 : Key.Digit2;
+            var Numpad3 = numpad ? Key.Numpad3 : Key.Digit3;
+            var Numpad4 = numpad ? Key.Numpad4 : Key.Digit4;
             var Numpad5 = numpad ? Key.Numpad5 : Key.Digit5;
-            var Numpad6 = numpad ? Key.Numpad5 : Key.Digit6;
+            var Numpad6 = numpad ? Key.Numpad5 : Key.Digit5;
+            var Numpad7 = numpad ? Key.Numpad7 : Key.Digit7;
 
 
             // Go to the end of the time loop
@@ -65,6 +66,10 @@ namespace AltEnding.Utilities
                     if (Keyboard.current[Numpad6].wasReleasedThisFrame)
                     {
                         WarpToPlanet(AstroObjectLocator.GetAstroObject("QM Hourglass Twins Aspect"));
+                    }
+                    if (Keyboard.current[Numpad7].wasReleasedThisFrame)
+                    {
+                        WarpToPlanet(AstroObjectLocator.GetAstroObject("QM Hourglass Twins Aspect Interior"), 70);
                     }
                 }
             }

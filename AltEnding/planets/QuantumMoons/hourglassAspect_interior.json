@@ -7,7 +7,7 @@
 	"Base": {
 		"groundSize": 0,
 		"surfaceSize": 70,
-		"surfaceGravity": -10,
+		"surfaceGravity": 10,
 		"hasMapMarker": true
 	},
 	"Orbit": {
@@ -15,12 +15,12 @@
 		"semiMajorAxis": 1560,
 		"inclination": 90,
 		"longitudeOfAscendingNode": 90,
-		"trueAnomaly": 0,
+		"trueAnomaly": 90,
 		"isStatic": true
 	},
 
 	"Atmosphere": {
-		"size": 250,
+		"size": 250
 	},
 
 
@@ -55,6 +55,14 @@
 					"z": 124.9659
 				},
 				"scale": 0.1
+			},
+			{
+				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthUnderground/Sector_SealedCavern/Geometry_SealedCavern",
+				"position": {
+					"x": 0,
+					"y": 70,
+					"z": 0
+				}
 			}
 		]
 	}
